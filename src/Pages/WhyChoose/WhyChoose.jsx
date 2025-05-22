@@ -42,6 +42,7 @@ export default function WhyChoose() {
                 <p className="text-gray-600">Richly varied landscapes, luxury accommodation Travel.</p>
               </div>
             </div>
+
             {/* Middle Image with animation */}
             <div className="box-2">
               <img
@@ -50,6 +51,7 @@ export default function WhyChoose() {
                 className="center-img"
               />
             </div>
+            
             {/* Right Features */}
             <div className="box-3">
               <div className='content-box'>

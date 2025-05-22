@@ -6,6 +6,7 @@ import FilterForm from '../../Pages/FilterForm/FilterForm'
 import WhyChoose from '../../Pages/WhyChoose/WhyChoose'
 import TrendingDestinations from '../../Pages/TrendingDestinations/TrendingDestinations'
 
+
 export default function HomePage() {
 
   return (
@@ -17,6 +18,8 @@ export default function HomePage() {
        <WhyChoose/>
 
        <TrendingDestinations/>
+
+    
     </>
   )
 }

@@ -61,7 +61,7 @@ function LoginForm() {
             <div className="login-content">
                 <h2>LOG IN</h2>
                 <div className="bread-crumb mt-2">
-                    <ul className='d-flex '>
+                    <ul className='d-flex p-0'>
                         <li className='arrow-icon'>
                             <span className='me-2'><HomeIcon/></span> 
                             <Link to='/'>Home</Link>
