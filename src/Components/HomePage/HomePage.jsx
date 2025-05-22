@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
        <LandingPage/>
-       <h1>hello</h1>
+      
        <FilterForm/>
 
        <WhyChoose/>
