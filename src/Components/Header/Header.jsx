@@ -11,6 +11,7 @@ export default function Header() {
 
     const [scrolled, setScrolled] = useState(false);
     const [dropDownMenu, setDropDownMenu] = useState(false);
+    
 
     const handleClick = ()=>{
         if(dropDownMenu){
@@ -72,7 +73,7 @@ export default function Header() {
                          {dropDownMenu1 && (
                             <div className='dropdown-menu'>
                                 <ul className='px-2 m-0'>
-                                    <li>Mumbai</li>
+                                    <li><Link to='/addMembers' onClick={() => setDropDownMenu1(false)}><h6>Add Members Details </h6></Link></li>
                                     <li>Matheran</li>
                                     <li>Goa</li>
                                     <li>Kerala</li>

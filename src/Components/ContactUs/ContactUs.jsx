@@ -34,24 +34,7 @@ const ContactUs = () => {
     return newError;
   };
 
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     console.log('Values:', values);
-//     const validationError = validate();
-//     setError(validationError);
 
-//     if (Object.keys(validationError).length === 0) {
-      
-//         const response = await registerUser(values); // Make sure this function is implemented elsewhere
-//         if (response?.code === 201) {
-//           navigate('/')
-//           setMessage('Added Successfully');
-//         } else {
-//           setError({ general: 'Invalid or Email already exists!' });
-//         }
-      
-//     }
-//   };
     const [submitted, setSubmitted] = useState(false);
     const handleSubmit = (e) => {
     e.preventDefault();

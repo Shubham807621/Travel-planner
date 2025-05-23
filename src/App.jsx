@@ -1,13 +1,15 @@
 import { useState } from 'react'
 
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './Components/HomePage/HomePage'
 import Header from './Components/Header/Header'
 import SignUpForm from './Components/SignUp/SignUpForm'
 import LoginForm from './Components/LoginPage/LoginForm'
 import AboutUs from './Components/AboutUs/AboutUs';
-import ContactUs from './Components/ContactUs/ContactUs'
+import ContactUs from './Components/ContactUs/ContactUs';
+import AddMemberDetails from './Pages/AddMembers/AddMemberDetails';
 
 function App() {
 
@@ -22,6 +24,7 @@ function App() {
             <Route path='/login' element={<LoginForm/>}/>
             <Route path='/aboutus' element={<AboutUs/>}/>
             <Route path='/contact' element={<ContactUs/>}/>
+            <Route path='/addMembers' element={<AddMemberDetails/>}/>
         </Routes>
     
     </BrowserRouter>
