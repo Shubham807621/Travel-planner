@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import './aboutUs.css';
-import aboutImage from './Images/about.svg';
-import treker from './Images/trekk.jpg';
-import { FaUsers, FaHeadset } from 'react-icons/fa';
+import aboutImage from '../../Images/AboutUs/about.svg';
+import treker from '../../Images/AboutUs/trekk.jpg';
+import GroupIcon from '@mui/icons-material/Group';
+import HeadphonesIcon from '@mui/icons-material/Headphones';
 import { Link, useNavigate } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
-import ModalVideo from 'react-modal-video';
-import 'react-modal-video/css/modal-video.min.css';
-import { FaHandHoldingUsd, FaMapMarkedAlt, FaUserTie } from 'react-icons/fa';
+// import 'react-modal-video/css/modal-video.min.css';
+// import { FaHandHoldingUsd, FaMapMarkedAlt, FaUserTie } from 'react-icons/fa';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import EditLocationIcon from '@mui/icons-material/EditLocation';
 
 const AboutUs = () => {
    // const [isOpen, setOpen] = useState(false);
@@ -16,17 +19,17 @@ const AboutUs = () => {
   
   const features = [
     {
-      icon: <FaHandHoldingUsd />,
+      icon: <CurrencyRupeeIcon />,
       title: "AFFORDABLE PRICE",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-      icon: <FaMapMarkedAlt />,
+      icon: <EditLocationIcon />,
       title: "BEST DESTINATION",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-      icon: <FaUserTie />,
+      icon: <ManageAccountsIcon />,
       title: "PERSONAL SERVICE",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -62,7 +65,7 @@ const AboutUs = () => {
 
           <div className="row feature-section my-4">
             <div className="col-6 d-flex align-items-start">
-              <FaUsers className="icon me-2 " />
+              <GroupIcon className="icon me-2 " />
               <div>
                 <strong>Expert Team for<br />
                   Support
@@ -71,7 +74,7 @@ const AboutUs = () => {
               </div>
             </div>
             <div className="col-6 d-flex align-items-start border-start ps-3">
-              <FaHeadset className="icon me-2" />
+              <HeadphonesIcon className="icon me-2" />
               <div>
                 <strong>Urgent Support for<br />
                 Client
