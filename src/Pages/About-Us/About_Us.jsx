@@ -1,5 +1,5 @@
 import React from 'react'
-import './About_Us.css'
+import './About_us.css'
 import about_us_img from '../../Images/about-image-1.svg'
 import stone_img from '../../Images/about-stone-right.svg'
 
