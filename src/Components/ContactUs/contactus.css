@@ -1,0 +1,261 @@
+.signup-section {
+    text-align: center;
+    margin: 0 !important;
+}
+.signup-section .signup-image-wrapper{
+
+    position: relative;
+    padding: 250px 0px 140px;
+    margin-bottom: 10%;
+}
+
+.signup-section .signup-image-wrapper .image-banner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 120%;
+    background:url("../../Images/banner-image-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+
+.signup-section .signup-image-wrapper .image-banner:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.30);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.57), rgba(16, 34, 27, 0.35), rgba(16, 34, 27, 1.0));
+}
+
+
+.signup-section .signup-image-wrapper .image-banner:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    background: url("../../Images//banner-pattern.png") bottom center repeat-x;
+    height: 39px;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: 80s linear 0s infinite normal none running slide;
+}
+
+.signup-section .signup-image-wrapper .signup-content{
+    position: absolute;
+    top: 50%;
+    left: 41%;
+}
+
+.signup-section .signup-image-wrapper .signup-content h2{
+    font-family:Poppins, sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    color: white;
+}
+
+.signup-section .signup-image-wrapper .signup-content .bread-crumb ul li{
+    list-style: none;
+    margin-right: 35px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+.signup-section .signup-image-wrapper .signup-content .bread-crumb ul li svg{
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    padding: 5px;
+    text-align: center;
+    background: #1DC5CE;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+.signup-section .signup-image-wrapper .signup-content .bread-crumb ul .arrow-icon:after {
+    content: 'arrow_right';
+    position: absolute;
+    right: -25px;
+    top: -4px;
+    width: 22px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Material Symbols Outlined';
+}
+
+.signup-section .signup-image-wrapper .signup-content .bread-crumb ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.signup-section .signup-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #e3ecf1;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.signup-container .input-container{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.signup-section .signup-container .form-group {
+  width: 97%;
+  margin: 0 10px;
+} 
+
+.signup-section .signup-container .input-container .form-group {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.signup-section .signup-container .form-group label {
+  font-weight: 500;
+  text-align: start !important;
+  margin: 10px 5px;
+  width: 100%;
+}
+.signup-section  .signup-container .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+}
+.signup-section  .signup-container .input-container .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+}
+
+.signup-container .form-group .error {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 4px;
+  text-align: start;
+}
+
+.signup-container .success {
+  color: green;
+   text-align: start;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.signup-section  .signup-container form .submit-btn {
+  width: 50%;
+  padding: 10px;
+    background-color: #14b8a6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.signup-container form button:hover {
+  background: #0056b3;
+}
+.astrix{
+  color: #007bff;
+}
+
+
+@keyframes slide {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: 2000px bottom; /* adjust as needed for speed/distance */
+  }
+}
+
+.copyright{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(36, 33, 33);
+    color: white;
+    padding: 20px;
+}
+.map-wrapper {
+  text-align: center;
+  padding: 20px;
+}
+
+.map-image {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.location-marker {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #555;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip {
+  position: absolute;
+  transform: translate(-50%, -120%);
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: 180px;
+  text-align: left;
+  z-index: 10;
+}
+
+.tooltip p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.tooltip a {
+  display: block;
+  margin-top: 5px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.tooltip button {
+  margin-top: 5px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  float: right;
+}

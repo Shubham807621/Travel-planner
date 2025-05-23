@@ -50,7 +50,7 @@ export default function Header() {
             
                 <ul className='p-0 m-0 nav-bar'>
                     <li><Link to='/'>Home       </Link> </li>
-                    <li><Link to='/about-us'>About Us   </Link> </li>
+                    <li><Link to='/aboutus'>About Us   </Link> </li>
                     <li>
                         <Link onClick={handleClick}>Destination <ArrowDown/></Link> 
 
@@ -66,7 +66,7 @@ export default function Header() {
                         )}
                         
                     </li>
-                    <li><Link to='/contact-us'>Contact Us </Link> </li>
+                    <li><Link to='/contact'>Contact Us </Link> </li>
                     <li>
                         <Link onClick={handleClick1}>Pages<ArrowDown/> </Link> 
                          {dropDownMenu1 && (
