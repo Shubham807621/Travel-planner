@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './addmembers.css'
 import { Link, useNavigate } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
  function AddMemberDetails() {
   const [showModal, setShowModal] = useState(false);

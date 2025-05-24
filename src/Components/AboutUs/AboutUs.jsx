@@ -107,28 +107,29 @@ const AboutUs = () => {
       >
         
         {!showVideo && (
-  <button className="play-button" onClick={() => setShowVideo(true)}>
-    ▶
-  </button>
-)}
+            <button className="play-button" onClick={() => setShowVideo(true)}>
+              ▶
+            </button>
+        )}
 
-{showVideo && (
-  <div className="iframe-container">
-    <button className="close-button" onClick={() => setShowVideo(false)}>
-      ✖
-    </button>
-    <iframe
-      width="100%"
-      height="470"
-      src={`${videoURL}?autoplay=1`}
-      title="Video"
-      allow="autoplay; encrypted-media"
-      allowFullScreen
-    />
-  </div>
-    )}
+        {showVideo && (
+          <div className="iframe-container">
+            <button className="close-button" onClick={() => setShowVideo(false)}>
+              ✖
+            </button>
+            <iframe
+              width="100%"
+              height="470"
+              src={`${videoURL}?autoplay=1`}
+              title="Video"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+          </div>
+        )}
       </div>    
     </div>
+    
     <div className="features-container">
       {features.map((feature, index) => (
         <div className="feature-item" key={index}>
