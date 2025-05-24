@@ -90,6 +90,7 @@ const AboutUs = () => {
         </div>
       </div>
     </section>
+    
     <div>
       <h2 style={{color:'rgb(41, 37, 37)',textAlign:'center',fontWeight:'bold'}}>Treker is a World Leading Online 
         Tour Booking Platform</h2>
@@ -106,7 +107,7 @@ const AboutUs = () => {
         }}
       >
         
-        {!showVideo && (
+        {/* {!showVideo && (
             <button className="play-button" onClick={() => setShowVideo(true)}>
               ▶
             </button>
@@ -126,10 +127,10 @@ const AboutUs = () => {
               allowFullScreen
             />
           </div>
-        )}
+        )} */}
       </div>    
     </div>
-    
+
     <div className="features-container">
       {features.map((feature, index) => (
         <div className="feature-item" key={index}>
