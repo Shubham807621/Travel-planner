@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './aboutUs.css';
+import './aboutus.css';
 import aboutImage from '../../Images/AboutUs/about.svg';
 import treker from '../../Images/AboutUs/trekk.jpg';
 import GroupIcon from '@mui/icons-material/Group';
@@ -90,7 +90,7 @@ const AboutUs = () => {
         </div>
       </div>
     </section>
-    
+
     <div>
       <h2 style={{color:'rgb(41, 37, 37)',textAlign:'center',fontWeight:'bold'}}>Treker is a World Leading Online 
         Tour Booking Platform</h2>
