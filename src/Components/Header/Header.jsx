@@ -93,7 +93,7 @@ export default function Header() {
                                     <li><Link to='/activepage' onClick={() => setDropDownMenu2(false)}><h6>Active Package </h6></Link></li>
                                     <li><Link to='/pendingpage' onClick={() => setDropDownMenu2(false)}><h6>Pending Package </h6></Link></li>
                                     <li><Link to='/expiredpage' onClick={() => setDropDownMenu2(false)}><h6>Expired Package </h6></Link></li>
-                                    <li>Kerala</li>
+                                    <li><Link to='/newuser' onClick={() => setDropDownMenu2(false)}><h6>Add New User </h6></Link></li>
                                 </ul>
                             </div>
                         )}

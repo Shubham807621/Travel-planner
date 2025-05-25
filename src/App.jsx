@@ -11,6 +11,7 @@ import AddMemberDetails from './Pages/AddMembers/AddMemberDetails';
 import ActivePage from './Pages/Admin_Pages/Packages/ActivePage';
 import PendingPage from './Pages/Admin_Pages/Packages/PendingPage'
 import ExpiredPage from './Pages/Admin_Pages/Packages/ExpiredPage'
+import NewUser from './Pages/Admin_Pages/Users/NewUser'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
             <Route path='/activepage' element={<ActivePage/>}/>
             <Route path='/pendingpage' element={<PendingPage/>}/>
             <Route path='/expiredpage' element={<ExpiredPage/>}/>
+            <Route path='/newuser' element={<NewUser/>}/>
         </Routes>
     
     </BrowserRouter>
