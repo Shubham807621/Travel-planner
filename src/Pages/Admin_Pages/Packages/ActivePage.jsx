@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './packagestatus.css';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
 const initialData = [
   { name: "Singapore Holiday Tour", date: "12 May", destination: "Japan", status: "Active" },
@@ -100,7 +101,7 @@ const handlePrev = () => {
           <td>{pkg.destination}</td>
           <td><span className="status-active">{pkg.status}</span></td>
           <td>
-            <button className="btn edit" onClick={() => handleEdit(actualIndex)}>✏️</button>
+            <button className="btn edit" onClick={() => handleEdit(actualIndex)}><EditOutlinedIcon/></button>
             <button className="btn delete" onClick={() => handleDelete(actualIndex)}>🗑️</button>
           </td>
          </>
