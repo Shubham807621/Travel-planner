@@ -8,6 +8,9 @@ import LoginForm from './Components/LoginPage/LoginForm'
 import AboutUs from './Components/AboutUs/AboutUs';
 import ContactUs from './Components/ContactUs/ContactUs';
 import AddMemberDetails from './Pages/AddMembers/AddMemberDetails';
+import ActivePage from './Pages/Admin_Pages/Packages/ActivePage';
+import PendingPage from './Pages/Admin_Pages/Packages/PendingPage'
+import ExpiredPage from './Pages/Admin_Pages/Packages/ExpiredPage'
 
 function App() {
 
@@ -23,6 +26,9 @@ function App() {
             <Route path='/aboutus' element={<AboutUs/>}/>
             <Route path='/contact' element={<ContactUs/>}/>
             <Route path='/addMembers' element={<AddMemberDetails/>}/>
+            <Route path='/activepage' element={<ActivePage/>}/>
+            <Route path='/pendingpage' element={<PendingPage/>}/>
+            <Route path='/expiredpage' element={<ExpiredPage/>}/>
         </Routes>
     
     </BrowserRouter>

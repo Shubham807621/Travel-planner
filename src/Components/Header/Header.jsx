@@ -22,7 +22,7 @@ export default function Header() {
         setDropDownMenu(true)
     }
        const [dropDownMenu1, setDropDownMenu1] = useState(false);
-
+        const [dropDownMenu2, setDropDownMenu2] = useState(false);
     const handleClick1 = ()=>{
         if(dropDownMenu1){
             
@@ -31,6 +31,10 @@ export default function Header() {
         else
         setDropDownMenu1(true)
     }
+
+    const handleClick2 = () => {
+    setDropDownMenu2(prev => !prev);
+}
 
 
   useEffect(() => {
@@ -76,6 +80,19 @@ export default function Header() {
                                     <li><Link to='/addMembers' onClick={() => setDropDownMenu1(false)}><h6>Add Members Details </h6></Link></li>
                                     <li>Matheran</li>
                                     <li>Goa</li>
+                                    <li>Kerala</li>
+                                </ul>
+                            </div>
+                        )}
+                    </li>
+                    <li>
+                        <Link onClick={handleClick2}>Dashboard<ArrowDown/> </Link> 
+                         {dropDownMenu2 && (
+                            <div className='dropdown-menu'>
+                                <ul className='px-2 m-0'>
+                                    <li><Link to='/activepage' onClick={() => setDropDownMenu2(false)}><h6>Active Package </h6></Link></li>
+                                    <li><Link to='/pendingpage' onClick={() => setDropDownMenu2(false)}><h6>Pending Package </h6></Link></li>
+                                    <li><Link to='/expiredpage' onClick={() => setDropDownMenu2(false)}><h6>Expired Package </h6></Link></li>
                                     <li>Kerala</li>
                                 </ul>
                             </div>
