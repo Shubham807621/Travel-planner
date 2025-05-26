@@ -37,7 +37,6 @@ function App() {
             <Route path='/destination/:name' element={<DestinationDetail/>}/>
             <Route path='/destination/:state/:city' element={<DestinationCity/>}/>
             <Route path='/addMembers' element={<AddMemberDetails/>}/>
-            {/* <Route path='/admin/dashboard' element={<AdminHeader/>}/> */}
             <Route path='/activepage' element={<ActivePage/>}/>
             <Route path='/pendingpage' element={<PendingPage/>}/>
             <Route path='/expiredpage' element={<ExpiredPage/>}/>
