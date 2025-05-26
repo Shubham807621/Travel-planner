@@ -19,12 +19,18 @@ export default function DestinationDetail() {
     name: 'Rajasthan',
     description: 'Immerse yourself in the royal heritage of Rajasthan, with its majestic forts, palaces, and vibrant culture.',
     highlights: [
-      { name: 'Jaipur City', image: JaipurCity, description: 'The Pink City, famous for its forts and palaces.', link: '/destination/1/rajasthan-cities/jaipur' },
-      { name: 'Jodhpur City', image: JodhpurCity, description: 'The Blue City, known for Mehrangarh Fort.', link: '/destination/1/rajasthan-cities/jodhpur' },
-      { name: 'Udaipur City', image: UdaipurCity, description: 'The City of Lakes, with stunning palaces.', link: '/destination/1/rajasthan-cities/udaipur' },
-      { name: 'Jaisalmer City', image: JaisalmerCity, description: 'The Golden City, famous for its desert forts.', link: '/destination/1/rajasthan-cities/jaisalmer' },
-      { name: 'Pushkar City', image: PushkarCity, description: 'A spiritual hub with sacred lakes and temples.', link: '/destination/1/rajasthan-cities/pushkar' },
+      { name: 'Jaipur ', image: JaipurCity, description: 'The Pink City, famous for its forts and palaces.', link: '/destination/1/rajasthan-cities/jaipur' },
+      { name: 'Jodhpur ', image: JodhpurCity, description: 'The Blue City, known for Mehrangarh Fort.', link: '/destination/1/rajasthan-cities/jodhpur' },
+      { name: 'Udaipur ', image: UdaipurCity, description: 'The City of Lakes, with stunning palaces.', link: '/destination/1/rajasthan-cities/udaipur' },
+      { name: 'Jaisalmer ', image: JaisalmerCity, description: 'The Golden City, famous for its desert forts.', link: '/destination/1/rajasthan-cities/jaisalmer' },
+      { name: 'Pushkar ', image: PushkarCity, description: 'A spiritual hub with sacred lakes and temples.', link: '/destination/1/rajasthan-cities/pushkar' },
     ],
+  }
+
+  const navigate = useNavigate();
+
+  const handleClick =(name,city_name)=>{
+    navigate(`/destination/${name}/${city_name}`)
   }
 
 
@@ -49,11 +55,11 @@ export default function DestinationDetail() {
 
               {destination.highlights && destination.highlights.length > 0 ? (
                 <div className="popular-cities">
-                  {destination.highlights.map((highlight, index) => (
+                  {destination.highlights.map((highlight) => (
                     <div
                       key={`${destination.id}`}
                       className="cities-card "
-                      onClick={() => handleHighlightClick(highlight)}
+                      onClick={() => handleClick(destination.name, highlight.name)}
                       style={{ cursor: highlight.link ? 'pointer' : 'default' }}
                     >
                       <img

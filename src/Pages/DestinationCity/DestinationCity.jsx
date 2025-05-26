@@ -1,17 +1,27 @@
-import React from 'react'
-import './Destination.css'
-import TrendingDestinations from '../TrendingDestinations/TrendingDestinations'
+import React, { useEffect, useState } from 'react'
+import './DestinationCity.css'
 import HomeIcon from '@mui/icons-material/Home';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
-export default function Destination() {
+
+
+export default function DestinationCity() {
+  const { state, city } = useParams();
+  const [selectedState, setSelectedState] = useState("");
+  const [selectedCity, setSelectedCity] = useState("");
+
+  useEffect(() => {
+    setSelectedState(state);
+    setSelectedCity(city);
+  }, [state, city]);
   return (
     <>
-        <div className="destination-wrapper">
-            <div className="destination-img-wrapper ">
+        <div className="destination-city-wrapper">
+
+             <div className="destination-img-wrapper ">
                 <div className="image-banner">
-                    <div className="destination-content">
-                        <h2>DESTINATIONS</h2>
+                    <div className="destination-city-content">
+                        <h2>{selectedCity}</h2>
                         <div className="bread-crumb mt-2">
                             <ul className='d-flex p-0'>
                                 <li className='arrow-icon'>
@@ -26,7 +36,8 @@ export default function Destination() {
                 </div>
             
             </div>
-                <TrendingDestinations/>
+
+            
         </div>
     
     </>
