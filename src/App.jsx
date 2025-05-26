@@ -8,7 +8,7 @@ import LoginForm from './Components/LoginPage/LoginForm'
 import AboutUs from './Components/AboutUs/AboutUs';
 import ContactUs from './Components/ContactUs/ContactUs';
 import AddMemberDetails from './Pages/AddMembers/AddMemberDetails';
-import AdminHeader from './Admin-Panel/Main_Body/AdminHeader'
+import AdminHeader from './Admin-Panel/Main-Body/AdminHeader'
 import DestinationDetail from './Pages/Destination/DestinationDetail'
 import Destination from './Pages/Destination/Destination'
 import DestinationCity from './Pages/DestinationCity/DestinationCity'
@@ -17,10 +17,6 @@ import PendingPage from './Pages/Admin-Pages/Packages/PendingPage'
 import ExpiredPage from './Pages/Admin-Pages/Packages/ExpiredPage'
 import NewUser from './Pages/Admin-Pages/Users/NewUser'
 
-import ActivePage from './Pages/Admin_Pages/Packages/ActivePage';
-import PendingPage from './Pages/Admin_Pages/Packages/PendingPage'
-import ExpiredPage from './Pages/Admin_Pages/Packages/ExpiredPage'
-import NewUser from './Pages/Admin_Pages/Users/NewUser'
 
 
 function App() {
@@ -30,6 +26,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header/>
+        <AdminHeader/>
         <Routes>
             <Route path="/" element={<HomePage/>} />
             <Route path='/sign-up' element={<SignUpForm/>}/>
@@ -40,7 +37,7 @@ function App() {
             <Route path='/destination/:name' element={<DestinationDetail/>}/>
             <Route path='/destination/:state/:city' element={<DestinationCity/>}/>
             <Route path='/addMembers' element={<AddMemberDetails/>}/>
-            <Route path='/admin/dashboard' element={<AdminHeader/>}/>
+            {/* <Route path='/admin/dashboard' element={<AdminHeader/>}/> */}
             <Route path='/activepage' element={<ActivePage/>}/>
             <Route path='/pendingpage' element={<PendingPage/>}/>
             <Route path='/expiredpage' element={<ExpiredPage/>}/>

@@ -71,7 +71,9 @@ export default function AdminHeader() {
  
 
   return (
-    <>
+    <>  
+     {!hideElement &&(
+
         <div className="admin-header-wrapper">
             <div className="container-fluid header">
                 
@@ -79,10 +81,7 @@ export default function AdminHeader() {
                     <h1 className="fw-bold"><Link to='/'>Travel Planner</Link></h1>
                 </div>
 
-                {/* <div className="search-box">
-                <input type="text" placeholder="Search for Employee..." />
-                <span><SearchIcon className="search-icon" /></span>
-                </div> */}
+        
                 <div className="user-profile">
                     <div className="notification mx-4 mt-2">
                     <StyledBadge badgeContent=" ">
@@ -129,7 +128,7 @@ export default function AdminHeader() {
                                     }}
                                 >
                                     <ExitToAppOutlinedIcon className="me-2" /> Logout
-                               </button>
+                        </button>
                             </div>
                             )}
                     </div>
@@ -165,7 +164,7 @@ export default function AdminHeader() {
                     </div>
                     {openMenu === "users" && (
                         <div className="ms-5 sub-menu open">
-                            <Link to="/admin/user" className={`submenu-item ${location.pathname === "/admin/user" ? "active" : "" }`}>
+                            <Link to="/admin/dashboard/user" className={`submenu-item ${location.pathname === "/admin/dashboard/user" ? "active" : "" }`}>
                                 <p className="py-1">User</p>
                             </Link>
                     
@@ -254,6 +253,8 @@ export default function AdminHeader() {
             </div>
             </div> 
         </div>
+
+     )}
     </>
   )
 }

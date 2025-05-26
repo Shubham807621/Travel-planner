@@ -12,10 +12,10 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     
     const location = useLocation();
-    const hideElement = ["/admin/dashboard"].includes(location.pathname);
+const hideElement = location.pathname.startsWith("/admin"); 
 
 
-       const [dropDownMenu1, setDropDownMenu1] = useState(false);
+    const [dropDownMenu1, setDropDownMenu1] = useState(false);
 
 
     const handleClick1 = ()=>{
@@ -81,7 +81,7 @@ export default function Header() {
                
             </div>
             <div className="utility-box">
-                <div className="search-box">
+                <div className="search-box ">
                     <input type="text" placeholder='search...'/>
                     <span><SearchIcon/></span>
                 </div>
