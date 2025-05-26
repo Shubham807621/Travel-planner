@@ -2,14 +2,14 @@
     text-align: center;
     margin: 0 !important;
 }
-.aboutus-section .signup-image-wrapper{
+.aboutus-section .aboutus-image-wrapper{
 
     position: relative;
     padding: 250px 0px 140px;
     margin-bottom: 10%;
 }
 
-.aboutus-section .signup-image-wrapper .image-banner{
+.aboutus-section .aboutus-image-wrapper .image-banner{
     position: absolute;
     left: 0;
     top: 0;
@@ -22,7 +22,7 @@
 }
 
 
-.aboutus-section .signup-image-wrapper .image-banner:before {
+.aboutus-section .aboutus-image-wrapper .image-banner:before {
     content: '';
     position: absolute;
     left: 0;
@@ -34,7 +34,7 @@
 }
 
 
-.aboutus-section .signup-image-wrapper .image-banner:after {
+.aboutus-section .aboutus-image-wrapper .image-banner:after {
     content: '';
     position: absolute;
     left: 0;
@@ -47,20 +47,20 @@
     animation: 80s linear 0s infinite normal none running slide;
 }
 
-.aboutus-section .signup-image-wrapper .signup-content{
+.aboutus-section .aboutus-image-wrapper .aboutus-content{
     position: absolute;
     top: 50%;
     left: 41%;
 }
 
-.aboutus-section .signup-image-wrapper .signup-content h2{
+.aboutus-section .aboutus-image-wrapper .aboutus-content h2{
     font-family:Poppins, sans-serif;
     font-size: 54px;
     font-weight: 700;
     color: white;
 }
 
-.aboutus-section .signup-image-wrapper .signup-content .bread-crumb ul li{
+.aboutus-section .aboutus-image-wrapper .aboutus-content .bread-crumb ul li{
     list-style: none;
     margin-right: 35px;
     font-size: 20px;
@@ -68,7 +68,7 @@
     position: relative;
     text-align: center;
 }
-.aboutus-section .signup-image-wrapper .signup-content .bread-crumb ul li svg{
+.aboutus-section .aboutus-image-wrapper .aboutus-content .bread-crumb ul li svg{
     width: 34px;
     height: 34px;
     line-height: 34px;
@@ -79,7 +79,7 @@
     border-radius: 50%;
 }
 
-.aboutus-section .signup-image-wrapper .signup-content .bread-crumb ul .arrow-icon:after {
+.aboutus-section .aboutus-image-wrapper .aboutus-content .bread-crumb ul .arrow-icon:after {
     content: 'arrow_right';
     position: absolute;
     right: -25px;
@@ -91,7 +91,7 @@
     font-family: 'Material Symbols Outlined';
 }
 
-.aboutus-section .signup-image-wrapper .signup-content .bread-crumb ul li a{
+.aboutus-section .aboutus-image-wrapper .aboutus-content .bread-crumb ul li a{
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -109,15 +109,16 @@
   margin-bottom: 20px;
 }
 
-.description {
-  font-size: 2.5rem;
+.aboutus-description {
+  font-size: 1.1rem;
   color: #1d1c1c;
 }
 
 .icon {
-  color: #06b6d4;
+  color: #2ea6bb;
   font-size: 1.8rem;
   margin-top: 3px;
+ width: 40px;
 }
 
 .blockquote {
@@ -192,15 +193,18 @@
   width: 250px;
   
 }
-
+.aboutstitle{
+  margin-left: 2px;
+}
 .icon-box {
   background-color: #0077b6;
   color: #fff;
   padding: 20px;
   display:inline-flex;
-  font-size: 60px;
+  font-size: 100px;
   margin-bottom: 10px;
   border-radius: 4px;
+  width: 100px;
 }
 
 .f-bottom .feature-item h4 {

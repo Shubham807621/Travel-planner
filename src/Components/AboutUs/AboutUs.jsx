@@ -21,24 +21,24 @@ const AboutUs = () => {
     {
       icon: <CurrencyRupeeIcon />,
       title: "AFFORDABLE PRICE",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      description: "Explore More, Pay Less."
     },
     {
       icon: <EditLocationIcon />,
       title: "BEST DESTINATION",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      description: "Best Vacation Ever and Blissful Beaches."
     },
     {
       icon: <ManageAccountsIcon />,
       title: "PERSONAL SERVICE",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      description: "Dedicated Support, Every Step and Your Journey, Our Priority."
     },
   ];
   return (
     <div className="aboutus-section">
-      <div className="signup-image-wrapper">
+      <div className="aboutus-image-wrapper">
           <div className="image-banner"></div>
-          <div className="signup-content">
+          <div className="aboutus-content">
             <h2>ABOUT US</h2>
             <div className="bread-crumb mt-2">
               <ul className="d-flex">
@@ -58,7 +58,7 @@ const AboutUs = () => {
           </div>
           <div className="col-md-6">
             <h1 className="heading">World Best Travel Agency</h1>
-            <p className="description">
+            <p className="aboutus-description">
               Since 2014, we’ve helped more than 500,000 people of all ages enjoy the best outdoor experience of their lives.
               Whether it’s for one day or a two-week vacation, close to home or a foreign land.
             </p>
@@ -135,7 +135,7 @@ const AboutUs = () => {
         {features.map((feature, index) => (
           <div className="feature-item" key={index}>
             <div className="icon-box">{feature.icon}</div>
-            <h4>{feature.title}</h4>
+            <h4 className='aboutstitle'>{feature.title}</h4>
             <p>{feature.description}</p>
           </div>
         ))}
