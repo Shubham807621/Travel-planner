@@ -1,0 +1,248 @@
+body {
+    /* background-image: url("src/assets/Images/tt-work-bg.jpg");  */
+     
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment:fixed ;
+    margin: 0;
+  }
+.header{
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0 0 0/ 20%);
+    background: rgba(255, 255, 255, 0.627);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+
+    
+}
+
+a{
+    text-decoration: none !important;
+    color:black !important;
+}
+
+
+.header h1 a {
+    width: 340px;
+    font-size: 30px;
+    font-family: Poppins, sans-serif;
+    position: fixed;
+    top: 15px;
+    z-index: 1000;
+    padding: 0px 13px;
+   /* background-color: white; */
+}
+
+.search-box {
+    width: 280px;
+    margin-left: 25%;
+    margin-top: 15px;
+    height: 35px;
+    background: #f5f5f5;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+}
+
+
+.search-box input {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    width: 200px;
+    
+}
+
+
+.search-icon {
+    color: rgba(0, 0, 0, 0.56);
+    cursor: pointer;
+    margin-left: 40px;
+    background: transparent;
+}
+
+.header .user-profile
+{
+    width: 300px;
+    display: flex;
+}
+
+.header .user-profile .bell-icon {
+  
+    color: black;
+    /* margin-left: 900px; */
+    font-size: 30px !important;
+    margin-top: 8px;
+}
+
+.header .user-profile .profile-dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+.header .user-profile .profile-dropdown .profile-btn {
+    background-color:transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+.header .user-profile .profile-dropdown .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+ .header .user-profile .profile-dropdown .dropdown-menu {
+    position: absolute;
+    top: 113%;
+    right: 0%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: auto;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+  }
+
+
+.header .user-profile .profile-dropdown .dropdown-menu  .user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+.header .user-profile .profile-dropdown .dropdown-menu  .user-info .user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+.header .user-profile .profile-dropdown .dropdown-menu  .dropdown-item {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+.header .user-profile .profile-dropdown .dropdown-menu  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+
+
+
+/* Sidebar */
+.admin-header-wrapper .sidebar {
+    box-shadow: 5px 5px 15px rgba(0 0 0/ 20%);
+    background: rgba(255, 255, 255, 0.627);
+    backdrop-filter: blur(12px);
+    width: 280px;
+    height: 100vh;
+    border-right: 2px solid rgba(0, 0, 0, 0.108);
+    position: relative;
+    position: fixed;
+    top: 10.1%;
+    left: 0;
+    z-index: 1000;
+}
+
+
+/* Vertical Line */
+.sidebar .sub-menu .vertical-line {
+    position: absolute;
+    left: 57px;
+    top: 141px;
+    height: 56px;
+    width: 2px;
+    background-color: #e0e0e0;
+  }
+
+  .submenu-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    padding-left: 10px;
+    transition: color 0.3s;
+  }
+  .submenu-item.active {
+    color: #2260f2 !important;
+    font-weight: bold;
+  }
+  
+  /* Orange Highlight Before Active Submenu Item */
+  .submenu-item.active::before {
+    content: ".";
+    position: absolute;
+    left: -8px;
+    width: 5px;
+    height: 20px;
+    background-color: #f26522;
+    border-radius: 5px;
+  }
+
+.sidebar h1 {
+    width: 240px;
+    font-size: 50px;
+    color: rgb(21, 94, 252);
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding: 0px 13px;
+   /* background-color: white; */
+}
+.sidebar .main-item1{
+    height: auto;
+}
+
+
+.sidebar .main-item1 .main-title{
+    font-size: 14px;
+    margin: 0;
+}
+
+.sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+.sidebar .main-item1 .sub-menu.open p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500 !important;
+    /* color: rgba(0, 0, 0, 0.429); */
+}
+.sub-menu.open {
+    max-height: 200px; /* Adjust as needed */
+    opacity: 1;
+}

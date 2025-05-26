@@ -7,6 +7,7 @@ import Banaras from '../../Images/Destinations/img2.jpeg'
 import Somnath_Mandir from '../../Images/Destinations/img1.jpeg'
 import kerala1 from '../../Images/Destinations/img4.jpeg'
 import Andaman from '../../Images/Destinations/andaman.jpeg'
+import { useNavigate } from "react-router-dom";
 
 const images = [
   { src: camels, title: "Rajasthan", tours: "15 Tours", className: "img1" },
@@ -19,6 +20,14 @@ const images = [
 ];
 
 const TrendingDestinations = () => {
+
+const navigate = useNavigate();
+
+const handleClick =(name)=>{
+console.log("hello")
+navigate(`/destination/${name}`);
+
+}
   return (
     <div className="trending-container mt-4">
       <h2 className="title">
@@ -26,7 +35,7 @@ const TrendingDestinations = () => {
       </h2>
       <div className="grid-container">
         {images.map((img, index) => (
-          <div key={index} className={`image-card ${img.className}`}>
+          <div key={index} className={`image-card ${img.className}`} onClick={() => handleClick(img.title)}>
             <img src={img.src} alt={img.title} />
             <div className="overlay">
               <span className="destination">{img.title}</span>

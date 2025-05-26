@@ -1,0 +1,66 @@
+.destination-card{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+.destination-card .destination-detail{
+    width: 100%;
+    padding-top: 4%;
+}
+
+.destination-card .destination-detail .img-wrapper{
+
+    width: 100%;
+   
+   
+}
+.destination-card .destination-detail .detail-image{
+ width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+
+.destination-card .destination-detail .popular-cities{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 80px 0;
+    margin: 25px 0;
+}
+
+.destination-card .destination-detail .popular-cities .cities-card {
+  background: #fff;
+  width: 300px;
+  /* margin:10px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.destination-card .destination-detail .popular-cities .cities-card:hover {
+  transform: translateY(-5px);
+}
+
+.destination-card .destination-detail .popular-cities .cities-card .City-image{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.destination-card .destination-detail .popular-cities .cities-card  .city-name{
+
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.destination-card .destination-detail .popular-cities .cities-card  .city-description {
+  padding: 0 15px 15px;
+  color: #666;
+  line-height: 1.5;
+}

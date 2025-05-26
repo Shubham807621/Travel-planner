@@ -5,24 +5,19 @@ import { Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/SearchOutlined';
 import Favorite from '@mui/icons-material/FavoriteBorderOutlined';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
 
     const [scrolled, setScrolled] = useState(false);
-    const [dropDownMenu, setDropDownMenu] = useState(false);
     
+    const location = useLocation();
+    const hideElement = ["/admin/dashboard"].includes(location.pathname);
 
-    const handleClick = ()=>{
-        if(dropDownMenu){
-            
-            setDropDownMenu(false)
-        }
-        else
-        setDropDownMenu(true)
-    }
+
        const [dropDownMenu1, setDropDownMenu1] = useState(false);
-        const [dropDownMenu2, setDropDownMenu2] = useState(false);
+
+
     const handleClick1 = ()=>{
         if(dropDownMenu1){
             
@@ -32,9 +27,7 @@ export default function Header() {
         setDropDownMenu1(true)
     }
 
-    const handleClick2 = () => {
-    setDropDownMenu2(prev => !prev);
-}
+
 
 
   useEffect(() => {
@@ -46,7 +39,9 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <>
+    <>  
+    {!hideElement &&(
+
         <div className={`header-wrapper ${scrolled ? "scrolled" : ""}`}>
             <div className="logo">
                 <h3>Travel Planner</h3>
@@ -57,18 +52,9 @@ export default function Header() {
                     <li><Link to='/'>Home       </Link> </li>
                     <li><Link to='/aboutus'>About Us   </Link> </li>
                     <li>
-                        <Link onClick={handleClick}>Destination <ArrowDown/></Link> 
+                        <Link to='/destination'>Destinations</Link> 
 
-                        {dropDownMenu && (
-                            <div className='dropdown-menu'>
-                                <ul className='px-2 m-0'>
-                                    <li>Mumbai</li>
-                                    <li>Matheran</li>
-                                    <li>Goa</li>
-                                    <li>Kerala</li>
-                                </ul>
-                            </div>
-                        )}
+                    
                         
                     </li>
                     <li><Link to='/contact'>Contact Us </Link> </li>
@@ -86,17 +72,8 @@ export default function Header() {
                         )}
                     </li>
                     <li>
-                        <Link onClick={handleClick2}>Dashboard<ArrowDown/> </Link> 
-                         {dropDownMenu2 && (
-                            <div className='dropdown-menu'>
-                                <ul className='px-2 m-0'>
-                                    <li><Link to='/activepage' onClick={() => setDropDownMenu2(false)}><h6>Active Package </h6></Link></li>
-                                    <li><Link to='/pendingpage' onClick={() => setDropDownMenu2(false)}><h6>Pending Package </h6></Link></li>
-                                    <li><Link to='/expiredpage' onClick={() => setDropDownMenu2(false)}><h6>Expired Package </h6></Link></li>
-                                    <li>Kerala</li>
-                                </ul>
-                            </div>
-                        )}
+                        <Link to='/admin/dashboard'>Dashboard </Link> 
+                         
                     </li>
                 </ul>
                
@@ -115,6 +92,8 @@ export default function Header() {
 
             </div>
         </div>
+
+    )}
     </>
   )
 }
