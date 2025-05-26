@@ -3,10 +3,7 @@
   font-family: Arial, sans-serif;
   
 }
-.activeform{
-    background-color: rgb(243, 247, 250);
-    width: 1040px;
-}
+
 h4 {
   color: #002244;
   margin-bottom: 5px;
@@ -14,6 +11,7 @@ h4 {
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+  
 }
 
 p {
