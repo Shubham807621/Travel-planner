@@ -15,11 +15,10 @@ export default function DestinationCity() {
     setSelectedCity(city);
   }, [state, city]);
 
-  
+
   return (
     <>
         <div className="destination-city-wrapper">
-
              <div className="destination-img-wrapper ">
                 <div className="image-banner">
                     <div className="destination-city-content">
@@ -30,7 +29,6 @@ export default function DestinationCity() {
                                     <span className='me-2'><HomeIcon/></span>
                                     <Link to='/'>Home</Link>
                                 </li>
-            
                                 <li>Destination </li>
                             </ul>
                         </div>

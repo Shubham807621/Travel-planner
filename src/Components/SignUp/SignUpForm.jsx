@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './signup.css';
 import { Link, useNavigate } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
+import { registerUser } from '../APIServices/apiservice';
 
 const SignUpForm = () => {
   const [values, setValues] = useState({
