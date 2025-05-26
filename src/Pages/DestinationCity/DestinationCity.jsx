@@ -14,6 +14,8 @@ export default function DestinationCity() {
     setSelectedState(state);
     setSelectedCity(city);
   }, [state, city]);
+
+  
   return (
     <>
         <div className="destination-city-wrapper">

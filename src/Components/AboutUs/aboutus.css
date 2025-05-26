@@ -1,15 +1,15 @@
-.signup-section {
+.aboutus-section {
     text-align: center;
     margin: 0 !important;
 }
-.signup-section .signup-image-wrapper{
+.aboutus-section .signup-image-wrapper{
 
     position: relative;
     padding: 250px 0px 140px;
     margin-bottom: 10%;
 }
 
-.signup-section .signup-image-wrapper .image-banner{
+.aboutus-section .signup-image-wrapper .image-banner{
     position: absolute;
     left: 0;
     top: 0;
@@ -22,7 +22,7 @@
 }
 
 
-.signup-section .signup-image-wrapper .image-banner:before {
+.aboutus-section .signup-image-wrapper .image-banner:before {
     content: '';
     position: absolute;
     left: 0;
@@ -34,7 +34,7 @@
 }
 
 
-.signup-section .signup-image-wrapper .image-banner:after {
+.aboutus-section .signup-image-wrapper .image-banner:after {
     content: '';
     position: absolute;
     left: 0;
@@ -47,20 +47,20 @@
     animation: 80s linear 0s infinite normal none running slide;
 }
 
-.signup-section .signup-image-wrapper .signup-content{
+.aboutus-section .signup-image-wrapper .signup-content{
     position: absolute;
     top: 50%;
     left: 41%;
 }
 
-.signup-section .signup-image-wrapper .signup-content h2{
+.aboutus-section .signup-image-wrapper .signup-content h2{
     font-family:Poppins, sans-serif;
     font-size: 54px;
     font-weight: 700;
     color: white;
 }
 
-.signup-section .signup-image-wrapper .signup-content .bread-crumb ul li{
+.aboutus-section .signup-image-wrapper .signup-content .bread-crumb ul li{
     list-style: none;
     margin-right: 35px;
     font-size: 20px;
@@ -68,7 +68,7 @@
     position: relative;
     text-align: center;
 }
-.signup-section .signup-image-wrapper .signup-content .bread-crumb ul li svg{
+.aboutus-section .signup-image-wrapper .signup-content .bread-crumb ul li svg{
     width: 34px;
     height: 34px;
     line-height: 34px;
@@ -79,7 +79,7 @@
     border-radius: 50%;
 }
 
-.signup-section .signup-image-wrapper .signup-content .bread-crumb ul .arrow-icon:after {
+.aboutus-section .signup-image-wrapper .signup-content .bread-crumb ul .arrow-icon:after {
     content: 'arrow_right';
     position: absolute;
     right: -25px;
@@ -91,7 +91,7 @@
     font-family: 'Material Symbols Outlined';
 }
 
-.signup-section .signup-image-wrapper .signup-content .bread-crumb ul li a{
+.aboutus-section .signup-image-wrapper .signup-content .bread-crumb ul li a{
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -203,11 +203,11 @@
   border-radius: 4px;
 }
 
-h4 {
+.f-bottom .feature-item h4 {
   font-size: 16px;
   font-weight: bold;
   color: #000;
-  margin: 0 0 10px;
+  /* margin: 0 0 10px; */
 }
 
 p {
