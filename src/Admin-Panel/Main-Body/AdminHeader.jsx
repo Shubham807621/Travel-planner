@@ -41,7 +41,7 @@ export default function AdminHeader() {
     const scrollTimeoutRef = useRef(null);
     const location = useLocation();
     const sidebarRef = useRef(null);
-    const hideElement = ["/", "/register", "/reset-password", "/verify", "/NewPassword"].includes(location.pathname);
+    const hideElement = location.pathname.startsWith("/admin"); 
     const userRole = localStorage.getItem("role");
 
     const empId = localStorage.getItem("empId"); // Get logged-in employee ID
@@ -72,7 +72,8 @@ export default function AdminHeader() {
 
   return (
     <>  
-     {!hideElement &&(
+     {hideElement &&(
+
 
         <div className="admin-header-wrapper">
             <div className="container-fluid header">
@@ -253,7 +254,6 @@ export default function AdminHeader() {
             </div>
             </div> 
         </div>
-
      )}
     </>
   )

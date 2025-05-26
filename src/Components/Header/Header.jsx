@@ -12,8 +12,8 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     
     const location = useLocation();
-const hideElement = location.pathname.startsWith("/admin"); 
-
+    const hideElement = location.pathname.startsWith("/admin"); 
+    const userRole = localStorage.getItem("role");
 
     const [dropDownMenu1, setDropDownMenu1] = useState(false);
 
@@ -71,12 +71,12 @@ const hideElement = location.pathname.startsWith("/admin");
                             </div>
                         )}
                     </li>
-                    <li>
+                    {userRole === 'Admin' && (
+                        <li>
+                            <Link to='/admin/dashboard'>Dashboard </Link> 
+                        </li>
 
-
-                        <Link to='/admin/dashboard'>Dashboard </Link> 
-
-                    </li>
+                    )}
                 </ul>
                
             </div>
