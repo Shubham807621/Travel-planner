@@ -45,7 +45,7 @@ export default function FilterForm() {
                                 <span>• {rooms} room</span>
                             </button>
                             {showDropdown && (
-                                <div className="dropdown-menu-member  z-10 mt-2 w-64 ">
+                                <div className="dropdown-menu-member z-10 mt-2 w-64 ">
                                     {[
                                         { label: 'Room', value: rooms, setter: setRooms },
                                         { label: 'Adults', value: adults, setter: setAdults, sub: 'Ages 18 or above' },
@@ -53,7 +53,7 @@ export default function FilterForm() {
                                         <div key={label} className="d-flex justify-content-between align-items-center py-2">
                                             <div>
                                                 <div className="text-label fw-bold">{label}</div>
-                                                {sub && <div className="text-sm  sub-text">{sub}</div>}
+                                                {sub && <div className="text-sm sub-text">{sub}</div>}
                                             </div>
                                             <div className="d-flex align-items-center gap-2">
                                                 <button
