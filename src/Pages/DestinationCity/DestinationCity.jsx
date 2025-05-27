@@ -77,6 +77,7 @@ export default function DestinationCity() {
                     {attraction.map((attraction) => (
                     <div key={attraction.id} className="destination-card">
                         <div className="image-wrapper">
+                          <h1>Hello </h1>
                             <img
                                 src={attraction.image}
                                 alt={attraction.name}
