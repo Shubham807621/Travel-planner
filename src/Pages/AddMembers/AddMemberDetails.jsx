@@ -132,6 +132,7 @@ import HomeIcon from '@mui/icons-material/Home';
                         type="file"
                         className="form-control"
                         onChange={handleChange1}
+                        required='required'
                         />
                         <h6>Upload Adharcard/Driving License/Pan card</h6>
                     </div>
@@ -158,23 +159,34 @@ import HomeIcon from '@mui/icons-material/Home';
         {/* Show Submitted List and Add More Button */}
         {!showModal && submittedMembers.length > 0 && (
           <div className="p-4 border rounded shadow-sm bg-light mt-3">
-            <h4>Submitted Members:</h4>
-            <ul className="list-group list-group-flush mt-3">
+        <h4 className='datatitle'>Submitted Members:</h4>
+        <table className="table mt-3">
+          <thead className="thead-dark">
+            <tr>
+              <th>Sr. no</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Document</th>
+            </tr>
+          </thead>
+          <tbody>
             {submittedMembers.map((member, index) => (
-                <li key={index} className="list-group-item">
-                <div className="row">
-                    <div className="col-md-3"><strong>{index + 1}. Name:</strong> {member.fname} {member.lname}</div>
-                    <div className="col-md-3"><strong>Email:</strong> {member.email}</div>
-                    <div className="col-md-3"><strong>Phone:</strong> {member.phone}</div>
-                    <div className="col-md-3"><strong>Document:</strong> {member.file ? member.file.name : 'No file'}</div>
-                </div>
-                </li>
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{member.fname} {member.lname}</td>
+                <td>{member.email}</td>
+                <td>{member.phone}</td>
+                <td>{member.file ? member.file.name : 'No file'}</td>
+              </tr>
             ))}
-            </ul>
-            <button className="btn btn-primary mt-4" onClick={() => setShowModal(true)}>
-              Add More Members
-            </button>
-          </div>
+          </tbody>
+        </table>
+        <button className="btn btn-primary mt-4" onClick={() => setShowModal(true)}>
+          Add More Members
+        </button>
+      </div>
+
         )}
       </div>
 </div>

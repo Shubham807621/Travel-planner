@@ -16,6 +16,7 @@ import ActivePage from './Pages/Admin-Pages/Packages/ActivePage';
 import PendingPage from './Pages/Admin-Pages/Packages/PendingPage'
 import ExpiredPage from './Pages/Admin-Pages/Packages/ExpiredPage'
 import NewUser from './Pages/Admin-Pages/Users/NewUser'
+import BookingEnquiry from './Pages/Admin-Pages/Booking-Enquiry/BookingEnquiry'
 
 
 
@@ -41,6 +42,7 @@ function App() {
             <Route path='/pendingpage' element={<PendingPage/>}/>
             <Route path='/expiredpage' element={<ExpiredPage/>}/>
             <Route path='/newuser' element={<NewUser/>}/>
+            <Route path='/booking' element={<BookingEnquiry/>}/>
         </Routes>
     
     </BrowserRouter>
