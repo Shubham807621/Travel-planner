@@ -13,7 +13,7 @@ import './HotelDetails.css';
 
 export default function HotelDetails() {
     return (
-        <div>
+        <div className='hotel-details-wrapper'>
             <div className="TopContent">
                 <div className="MainContainer">
                     <Booking />

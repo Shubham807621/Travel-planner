@@ -1,14 +1,21 @@
 // HotelGallery.jsx
 import "./HotelGallery.css";
+import HotelFront from '../../../Images/HotelDetails/HotelGallery/frontview.jpeg'
+import HotelRoom from '../../../Images/HotelDetails/HotelGallery/hotelroom.jpeg'
+import DiningArea from '../../../Images/HotelDetails/HotelGallery/dining.jpeg'
+import Lobby from '../../../Images/HotelDetails/HotelGallery/Lobby.jpeg'
+import PoolNightView from '../../../Images/HotelDetails/HotelGallery/poolviewnight.jpeg'
+import Restaurant from '../../../Images/HotelDetails/HotelGallery/Resturant.jpeg'
+import DayPoolView from '../../../Images/HotelDetails/HotelGallery/poolviewday.jpeg'
 
 const photos = [
-    { src: "../src/assets/HotelGallery/frontview.jpeg", alt: "Hotel Front" },
-    { src: "../src/assets/HotelGallery/hotelroom.jpeg", alt: "Hotel Room" },
-    { src: "../src/assets/HotelGallery/dining.jpeg", alt: "Dining Area" },
-    { src: "../src/assets/HotelGallery/Lobby.jpeg", alt: "Lobby" },
-    { src: "../src/assets/HotelGallery/poolviewnight.jpeg", alt: "Pool Night View" },
-    { src: "../src/assets/HotelGallery/Resturant.jpeg", alt: "Restaurant" },
-    { src: "../src/assets/HotelGallery/poolviewday.jpeg", alt: "Day Pool View" },
+    { src: HotelFront, alt: "Hotel Front" },
+    { src: HotelRoom, alt: "Hotel Room" },
+    { src: DiningArea, alt: "Dining Area" },
+    { src: Lobby, alt: "Lobby" },
+    { src: PoolNightView, alt: "Pool Night View" },
+    { src: Restaurant, alt: "Restaurant" },
+    { src: DayPoolView, alt: "Day Pool View" },
 ];
 
 export default function HotelGallery() {

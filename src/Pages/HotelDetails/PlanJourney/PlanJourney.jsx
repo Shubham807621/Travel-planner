@@ -1,7 +1,7 @@
 import React from 'react';
 import './PlanJourney.css';
-import airportTransfer from './assets/cabs/cab2.jpeg';
-import rentCar from './assets/cabs/Cab1.jpeg';
+import airportTransfer from '../../../Images/HotelDetails/cabs/cab2.jpeg';
+import rentCar from '../../../Images/HotelDetails/cabs/Cab1.jpeg';
 
 const PlanJourney = () => {
     return (

@@ -1,4 +1,6 @@
 import './RoomOptions.css';
+import room1 from '../../../Images/HotelDetails/RoomOptions/room1.jpeg'
+import room2 from '../../../Images/HotelDetails/RoomOptions/room2.jpeg'
 
 const rooms = [
     {
@@ -6,14 +8,14 @@ const rooms = [
         size: '42 m²/452 ft²',
         view: 'City view',
         bed: '1 king bed',
-        image: '../src/assets/RoomOptions/room2.jpeg'
+        image: room1
     },
     {
         title: 'Deluxe Room',
         size: '25 m²/269 ft²',
         view: 'City view',
         bed: '1 king bed',
-        image: '../src/assets/RoomOptions/room2.jpeg'
+        image: room2
     }
 ];
 
