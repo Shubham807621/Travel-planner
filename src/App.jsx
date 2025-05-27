@@ -7,7 +7,7 @@ import SignUpForm from './Components/SignUp/SignUpForm'
 import LoginForm from './Components/LoginPage/LoginForm'
 import AboutUs from './Components/AboutUs/AboutUs';
 import ContactUs from './Components/ContactUs/ContactUs';
-import AddMemberDetails from './Pages/AddMembers/AddMemberDetails';
+import AddMemberDetails from './Admin-Panel/AddMembers/AddMemberDetails';
 import AdminHeader from './Admin-Panel/Main-Body/AdminHeader'
 import DestinationDetail from './Pages/Destination/DestinationDetail'
 import Destination from './Pages/Destination/Destination'
@@ -15,7 +15,8 @@ import DestinationCity from './Pages/DestinationCity/DestinationCity'
 import ActivePage from './Pages/Admin-Pages/Packages/ActivePage';
 import PendingPage from './Pages/Admin-Pages/Packages/PendingPage'
 import ExpiredPage from './Pages/Admin-Pages/Packages/ExpiredPage'
-import NewUser from './Pages/Admin-Pages/Users/NewUser'
+import NewUser from './Admin-Panel/Users/NewUser'
+import BookingEnquiry from './Admin-Panel/Booking-Enquiry/BookingEnquiry'
 
 
 
@@ -41,6 +42,7 @@ function App() {
             <Route path='/pendingpage' element={<PendingPage/>}/>
             <Route path='/expiredpage' element={<ExpiredPage/>}/>
             <Route path='/newuser' element={<NewUser/>}/>
+            <Route path='/booking' element={<BookingEnquiry/>}/>
         </Routes>
     
     </BrowserRouter>
