@@ -1,0 +1,139 @@
+/* HotelGallery.css */
+.hotel-section {
+    padding: 2.5rem 1rem;
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1280px;
+    margin: auto;
+}
+
+.hotel-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1e40af;
+    margin-bottom: 2rem;
+}
+
+@media(min-width: 768px) {
+    .hotel-heading {
+        font-size: 2.5rem;
+    }
+}
+
+.hotel-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media(min-width: 640px) {
+    .hotel-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 768px) {
+    .hotel-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.hotel-main-image {
+    grid-column: span 2;
+    grid-row: span 2;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease -in -out;
+}
+
+.hotel-main-img:hover {
+    transform: scale(1.05);
+}
+
+.hotel-tag {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    backdrop-filter: blur(4px);
+}
+
+.hotel-thumb-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease -in -out;
+}
+
+.hotel-thumb-wrapper:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-thumb-img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    transition: transform 0.3s ease -in -out;
+}
+
+.hotel-thumb-img:hover {
+    transform: scale(1.05);
+}
+
+.hotel-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease -in -out;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.75rem;
+}
+
+.hotel-thumb-wrapper:hover.hotel-thumb-overlay {
+    opacity: 1;
+}
+
+.hotel-thumb-text {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.hotel-button-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.hotel-button {
+    background: linear-gradient(to right, #2563eb, #1e3a8a);
+    color: white;
+    font-size: 1.125rem;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease -in -out;
+    border: none;
+    cursor: pointer;
+}
+
+.hotel-button:hover {
+    background: linear-gradient(to right, #1d4ed8, #1e3a8a);
+}

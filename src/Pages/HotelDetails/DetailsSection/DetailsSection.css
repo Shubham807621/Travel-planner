@@ -1,0 +1,128 @@
+/* Wrapper for the whole content */
+.details-wrapper {
+    display: flex;
+    gap: 30px;
+    padding: 40px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Tabs container */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Tab buttons */
+.tabs button {
+    background: none;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+    color: #fd6c63;
+    background-color: #fef2f1;
+    border-radius: 4px 4px 0 0;
+}
+
+.tabs button.active {
+    border-bottom: 3px solid #fd6c63;
+    color: #fd6c63;
+}
+
+/* Left content section */
+.tab-content {
+    flex: 2;
+    padding: 25px;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Paragraphs inside content */
+.tab-content p {
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Feature list */
+.feature-list {
+    list-style: disc;
+    padding-left: 25px;
+    color: #333;
+    font-size: 14.5px;
+    line-height: 1.5;
+}
+
+/* Right: Travel tips section */
+.travel-tips-box {
+    flex: 1;
+    background: linear-gradient(to bottom right, #fef2f1, #e3f2fd);
+    padding: 30px 20px;
+    border-radius: 10px;
+    border-top: 3px solid #fd6c63;
+    border-bottom: 3px solid #039be5;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.travel-tips-box h5 {
+    font-size: 13px;
+    color: #fd6c63;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.travel-tips-box .line {
+    width: 30px;
+    height: 1.5px;
+    background: #fd6c63;
+    margin-right: 10px;
+}
+
+.travel-tips-box h3 {
+    font-size: 20px;
+    margin: 18px 0;
+    color: #0d1b2a;
+    line-height: 1.4;
+}
+
+.travel-tips-box p {
+    font-size: 14.5px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.quote-btn {
+    background: #fd6c63;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.quote-btn:hover {
+    background: #e2544f;
+}

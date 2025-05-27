@@ -1,0 +1,105 @@
+.room-options-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+
+.room-options-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Two cards in a row */
+.room-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Make each card horizontal: image left, info right */
+.room-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease;
+    height: 220px;
+    /* fixed height for visual consistency */
+}
+
+.room-card:hover {
+    transform: scale(1.01);
+}
+
+.room-image {
+    width: 60%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.room-info {
+    width: 40%;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.room-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.room-info p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #444;
+}
+
+.price-button {
+    margin-top: 10px;
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.price-button:hover {
+    background-color: #0d5edb;
+}
+
+/* Mobile responsive: stack cards vertically */
+@media screen and (max-width: 768px) {
+    .room-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .room-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .room-image,
+    .room-info {
+        width: 100%;
+    }
+
+    .room-image {
+        height: 200px;
+    }
+}

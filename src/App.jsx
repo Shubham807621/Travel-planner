@@ -26,28 +26,28 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header/>
-        <AdminHeader/>
+        <Header />
+        <AdminHeader />
         <Routes>
-            <Route path="/" element={<HomePage/>} />
-            <Route path='/sign-up' element={<SignUpForm/>}/>
-            <Route path='/login' element={<LoginForm/>}/>
-            <Route path='/aboutus' element={<AboutUs/>}/>
-            <Route path='/contact' element={<ContactUs/>}/>
-            <Route path='/destination' element={<Destination/>}/>
-            <Route path='/destination/:name' element={<DestinationDetail/>}/>
-            <Route path='/destination/:state/:city' element={<DestinationCity/>}/>
-            <Route path='/addMembers' element={<AddMemberDetails/>}/>
-            <Route path='/activepage' element={<ActivePage/>}/>
-            <Route path='/pendingpage' element={<PendingPage/>}/>
-            <Route path='/expiredpage' element={<ExpiredPage/>}/>
-            <Route path='/newuser' element={<NewUser/>}/>
-            <Route path='/booking' element={<BookingEnquiry/>}/>
+          <Route path="/" element={<HomePage />} />
+          <Route path='/sign-up' element={<SignUpForm />} />
+          <Route path='/login' element={<LoginForm />} />
+          <Route path='/aboutus' element={<AboutUs />} />
+          <Route path='/contact' element={<ContactUs />} />
+          <Route path='/destination' element={<Destination />} />
+          <Route path='/destination/:name' element={<DestinationDetail />} />
+          <Route path='/destination/:state/:city' element={<DestinationCity />} />
+          <Route path='/addMembers' element={<AddMemberDetails />} />
+          <Route path='/activepage' element={<ActivePage />} />
+          <Route path='/pendingpage' element={<PendingPage />} />
+          <Route path='/expiredpage' element={<ExpiredPage />} />
+          <Route path='/newuser' element={<NewUser />} />
+          <Route path='/booking' element={<BookingEnquiry />} />
         </Routes>
-    
-    </BrowserRouter>
 
-  
+      </BrowserRouter>
+
+
     </>
   )
 }

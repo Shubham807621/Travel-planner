@@ -1,0 +1,60 @@
+/* Base styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Wraps everything */
+.AppWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 40px;
+}
+
+/* Top section with two side-by-side containers */
+.TopContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Main content */
+.MainContainer {
+    flex: 3;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Sticky right-side container */
+.SideContainer {
+    flex: 1;
+    position: sticky;
+    top: 30px;
+    align-self: flex-start;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    height: fit-content;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* RoomOptions styling already in its file, just add spacing */
+.RoomOptions {
+    margin-top: 30px;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+    .TopContent {
+        flex-direction: column;
+    }
+
+    .SideContainer {
+        position: static;
+    }
+}

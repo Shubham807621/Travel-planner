@@ -1,0 +1,82 @@
+.booking-card {
+    background: #fff;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.price-banner {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+.price-banner h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.price-banner span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.rating {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.booking-form {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form h3 {
+    background-color: #1a9cf7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="date"] {
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.add-options p {
+    margin: 10px 0 5px;
+    font-weight: 500;
+}
+
+.add-options label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.book-button {
+    margin-top: 16px;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.book-button:hover {
+    background-color: #e55b5b;
+}
