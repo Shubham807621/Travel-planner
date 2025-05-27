@@ -4,7 +4,7 @@ import camels from '../../Images/Destinations/camels.jpeg'
 import mumbai from '../../Images/Destinations/mum.jpg'
 import up from '../../Images/Destinations/upp3.jpg'
 import tamilnadu from '../../Images/Destinations/tamilnadu.jpg'
-import Somnath_Mandir from '../../Images/Destinations/img1.jpeg'
+
 import kerala from '../../Images/Destinations/img4.jpeg'
 import ladakh from '../../Images/Destinations/ladakh.jpg'
 import { useNavigate } from "react-router-dom";
