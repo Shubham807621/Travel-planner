@@ -1,22 +1,22 @@
 import React from "react";
 import "./TrendingDestinations.css";
 import camels from '../../Images/Destinations/camels.jpeg'
-import water from '../../Images/Destinations/water1.jpeg'
-import Kerala from '../../Images/Destinations/img3.jpeg'
-import Banaras from '../../Images/Destinations/img2.jpeg'
+import mumbai from '../../Images/Destinations/mum.jpg'
+import up from '../../Images/Destinations/up.jpg'
+import tamilnadu from '../../Images/Destinations/tamilnadu.jpg'
 import Somnath_Mandir from '../../Images/Destinations/img1.jpeg'
-import kerala1 from '../../Images/Destinations/img4.jpeg'
-import Andaman from '../../Images/Destinations/andaman.jpeg'
+import kerala from '../../Images/Destinations/img4.jpeg'
+import ladakh from '../../Images/Destinations/ladakh.jpg'
 import { useNavigate } from "react-router-dom";
 
 const images = [
   { src: camels, title: "Rajasthan", tours: "15 Tours", className: "img1" },
-  { src: water, title: "M aharashtra", tours: "8 Tours", className: "img2" },
-  { src: Kerala, title: "Kerala", tours: "12 Tours", className: "img3" },
-  { src: Banaras, title: "Banaras", tours: "5 Tours", className: "img4" },
-  { src: Somnath_Mandir, title: "Somnath Mandir", tours: "10 Tours", className: "img5" },
-  { src: kerala1, title: "Kerala  ", tours: "7 Tours", className: "img6" },
-  { src: Andaman, title: "Andaman", tours: "9 Tours", className: "img7" }
+  { src: mumbai, title: "Maharashtra", tours: "8 Tours", className: "img2" },
+  
+  { src: tamilnadu, title: "Tamil Nadu", tours: "5 Tours", className: "img3" },
+  { src: up, title: "Uttar Pradesh", tours: "12 Tours", className: "img4" },
+  { src: kerala, title: "Kerala  ", tours: "7 Tours", className: "img5" },
+  { src: ladakh, title: "Ladakh", tours: "9 Tours", className: "img6" }
 ];
 
 const TrendingDestinations = () => {
