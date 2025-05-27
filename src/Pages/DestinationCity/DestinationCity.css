@@ -105,6 +105,7 @@
     align-items: center;
     height: 400px;
     padding-top: 15px;
+    gap: 10px;
 }
 
 .destination-city-wrapper .destination-city-info .destination-box .destination-card {
