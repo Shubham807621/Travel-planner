@@ -1,5 +1,5 @@
 import React from 'react'
-import BookingPage from '../HotelDetails/Booking/Booking';
+import Booking from '../HotelDetails/Booking/Booking';
 import HotelGallery from '../HotelDetails/HotelGallery/HotelGallery';
 import DetailsSection from '../HotelDetails/DetailsSection/DetailsSection';
 import LocationCard from '../HotelDetails/LocationCard/LocationCard';

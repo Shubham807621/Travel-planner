@@ -17,6 +17,7 @@ import PendingPage from './Pages/Admin-Pages/Packages/PendingPage'
 import ExpiredPage from './Pages/Admin-Pages/Packages/ExpiredPage'
 import NewUser from './Admin-Panel/Users/NewUser'
 import BookingEnquiry from './Admin-Panel/Booking-Enquiry/BookingEnquiry'
+import HotelDetails from './Pages/HotelDetails/HotelDetails'
 
 
 
@@ -43,6 +44,7 @@ function App() {
           <Route path='/expiredpage' element={<ExpiredPage />} />
           <Route path='/newuser' element={<NewUser />} />
           <Route path='/booking' element={<BookingEnquiry />} />
+          <Route path='/hotel-details' element={<HotelDetails/>}/>
         </Routes>
 
       </BrowserRouter>
