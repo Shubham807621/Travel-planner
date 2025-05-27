@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 const images = [
   { src: camels, title: "Rajasthan", tours: "15 Tours", className: "img1" },
-  { src: water, title: "Matheran", tours: "8 Tours", className: "img2" },
+  { src: water, title: "M aharashtra", tours: "8 Tours", className: "img2" },
   { src: Kerala, title: "Kerala", tours: "12 Tours", className: "img3" },
   { src: Banaras, title: "Banaras", tours: "5 Tours", className: "img4" },
   { src: Somnath_Mandir, title: "Somnath Mandir", tours: "10 Tours", className: "img5" },
