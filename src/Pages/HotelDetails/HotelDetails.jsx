@@ -1,5 +1,5 @@
 import React from 'react'
-import Booking from '../HotelDetails/Booking/Booking';
+import HotelName from './HotelName/HotelName';
 import HotelGallery from '../HotelDetails/HotelGallery/HotelGallery';
 import DetailsSection from '../HotelDetails/DetailsSection/DetailsSection';
 import LocationCard from '../HotelDetails/LocationCard/LocationCard';
@@ -16,7 +16,7 @@ export default function HotelDetails() {
         <div className='hotel-details-wrapper'>
             <div className="TopContent">
                 <div className="MainContainer">
-                    <Booking />
+                    <HotelName />
                     <HotelGallery />
                     <DetailsSection />
                     <HotelFeatures />
