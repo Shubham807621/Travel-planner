@@ -19,7 +19,7 @@ export default function DestinationCity() {
   }, [state, city]);
 
 
-  const cityDescription = 'Discover the Blue City of Jodhpur, famous for its majestic forts, palaces, and vibrant markets.';
+  const cityDescription = 'The Pink City, famous for its forts and palaces.';
 
   const [attraction , setAttraction] = useState( [
     {

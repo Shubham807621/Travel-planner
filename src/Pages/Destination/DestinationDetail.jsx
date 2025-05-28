@@ -23,6 +23,7 @@ export default function DestinationDetail() {
       { name: 'Jodhpur ', image: JodhpurCity, description: 'The Blue City, known for Mehrangarh Fort.', link: '/destination/1/rajasthan-cities/jodhpur' },
       { name: 'Udaipur ', image: UdaipurCity, description: 'The City of Lakes, with stunning palaces.', link: '/destination/1/rajasthan-cities/udaipur' },
       { name: 'Jaisalmer ', image: JaisalmerCity, description: 'The Golden City, famous for its desert forts.', link: '/destination/1/rajasthan-cities/jaisalmer' },
+      { name: 'Pushkar ', image: PushkarCity, description: 'A spiritual hub with sacred lakes and temples.', link: '/destination/1/rajasthan-cities/pushkar'},
       
     ],
   }
