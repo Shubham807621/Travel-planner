@@ -218,3 +218,13 @@ p {
   font-size: 14px;
   color: #333;
 }
+@media only screen and (max-width: 900px)
+{
+  .aboutus-section {
+    text-align: center;
+    margin: 0 !important;
+
+}
+
+
+}
