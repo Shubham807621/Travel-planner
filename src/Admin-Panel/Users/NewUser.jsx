@@ -7,12 +7,10 @@ const NewUser = () => {
     lastName: "",
     mobile: "",
     phone: "",
-    city: "",
-    country: "",
     password: "",
     confirmPassword: "",
     email: "",
-    confirmEmail: "",
+  
   });
 
   const [errors, setErrors] = useState({});
@@ -33,11 +31,6 @@ const NewUser = () => {
     // Email format
     if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Invalid email format";
-    }
-
-    // Confirm email
-    if (formData.email !== formData.confirmEmail) {
-      newErrors.confirmEmail = "Emails do not match";
     }
 
     // Password match
@@ -96,37 +89,16 @@ const NewUser = () => {
               
             </tr>
             <tr>
-                <td><label>Mobile</label></td>
-                <td><label>Phone</label></td>
-              
-              
+                <td><label>Mobile</label></td>        
             </tr>
             <tr>
-                <td><input type="text" name="mobile" value={formData.mobile}
+                <td>
+                  <input type="text" name="mobile" value={formData.mobile}
                   onChange={handleChange}/>
                   {errors.mobile && <span className="error">{errors.mobile}</span>}
-                  </td>
-              <td><input type="text" name="phone" value={formData.phone}
-                  onChange={handleChange}/>
-                  {errors.phone && <span className="error">{errors.phone}</span>}
-                  </td>
+                </td>
               
               
-            </tr>
-            <tr>
-                <td><label>City</label></td>
-                <td><label>Country</label></td>
-              
-            </tr>
-            <tr>
-            <td><input type="text" name="city" 
-            value={formData.city}
-                onChange={handleChange}
-            />{errors.city && <span className="error">{errors.city}</span>}</td>
-              <td><input type="text" name="country" 
-              value={formData.country}
-                  onChange={handleChange}
-              />{errors.country && <span className="error">{errors.country}</span>}</td>
             </tr>
             <tr>
                 <td><label>Password</label></td>
@@ -145,18 +117,13 @@ const NewUser = () => {
             </tr>
             <tr>
             <td><label>Email</label></td>
-            <td><label>Confirm Email</label></td>
+
             </tr>
             <tr>
-            <td><input type="email" name="email" value={formData.email}
+            <td>
+              <input type="email" name="email" value={formData.email}
                   onChange={handleChange}/>{errors.email && <span className="error">{errors.email}</span>}
-                  </td>
-              <td><input type="email" name="confirmEmail" value={formData.confirmEmail}
-                  onChange={handleChange}/>
-                  {errors.confirmEmail && (
-                  <span className="error">{errors.confirmEmail}</span>
-                )}
-                  </td>
+            </td>
             </tr>
             <tr className="form-actions">
                <button type="submit">Submit</button> 

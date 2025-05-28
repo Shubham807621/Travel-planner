@@ -44,7 +44,7 @@ function App() {
           <Route path='/expiredpage' element={<ExpiredPage />} />
           <Route path='/newuser' element={<NewUser />} />
           <Route path='/booking' element={<BookingEnquiry />} />
-          <Route path='/hotel-details' element={<HotelDetails/>}/>
+          <Route path='/destination/:state/:city/hotel-details/:id' element={<HotelDetails/>}/>
         </Routes>
 
       </BrowserRouter>
