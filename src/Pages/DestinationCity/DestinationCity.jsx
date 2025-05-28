@@ -6,6 +6,7 @@ import HawaMahal from '../../Images/Jaipur/Hawa Mahal.jpg';
 import CityPalaceJaipur from '../../Images/Jaipur/City-Palace1.jpg';
 import NahargarhFort from '../../Images/Jaipur/Nahargarh-fort.jpg';
 import AmberFort from '../../Images/Jaipur/ambur-fort.jpg';
+import HotelCard from './HotelCard';
 
 
 export default function DestinationCity() {
@@ -51,7 +52,7 @@ export default function DestinationCity() {
   return (
     <>
         <div className="destination-city-wrapper">
-             <div className="destination-img-wrapper ">
+            <div className="destination-img-wrapper ">
                 <div className="image-banner">
                     <div className="destination-city-content">
                         <h2>{selectedCity}</h2>
@@ -94,7 +95,8 @@ export default function DestinationCity() {
             
                 </div>    
             </div>    
-            
+
+            <HotelCard selectedCity={selectedCity} selectedState={selectedState}/>  
         </div>
     
     </>

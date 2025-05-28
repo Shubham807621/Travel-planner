@@ -1,7 +1,7 @@
 import React from 'react';
-import './Booking.css';
+import './HotelName.css';
 
-const Booking = () => {
+const HotelName = () => {
     return (
         <div className="booking-container">
             <div className="left-section">
@@ -19,4 +19,4 @@ const Booking = () => {
     );
 };
 
-export default Booking;
+export default HotelName;
