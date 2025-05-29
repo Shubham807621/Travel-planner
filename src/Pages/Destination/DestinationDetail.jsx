@@ -1,39 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './DestinationDetails.css'
-import { useNavigate } from 'react-router-dom';
-
-import Rajasthan from '../../Images/Destinations/Rajasthan.jpg';
-import JaipurCity from '../../Images/Destination1/JaipurCity.jpg';
-import JodhpurCity from '../../Images/Destination1/Jodhpur City.jpg';
-import UdaipurCity from '../../Images/Destination1/Udaipur city.jpg'
-import JaisalmerCity from '../../Images/Destination1/Jaisalmer city.jpg'
-import PushkarCity from '../../Images/Destination1/Pushkar-City.jpg'
+import { useNavigate, useParams } from 'react-router-dom';
+import {  getCitiesByStateName, getStateByName } from '../../Components/APIServices/apiservice';
 
 
 export default function DestinationDetail() {
-
-    const destination = 
-  {
-    id: 1,
-    image: Rajasthan,
-    name: 'Rajasthan',
-    description: 'Immerse yourself in the royal heritage of Rajasthan, with its majestic forts, palaces, and vibrant culture.',
-    highlights: [
-      { name: 'Jaipur ', image: JaipurCity, description: 'The Pink City, famous for its forts and palaces.', link: '/destination/1/rajasthan-cities/jaipur' },
-      { name: 'Jodhpur ', image: JodhpurCity, description: 'The Blue City, known for Mehrangarh Fort.', link: '/destination/1/rajasthan-cities/jodhpur' },
-      { name: 'Udaipur ', image: UdaipurCity, description: 'The City of Lakes, with stunning palaces.', link: '/destination/1/rajasthan-cities/udaipur' },
-      { name: 'Jaisalmer ', image: JaisalmerCity, description: 'The Golden City, famous for its desert forts.', link: '/destination/1/rajasthan-cities/jaisalmer' },
-      
-      
-    ],
-  }
+  const { state } = useParams();
+  const [states, setStates] =useState();
+  const [cities, setCities] = useState();
 
   const navigate = useNavigate();
 
-  const handleClick =(name,city_name)=>{
-    navigate(`/destination/${name}/${city_name}`)
+  const handleClick =(state,city)=>{
+    navigate(`/destination/${state}/${city}`)
   }
 
+  useEffect(()=>{
+    const fetchStateByName = async ()=>{
+  
+      try {
+        const response = await getStateByName(state);
+        setStates(response);
+        
+      } catch (error) {
+          console.error("Error fetching documents:", error);
+        }
+  
+    };
+    fetchStateByName();
+  
+  },[state])
+
+
+  useEffect(() => {
+    const fetchCitiesByStateName = async () => {
+      try {
+        const response = await getCitiesByStateName(state);
+        setCities(response);
+        console.log(response);
+      } catch (error) {
+        console.error("Error fetching cities:", error);
+      }
+    };
+    fetchCitiesByStateName();
+  }, [state]); // ✅ depend on `state`, not `cities`
+  
+    if (!states) {
+    return <div>Loading...</div>;
+  }
 
 
   return (
@@ -43,39 +57,35 @@ export default function DestinationDetail() {
       
             <div className="img-wrapper py-5">
               <img
-                src={destination.image || fallbackImage}
-                alt={destination.name || 'Destination'}
-                className={`detail-image`}
+                src={states.imgUrl}
+                alt={states.name}
+                className="detail-image"
               />
             </div>
-              <h1 className="detail-heading">{destination.name}</h1>
-              <p className="detail-description">{destination.description}</p>
+              <h1 className="detail-heading">{states.name}</h1>
+              <p className="detail-description">{states.description}</p>
               
               <h2 className="detail-subheading">Popular Cities </h2>
 
-
-              {destination.highlights && destination.highlights.length > 0 ? (
                 <div className="popular-cities">
-                  {destination.highlights.map((highlight) => (
+                  {cities.map((city) => (
                     <div
-                      key={`${destination.id}`}
+                      key={`${city.id}`}
                       className="cities-card "
-                      onClick={() => handleClick(destination.name, highlight.name)}
-                      style={{ cursor: highlight.link ? 'pointer' : 'default' }}
+                      onClick={() => handleClick(state,city.name)}
+                      style={{ cursor:  'pointer'  }}
                     >
                       <img
-                        src={highlight.image}
-                        alt={highlight.name || 'Highlight'}
+                        src={city.imgUrl}
+                        alt={city.name || 'Highlight'}
                         className={`City-image `}
                       />
-                      <h3 className="city-name">{highlight.name}</h3>
-                      <p className="city-description">{highlight.description}</p>
+                      <h3 className="city-name">{city.name}</h3>
+                      <p className="city-description">{city.description}</p>
                     </div>
                   ))}
                 </div>
-              ) : (
-                <p>No highlights available for this destination.</p>
-              )}
+            
           </section>
         </div>
     

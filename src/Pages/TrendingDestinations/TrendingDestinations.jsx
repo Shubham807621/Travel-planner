@@ -1,45 +1,61 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./TrendingDestinations.css";
-import camels from '../../Images/Destinations/camels.jpeg'
-import mumbai from '../../Images/Destinations/mum.jpg'
-import up from '../../Images/Destinations/upp3.jpg'
-import tamilnadu from '../../Images/Destinations/tamilnadu.jpg'
 
-import kerala from '../../Images/Destinations/img4.jpeg'
-import ladakh from '../../Images/Destinations/ladakh.jpg'
 import { useNavigate } from "react-router-dom";
-
-const images = [
-  { src: camels, title: "Rajasthan", tours: "15 Tours", className: "img1" },
-  { src: mumbai, title: "Maharashtra", tours: "8 Tours", className: "img2" },
-  
-  { src: tamilnadu, title: "Tamil Nadu", tours: "5 Tours", className: "img3" },
-  { src: up, title: "Uttar Pradesh", tours: "12 Tours", className: "img4" },
-  { src: kerala, title: "Kerala  ", tours: "7 Tours", className: "img5" },
-  { src: ladakh, title: "Ladakh", tours: "9 Tours", className: "img6" }
-];
+import { getAllStates } from "../../Components/APIServices/apiservice";
 
 const TrendingDestinations = () => {
+  const images = [
+  { className: "img1" },
+  { className: "img2" },
+  {className: "img3" },
+  {className: "img4" },
+  { className: "img5" },
+  {className: "img6" }
+];
+
+const [states, setStates] =useState([]);
 
 const navigate = useNavigate();
 
-const handleClick =(name)=>{
+const handleClick =(state)=>{
 console.log("hello")
-navigate(`/destination/${name}`);
+navigate(`/destination/${state}`);
 
 }
+
+useEffect(()=>{
+  const fetachStates = async ()=>{
+
+    try {
+      const response = await getAllStates();
+      setStates(response);
+      
+    } catch (error) {
+        console.error("Error fetching documents:", error);
+      }
+
+  };
+  fetachStates();
+
+},[])
+
+console.log(states);
   return (
     <div className="trending-container mt-4">
       <h2 className="title">
         Trending <span>Destinations</span>
       </h2>
       <div className="grid-container">
-        {images.map((img, index) => (
-          <div key={index} className={`image-card ${img.className}`} onClick={() => handleClick(img.title)}>
-            <img src={img.src} alt={img.title} />
+        {states.map((state, index) => (
+          <div
+            key={state.id}
+            className={`image-card ${images[index % images.length].className}`} // use index to match image class
+            onClick={() => handleClick(state.name)}
+          >
+            <img src={state.imgUrl} alt={state.name} />
             <div className="overlay">
-              <span className="destination">{img.title}</span>
-              <span className="tours">{img.tours}</span>
+              <span className="destination">{state.name}</span>
             </div>
           </div>
         ))}

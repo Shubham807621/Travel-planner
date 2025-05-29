@@ -36,7 +36,7 @@ function App() {
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/contact' element={<ContactUs />} />
           <Route path='/destination' element={<Destination />} />
-          <Route path='/destination/:name' element={<DestinationDetail />} />
+          <Route path='/destination/:state' element={<DestinationDetail />} />
           <Route path='/destination/:state/:city' element={<DestinationCity />} />
           <Route path='/addMembers' element={<AddMemberDetails />} />
           <Route path='/activepage' element={<ActivePage />} />
