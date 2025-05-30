@@ -18,7 +18,7 @@ import ExpiredPage from './Pages/Admin-Pages/Packages/ExpiredPage'
 import NewUser from './Admin-Panel/Users/NewUser'
 import BookingEnquiry from './Admin-Panel/Booking-Enquiry/BookingEnquiry'
 import HotelDetails from './Pages/HotelDetails/HotelDetails'
-import Dashboard from './Pages/Dashboard/Dashboard'
+// import Dashboard from './Pages/Dashboard/Dashboard'
 import Booking from './Pages/Travel-Booking/Payment Gateway/Booking'
 
 
@@ -46,7 +46,7 @@ function App() {
           <Route path='/newuser' element={<NewUser />} />
           <Route path='/booking' element={<BookingEnquiry />} />
           <Route path='/destination/:state/:city/hotel-details/:id' element={<HotelDetails/>}/>
-          <Route path="/Dashboard" element={<Dashboard />} />
+          {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
           <Route path="/PaymentGateway" element={<Booking />} />
         </Routes>
 
