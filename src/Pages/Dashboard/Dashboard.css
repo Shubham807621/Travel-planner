@@ -1,0 +1,51 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.header-wrapper {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 10000;
+}
+
+.dashboard-container {
+  margin-top: 50px; /* Increased to ensure content is below the navbar */
+  background-color: #f3f4f6; /* Matches the background color from the expected output */
+  position: relative; /* Ensure it stays in the document flow */
+}
+.text-white {
+    --bs-text-opacity: 1;
+    color: rgb(6 6 6) !important;
+}
+
+.stat-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+table tr:hover {
+    background-color: #fff;
+}
+
+.form-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.enquiry-badge {
+  display: inline-block;
+  background-color: #10b981; /* Green color */
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}

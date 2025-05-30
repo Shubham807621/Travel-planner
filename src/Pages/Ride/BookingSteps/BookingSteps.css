@@ -1,0 +1,99 @@
+.booking-container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Info Row */
+.info-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3b82f6;
+    font-size: 14px;
+    width: 180px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.info-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+/* Steps Row */
+.steps-row {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background: none;
+    text-align: center;
+    max-width: 240px;
+}
+
+.step-icon {
+    background-color: #3b82f6;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 16px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
+.step-card h3 {
+    font-size: 18px;
+    color: #3b82f6;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.step-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+/* Arrows */
+.arrow {
+    font-size: 28px;
+    color: #3b82f6;
+}
+
+/* CTA Button */
+
+.cta {
+    padding-top: 35px;
+}
+
+.cta-button {
+    margin-top: 14px;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #2563eb;
+}
