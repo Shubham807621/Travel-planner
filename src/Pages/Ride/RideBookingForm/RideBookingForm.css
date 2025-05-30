@@ -1,0 +1,138 @@
+.booking-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    backdrop-filter: blur(6px);
+}
+
+.ride-type-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.ride-type-toggle button {
+    background-color: transparent;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    padding: 10px 20px;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ride-type-toggle .active {
+    background-color: #007BFF;
+    color: white;
+}
+
+.headline {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.booking-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.input-group {
+    flex: 1 1 48%;
+    text-align: left;
+}
+
+.input-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f1f3f5;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.input-with-icon input {
+    border: none;
+    outline: none;
+    flex: 1;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.roundtrip-toggle {
+    flex: 1 1 100%;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.roundtrip-toggle label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.toggle-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.toggle-buttons button {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 2px solid #007BFF;
+    background-color: transparent;
+    color: #007BFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-buttons .active {
+    background-color: #007BFF;
+    color: white;
+}
+
+.search-button {
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* RideBookingForm.css */
+
+.input-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    margin-top: 5px;
+}
