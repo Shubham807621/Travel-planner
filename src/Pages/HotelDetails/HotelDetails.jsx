@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import HotelName from './HotelName/HotelName';
 import HotelGallery from '../HotelDetails/HotelGallery/HotelGallery';
 import DetailsSection from '../HotelDetails/DetailsSection/DetailsSection';
@@ -10,12 +10,11 @@ import PlanJourney from '../HotelDetails/PlanJourney/PlanJourney';
 import RoomOptions from '../HotelDetails/RoomOptions/RoomOptions';
 import './HotelDetails.css';
 
-
 export default function HotelDetails() {
     return (
-        <div className='hotel-details-wrapper'>
-            <div className="TopContent">
-                <div className="MainContainer">
+        <div className="hotel-details">
+            <div className="hotel-details__top">
+                <div className="hotel-details__main">
                     <HotelName />
                     <HotelGallery />
                     <DetailsSection />
@@ -24,15 +23,16 @@ export default function HotelDetails() {
                     <PlanJourney />
                 </div>
 
-                <div className="SideContainer">
+                <div className="hotel-details__side">
                     <LocationCard />
                     <BookingCard />
                 </div>
-
             </div>
-            {/* Room Section Below */}
-            <RoomOptions />
 
+            {/* Room Section */}
+            <div className="hotel-details__rooms">
+                <RoomOptions />
+            </div>
         </div>
-    )
+    );
 }

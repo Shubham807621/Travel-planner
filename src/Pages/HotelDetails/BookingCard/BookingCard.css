@@ -7,35 +7,37 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.price-banner {
+/* Price Banner */
+.booking-card .price-banner {
     background-color: #ff6b6b;
     color: white;
     padding: 16px;
     text-align: center;
 }
 
-.price-banner h2 {
+.booking-card .price-banner h2 {
     margin: 0;
     font-size: 24px;
 }
 
-.price-banner span {
+.booking-card .price-banner span {
     font-size: 14px;
     font-weight: 400;
 }
 
-.rating {
+.booking-card .price-banner .rating {
     margin-top: 8px;
     font-size: 18px;
 }
 
-.booking-form {
+/* Booking Form */
+.booking-card .booking-form {
     padding: 16px;
     display: flex;
     flex-direction: column;
 }
 
-.booking-form h3 {
+.booking-card .booking-form h3 {
     background-color: #1a9cf7;
     color: white;
     text-align: center;
@@ -44,9 +46,9 @@
     margin-bottom: 16px;
 }
 
-.booking-form input[type="text"],
-.booking-form input[type="email"],
-.booking-form input[type="date"] {
+.booking-card .booking-form input[type="text"],
+.booking-card .booking-form input[type="email"],
+.booking-card .booking-form input[type="date"] {
     padding: 10px;
     margin-bottom: 12px;
     border: 1px solid #ddd;
@@ -54,18 +56,24 @@
     font-size: 14px;
 }
 
-.add-options p {
+/* Add Options */
+.booking-card .booking-form .add-options {
+    margin-top: 10px;
+}
+
+.booking-card .booking-form .add-options p {
     margin: 10px 0 5px;
     font-weight: 500;
 }
 
-.add-options label {
+.booking-card .booking-form .add-options label {
     display: block;
     margin-bottom: 6px;
     font-size: 14px;
 }
 
-.book-button {
+/* Book Button */
+.booking-card .booking-form .book-button {
     margin-top: 16px;
     background-color: #ff6b6b;
     color: white;
@@ -77,6 +85,6 @@
     transition: background 0.3s;
 }
 
-.book-button:hover {
+.booking-card .booking-form .book-button:hover {
     background-color: #e55b5b;
 }

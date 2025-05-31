@@ -1,3 +1,4 @@
+/* Root: Wrapper for the gallery section */
 .gallery-section {
   display: flex;
   justify-content: space-between;
@@ -9,30 +10,33 @@
   flex-wrap: wrap;
 }
 
-.gallery-left {
+/* Left block containing heading and slider */
+.gallery-section .gallery-left {
   flex: 2;
   min-width: 60%;
 }
 
-.gallery-left h3 {
+.gallery-section .gallery-left h3 {
   font-size: 16px;
   margin-bottom: 15px;
   font-weight: bold;
   color: #0d1b2a;
 }
 
-.gallery-slider .slide-img-container {
+/* Slider container and image styling */
+.gallery-section .gallery-left .gallery-slider .slide-img-container {
   padding: 0 10px;
 }
 
-.gallery-slider img {
+.gallery-section .gallery-left .gallery-slider img {
   width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: 6px;
 }
 
-.gallery-right {
+/* Right block containing more packages info */
+.gallery-section .gallery-right {
   flex: 1;
   background: #0d1b2a;
   color: white;
@@ -41,37 +45,43 @@
   min-width: 300px;
 }
 
-.gallery-right h5 {
+/* Title with line */
+.gallery-section .gallery-right h5 {
   font-size: 13px;
   color: #fd6c63;
   display: flex;
   align-items: center;
 }
 
-.gallery-right .line {
+/* Decorative line next to h5 */
+.gallery-section .gallery-right .line {
   width: 25px;
   height: 1px;
   background: #fd6c63;
   margin-right: 10px;
 }
 
-.gallery-right h3 {
+/* Main heading in right block */
+.gallery-section .gallery-right h3 {
   font-size: 18px;
   margin: 15px 0;
 }
 
-.gallery-right p {
+/* Description paragraph in right block */
+.gallery-section .gallery-right p {
   font-size: 13px;
   margin-bottom: 20px;
+  line-height: 1.6;
 }
 
-.packages-list {
+/* List of travel packages */
+.gallery-section .gallery-right .packages-list {
   list-style: none;
   padding: 0;
   font-size: 14px;
 }
 
-.packages-list li {
+.gallery-section .gallery-right .packages-list li {
   margin-bottom: 10px;
   border-bottom: 1px solid #fd6c63;
   padding-bottom: 5px;

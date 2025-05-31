@@ -1,30 +1,30 @@
-.plan-journey-container {
+.plan-journey {
     max-width: 1000px;
     margin: 40px auto;
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
 }
 
-.title {
+.plan-journey__title {
     font-size: 24px;
     font-weight: 600;
     color: #333;
 }
 
-.subtitle {
+.plan-journey__subtitle {
     font-size: 14px;
     color: #777;
     margin-bottom: 30px;
 }
 
-.card-grid {
+.plan-journey__card-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 }
 
-.card {
+.plan-journey__card {
     background: #fff;
     border: 1px solid #eee;
     border-radius: 16px;
@@ -32,48 +32,49 @@
     padding: 40px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
 }
 
-.card:hover {
+.plan-journey__card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-.card-image {
+.plan-journey__image {
     width: 100px;
     height: auto;
     margin: 20px auto 10px;
     display: block;
 }
 
-.card-content {
+.plan-journey__content {
     padding: 0 20px 20px;
 }
 
-.card-content h3 {
+.plan-journey__content h3 {
     font-size: 18px;
     color: #222;
     margin-bottom: 5px;
 }
 
-.description {
+.plan-journey__description {
     font-size: 13px;
     color: #666;
     margin-bottom: 16px;
 }
 
-.card-footer {
+.plan-journey__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
 }
 
-.date {
+.plan-journey__date {
     color: #666;
 }
 
-.search-btn {
+.plan-journey__search-btn {
     background-color: #0066ff;
     color: white;
     border: none;
@@ -84,18 +85,6 @@
     transition: background-color 0.3s ease;
 }
 
-.search-btn:hover {
+.plan-journey__search-btn:hover {
     background-color: #0052cc;
-}
-
-.card-grid {
-    display: flex;
-    flex-wrap: nowrap; /* Prevent cards from wrapping to next line */
-    justify-content: center;
-    gap: 10px; /* You can adjust gap as needed */
-}
-
-.card {
-    width: 300px; /* Keep fixed width */
-    flex-shrink: 0; /* Prevent shrinking */
 }

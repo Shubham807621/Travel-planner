@@ -1,4 +1,4 @@
-.room-options-container {
+.room-options {
     margin-top: 40px;
     padding: 20px;
     background-color: #ffffff;
@@ -6,7 +6,7 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
 }
 
-.room-options-container h2 {
+.room-options__title {
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     margin-bottom: 20px;
@@ -14,14 +14,12 @@
     color: #333;
 }
 
-/* Two cards in a row */
-.room-cards-grid {
+.room-options__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-/* Make each card horizontal: image left, info right */
 .room-card {
     display: flex;
     flex-direction: row;
@@ -31,20 +29,19 @@
     background-color: #f9f9f9;
     transition: transform 0.2s ease;
     height: 220px;
-    /* fixed height for visual consistency */
 }
 
 .room-card:hover {
     transform: scale(1.01);
 }
 
-.room-image {
+.room-card__image {
     width: 60%;
     object-fit: cover;
     height: 100%;
 }
 
-.room-info {
+.room-card__info {
     width: 40%;
     padding: 15px;
     font-family: 'Poppins', sans-serif;
@@ -53,20 +50,20 @@
     justify-content: center;
 }
 
-.room-info h3 {
+.room-card__title {
     font-size: 18px;
     font-weight: 600;
     color: #222;
     margin-bottom: 10px;
 }
 
-.room-info p {
+.room-card__info p {
     font-size: 14px;
     margin: 5px 0;
     color: #444;
 }
 
-.price-button {
+.room-card__price-button {
     margin-top: 10px;
     background-color: #1a73e8;
     color: white;
@@ -79,13 +76,13 @@
     transition: background 0.3s;
 }
 
-.price-button:hover {
+.room-card__price-button:hover {
     background-color: #0d5edb;
 }
 
-/* Mobile responsive: stack cards vertically */
+/* Responsive */
 @media screen and (max-width: 768px) {
-    .room-cards-grid {
+    .room-options__grid {
         grid-template-columns: 1fr;
     }
 
@@ -94,12 +91,22 @@
         height: auto;
     }
 
-    .room-image,
-    .room-info {
+    .room-card__image,
+    .room-card__info {
         width: 100%;
     }
 
-    .room-image {
+    .room-card__image {
         height: 200px;
     }
+}
+.room-card__info p {
+    font-size: 13px;
+}
+.room-card__price-button {
+    font-size: 13px;
+    padding: 8px 12px;
+}
+.room-card__title {
+    font-size: 16px;
 }

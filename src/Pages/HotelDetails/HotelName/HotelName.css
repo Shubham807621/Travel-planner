@@ -1,4 +1,4 @@
-.booking-container {
+.hotel-name {
     display: flex;
     font-family: 'Arial', sans-serif;
     padding: 30px;
@@ -7,31 +7,19 @@
     margin: auto;
 }
 
-.left-section {
+.hotel-name__left {
     flex: 2;
 }
 
-.left-section h1 {
+.hotel-name__heading {
     font-size: 28px;
     font-weight: bold;
     color: #0d1b2a;
     margin-bottom: 20px;
 }
 
-.main-image {
+.hotel-name__image {
     width: 100%;
     height: auto;
     border-radius: 6px;
-}
-
-.tour-info {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-    font-size: 14px;
-    color: #333;
-}
-
-.right-section {
-    flex: 1;
 }
