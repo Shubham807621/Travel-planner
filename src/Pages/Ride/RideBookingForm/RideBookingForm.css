@@ -9,13 +9,13 @@
     backdrop-filter: blur(6px);
 }
 
-.ride-type-toggle {
+.booking-container .ride-type-toggle {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
 }
 
-.ride-type-toggle button {
+.booking-container .ride-type-toggle button {
     background-color: transparent;
     border: 2px solid #007BFF;
     color: #007BFF;
@@ -27,37 +27,37 @@
     transition: all 0.3s ease;
 }
 
-.ride-type-toggle .active {
+.booking-container .ride-type-toggle .active {
     background-color: #007BFF;
     color: white;
 }
 
-.headline {
+.booking-container .headline {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 2rem;
     color: #333;
 }
 
-.booking-card {
+.booking-container .booking-card {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
 }
 
-.input-group {
+.booking-container .input-group {
     flex: 1 1 48%;
     text-align: left;
 }
 
-.input-group label {
+.booking-container .input-group label {
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
 }
 
-.input-with-icon {
+.booking-container .input-group .input-with-icon {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -66,7 +66,7 @@
     border-radius: 8px;
 }
 
-.input-with-icon input {
+.booking-container .input-group .input-with-icon input {
     border: none;
     outline: none;
     flex: 1;
@@ -74,25 +74,35 @@
     font-size: 1rem;
 }
 
-.roundtrip-toggle {
+.booking-container .input-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.booking-container .roundtrip-toggle {
     flex: 1 1 100%;
     text-align: left;
     margin-top: 1rem;
 }
 
-.roundtrip-toggle label {
+.booking-container .roundtrip-toggle label {
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
 }
 
-.toggle-buttons {
+.booking-container .roundtrip-toggle .toggle-buttons {
     display: flex;
     gap: 1rem;
     margin-top: 0.5rem;
 }
 
-.toggle-buttons button {
+.booking-container .roundtrip-toggle .toggle-buttons button {
     flex: 1;
     padding: 0.6rem;
     border-radius: 8px;
@@ -104,12 +114,12 @@
     transition: all 0.3s ease;
 }
 
-.toggle-buttons .active {
+.booking-container .roundtrip-toggle .toggle-buttons .active {
     background-color: #007BFF;
     color: white;
 }
 
-.search-button {
+.booking-container .search-button {
     margin-top: 2rem;
     padding: 0.75rem 2rem;
     background-color: #007BFF;
@@ -121,7 +131,7 @@
     transition: background-color 0.3s ease;
 }
 
-.search-button:hover {
+.booking-container .search-button:hover {
     background-color: #0056b3;
 }
 

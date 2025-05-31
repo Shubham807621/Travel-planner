@@ -9,7 +9,7 @@
   margin-bottom: 1.5rem;
 }
 
-.map {
+.map-container .map {
   position: relative;
   background: url('./assets/Map.jpg') no-repeat center center;
   background-size: cover;
@@ -21,8 +21,8 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* White pin style */
-.marker {
+/* Marker (pin) style */
+.map-container .marker {
   position: absolute;
   transform: translate(-50%, -50%) rotate(-45deg);
   background-color: #ffffff;
@@ -40,15 +40,15 @@
   transition: transform 0.3s ease;
 }
 
-.marker span {
+.map-container .marker span {
   transform: rotate(45deg);
 }
 
-.marker:hover {
+.map-container .marker:hover {
   transform: translate(-50%, -50%) rotate(-45deg) scale(1.1);
 }
 
-.tooltip {
+.map-container .tooltip {
   position: absolute;
   bottom: -35px;
   left: 50%;
@@ -64,6 +64,6 @@
   pointer-events: none;
 }
 
-.marker:hover .tooltip {
+.map-container .marker:hover .tooltip {
   opacity: 1;
 }
