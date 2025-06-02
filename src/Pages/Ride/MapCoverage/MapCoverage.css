@@ -22,7 +22,7 @@
 }
 
 /* Marker (pin) style */
-.map-container .marker {
+.map-container .map .marker {
   position: absolute;
   transform: translate(-50%, -50%) rotate(-45deg);
   background-color: #ffffff;
@@ -40,15 +40,15 @@
   transition: transform 0.3s ease;
 }
 
-.map-container .marker span {
+.map-container .map .marker span {
   transform: rotate(45deg);
 }
 
-.map-container .marker:hover {
+.map-container .map .marker:hover {
   transform: translate(-50%, -50%) rotate(-45deg) scale(1.1);
 }
 
-.map-container .tooltip {
+.map-container .map .tooltip {
   position: absolute;
   bottom: -35px;
   left: 50%;

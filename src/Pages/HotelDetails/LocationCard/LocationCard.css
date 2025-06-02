@@ -9,33 +9,33 @@
     border: 1px solid #ddd;
 }
 
-.location-card__map-container {
+.location-card .map-container {
     height: 200px;
     width: 100%;
 }
 
-.location-card__map {
+.location-card .map-container .map {
     height: 100%;
     width: 100%;
 }
 
-.location-card__details {
+.location-card .details {
     padding: 16px;
 }
 
-.location-card__score {
+.location-card .details .score {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
 }
 
-.location-card__subtext {
+.location-card .details .subtext {
     font-size: 0.85rem;
     color: #777;
     margin-bottom: 10px;
 }
 
-.location-card__features {
+.location-card .details .features {
     list-style: none;
     padding-left: 0;
     color: #444;
@@ -43,7 +43,7 @@
     margin-bottom: 10px;
 }
 
-.location-card__parking {
+.location-card .details .parking {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
@@ -51,18 +51,18 @@
     color: #333;
 }
 
-.location-card__parking--free {
+.location-card .details .parking .free {
     color: green;
     font-weight: bold;
 }
 
-.location-card__walkable {
+.location-card .details .walkable {
     margin-top: 12px;
     font-size: 0.9rem;
     color: #444;
 }
 
-.location-card__button {
+.location-card .details .see-nearby {
     margin-top: 16px;
     width: 100%;
     background-color: #2563eb;
@@ -75,6 +75,6 @@
     transition: background 0.3s;
 }
 
-.location-card__button:hover {
+.location-card .details .see-nearby:hover {
     background-color: #1d4ed8;
 }

@@ -12,10 +12,11 @@ import './HotelDetails.css';
 
 export default function HotelDetails() {
     return (
-        <div className="hotel-details">
-            <div className="hotel-details__top">
-                <div className="hotel-details__main">
-                    <HotelName />
+        <div className="AppWrapper">
+            {/* Top Two Columns */}
+            <div className="TopContent">
+                <div className="MainContainer">
+                    <BookingPage />
                     <HotelGallery />
                     <DetailsSection />
                     <HotelFeatures />
@@ -23,16 +24,14 @@ export default function HotelDetails() {
                     <PlanJourney />
                 </div>
 
-                <div className="hotel-details__side">
+                <div className="SideContainer">
                     <LocationCard />
                     <BookingCard />
                 </div>
             </div>
 
-            {/* Room Section */}
-            <div className="hotel-details__rooms">
-                <RoomOptions />
-            </div>
+            {/* Room Section Below */}
+            <RoomOptions />
         </div>
     );
 }

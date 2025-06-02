@@ -1,53 +1,60 @@
-.hotel-details {
-    position: absolute;
-    top: 15%;
-    padding: 0 15px;
+/* Base styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-.hotel-details__top {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+/* Wraps everything */
+.AppWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 40px;
 }
 
-/* Main content column */
-.hotel-details__main {
-    width: 70%;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+/* Top section with two side-by-side containers */
+.AppWrapper .TopContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-/* Sticky right column */
-.hotel-details__side {
-    width: 27%;
-    position: sticky;
-    top: 15%;
-    align-self: flex-start;
-    padding: 20px;
-    border-radius: 12px;
-    height: fit-content;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+/* Main content */
+.AppWrapper .MainContainer {
+  flex: 3;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* RoomOptions spacing wrapper */
-.hotel-details__rooms {
-    margin-top: 30px;
+/* Sticky right-side container */
+.AppWrapper .SideContainer {
+  flex: 1;
+  position: sticky;
+  top: 30px;
+  align-self: flex-start;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Responsive: stack layout on small screens */
+/* RoomOptions styling already in its file, just add spacing */
+.RoomOptions {
+  margin-top: 30px;
+}
+
+/* Responsive for mobile */
 @media screen and (max-width: 768px) {
-    .hotel-details__top {
-        flex-direction: column;
-    }
+  .AppWrapper .TopContent {
+    flex-direction: column;
+  }
 
-    .hotel-details__side {
-        position: static;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .hotel-details__main {
-        width: 100%;
-    }
+  .AppWrapper .SideContainer {
+    position: static;
+  }
 }

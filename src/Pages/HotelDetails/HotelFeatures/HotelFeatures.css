@@ -9,7 +9,6 @@
     color: #222;
 }
 
-/* Feature box: used for both Highlights and Facilities */
 .hotel-features .feature-box {
     background: #ffffff;
     border: 1px solid #ddd;
@@ -26,15 +25,14 @@
     text-align: center;
 }
 
-/* Highlights Section */
-.hotel-features .highlight-list {
+.hotel-features .feature-box .highlight-list {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.hotel-features .highlight-list .feature-item {
+.hotel-features .feature-box .highlight-list .feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,34 +41,32 @@
     font-weight: 500;
 }
 
-.hotel-features .highlight-list .feature-item .icon {
+.hotel-features .feature-box .highlight-list .feature-item .icon {
     font-size: 36px;
     margin-bottom: 10px;
 }
 
-/* Icon colors */
-.hotel-features .icon.green {
+.hotel-features .feature-box .highlight-list .feature-item .icon.green {
     color: #28a745;
 }
 
-.hotel-features .icon.red {
+.hotel-features .feature-box .highlight-list .feature-item .icon.red {
     color: #dc3545;
 }
 
-.hotel-features .icon.blue {
+.hotel-features .feature-box .highlight-list .feature-item .icon.blue {
     color: #007bff;
 }
 
-.hotel-features .icon.purple {
+.hotel-features .feature-box .highlight-list .feature-item .icon.purple {
     color: #6f42c1;
 }
 
-.hotel-features .icon.gold {
+.hotel-features .feature-box .highlight-list .feature-item .icon.gold {
     color: #ff9900;
 }
 
-/* Facilities Section */
-.hotel-features .facility-list {
+.hotel-features .feature-box .facility-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 16px;
@@ -78,14 +74,13 @@
     padding: 10px 0;
 }
 
-.hotel-features .facility-list div {
+.hotel-features .feature-box .facility-list div {
     display: flex;
     align-items: center;
     gap: 10px;
     font-weight: 500;
 }
 
-/* High Demand Notice */
 .hotel-features .demand-notice {
     background-color: #ffe6e6;
     border-left: 6px solid #ff4d4d;
@@ -98,7 +93,7 @@
     font-weight: 500;
 }
 
-.hotel-features .demand-notice .alert-icon {
+.alert-icon {
     color: #ff1a1a;
     font-size: 28px;
 }

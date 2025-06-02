@@ -13,7 +13,7 @@
     flex-wrap: wrap;
 }
 
-.booking-container .info-box {
+.booking-container .info-row .info-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +24,7 @@
     text-align: center;
 }
 
-.booking-container .info-icon {
+.booking-container .info-row .info-box .info-icon {
     font-size: 30px;
     margin-bottom: 8px;
 }
