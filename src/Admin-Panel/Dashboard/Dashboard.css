@@ -1,0 +1,51 @@
+
+
+.dashboard-container {
+  width: 78%;
+  position: absolute; /* Ensure it stays in the document flow */
+  top: 15%;
+  left: 20%;
+}
+.text-white {
+    --bs-text-opacity: 1;
+    color: rgb(6 6 6) !important;
+}
+.dashboard-container .dashboard-cards{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-container .dashboard-cards .status-card {
+  width: 24%;
+  height: auto;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 10px;
+   background-color: #f3f4f6; 
+   border-radius: 15px;
+   
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+table tr:hover {
+    background-color: #fff;
+}
+
+.form-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.enquiry-badge {
+  display: inline-block;
+  background-color: #10b981; /* Green color */
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}

@@ -3,7 +3,7 @@ import './Booking.css';
 
 const Booking = () => {
   return (
-    <div className="booking-container">
+    <div className="booking-container-wrapper">
       {/* Background Image Section */}
       <div className="booking-img-wrapper">
         <div className="image-banner"></div>

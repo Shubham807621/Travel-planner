@@ -3,6 +3,8 @@ export const API_URLs = {
     SIGNUP:"/auth/register",
     GET_STATES:"/api/get_states",
     GET_CITIES:"/api/cities",
+    GET_HOTELS:"/api/hotel/list",
+    GET_PLACES:"/api/get-places",
 }
 
 export const API_BASE_URL = "http://localhost:8080"

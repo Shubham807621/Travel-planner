@@ -58,7 +58,7 @@ const handlePrev = () => {
 };
 
   return (
-    <div className="container">
+    <div className="active-package-container">
       <div className="activeform">
         <h4>PENDING PACKAGES LIST</h4>
         <table>

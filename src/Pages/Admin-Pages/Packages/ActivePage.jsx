@@ -59,9 +59,9 @@ const handlePrev = () => {
 };
 
   return (
-    <div className="container">
+    <div className="active-package-container">
       <div className="activeform">
-        <h4>ACTIVE PACKAGES LIST</h4>
+        <h4 className='mb-3'>ACTIVE PACKAGES LIST</h4>
         <table>
           <thead>
             <tr>

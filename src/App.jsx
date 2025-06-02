@@ -18,8 +18,8 @@ import ExpiredPage from './Pages/Admin-Pages/Packages/ExpiredPage'
 import NewUser from './Admin-Panel/Users/NewUser'
 import BookingEnquiry from './Admin-Panel/Booking-Enquiry/BookingEnquiry'
 import HotelDetails from './Pages/HotelDetails/HotelDetails'
-// import Dashboard from './Pages/Dashboard/Dashboard'
 import Booking from './Pages/Travel-Booking/Payment Gateway/Booking'
+import Dashboard from './Admin-Panel/Dashboard/Dashboard'
 
 
 function App() {
@@ -40,14 +40,14 @@ function App() {
           <Route path='/destination/:state' element={<DestinationDetail />} />
           <Route path='/destination/:state/:city' element={<DestinationCity />} />
           <Route path='/addMembers' element={<AddMemberDetails />} />
-          <Route path='/activepage' element={<ActivePage />} />
-          <Route path='/pendingpage' element={<PendingPage />} />
+          <Route path='/admin/active-package' element={<ActivePage />} />
+          <Route path='/admin/pending-package' element={<PendingPage />} />
           <Route path='/expiredpage' element={<ExpiredPage />} />
-          <Route path='/newuser' element={<NewUser />} />
+          <Route path='/admin/new-users' element={<NewUser />} />
           <Route path='/booking' element={<BookingEnquiry />} />
           <Route path='/destination/:state/:city/hotel-details/:id' element={<HotelDetails/>}/>
-          {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
-          <Route path="/PaymentGateway" element={<Booking />} />
+          <Route path="/admin/dashboard" element={<Dashboard/>} />
+          <Route path="?booking" element={<Booking />} />
         </Routes>
 
       </BrowserRouter>

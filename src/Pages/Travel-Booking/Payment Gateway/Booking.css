@@ -1,13 +1,4 @@
-/* Global styles moved from index.css */
-body {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff; /* Default to light mode as per expected output */
-  }
-  
+
   a {
     font-weight: 500;
     color: #646cff;

@@ -20,52 +20,52 @@ const Dashboard = () => {
   return (
     <ErrorBoundary>
       <div className="dashboard-container">
-        <h2 className="text-2xl font-bold mb-6 px-6 pt-6">Dashboard Overview</h2>
+        <h2 >Dashboard Overview</h2>
         
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6 px-6">
-          <div className="p-6 rounded-lg shadow stat-card bg-blue-600 text-white">
-            <div className="flex items-center">
-              <i className="fas fa-chart-bar text-3xl mr-4"></i>
+        <div className="dashboard-cards mb-5 px-2">
+          <div className="status-card ">
+    
+              <i className="fas fa-chart-bar"></i>
               <div>
-                <h3 className="text-lg font-semibold">Today Views</h3>
-                <p className="text-3xl font-bold">22,520</p>
+                <h3 className="">Today Views</h3>
+                <p className="">22,520</p>
               </div>
-            </div>
+  
           </div>
-          <div className="p-6 rounded-lg shadow stat-card bg-green-600 text-white">
-            <div className="flex items-center">
-              <i className="fas fa-dollar-sign text-3xl mr-4"></i>
+          <div className="status-card">
+           
+              <i className="fas fa-dollar-sign "></i>
               <div>
-                <h3 className="text-lg font-semibold">Earnings</h3>
-                <p className="text-3xl font-bold">16,520</p>
+                <h3 className="">Earnings</h3>
+                <p className="">16,520</p>
               </div>
-            </div>
+   
           </div>
-          <div className="p-6 rounded-lg shadow stat-card bg-purple-600 text-white">
-            <div className="flex items-center">
-              <i className="fas fa-users text-3xl mr-4"></i>
+          <div className="status-card">
+
+              <i className="fas fa-users "></i>
               <div>
-                <h3 className="text-lg font-semibold">Users</h3>
-                <p className="text-3xl font-bold">18,520</p>
+                <h3 className="">Users</h3>
+                <p className="">18,520</p>
               </div>
-            </div>
+
           </div>
-          <div className="p-6 rounded-lg shadow stat-card bg-red-600 text-white">
-            <div className="flex items-center">
-              <i className="fas fa-envelope text-3xl mr-4"></i>
+          <div className="status-card">
+        
+              <i className="fas fa-envelope "></i>
               <div>
-                <h3 className="text-lg font-semibold">Enquiry</h3>
-                <p className="text-3xl font-bold">19,520</p>
+                <h3 className="">Enquiry</h3>
+                <p className="">19,520</p>
               </div>
-            </div>
+         
           </div>
         </div>
 
         {/* Tables Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 pb-6">
+        <div className="px-2">
           {/* Recent Booking Table */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-4 rounded-lg shadow">
             <h3 className="text-lg font-semibold mb-4">Recent Booking</h3>
             <p className="text-gray-600 mb-4">Airport Hotels The Right Way To Start A Short Break Holiday</p>
             <table className="w-full table-auto">
@@ -117,7 +117,7 @@ const Dashboard = () => {
           </div>
 
           {/* Package Enquiry Table */}
-          <div className="bg-white p-6 rounded-lg shadow">
+          <div className="bg-white p-4 rounded-lg shadow">
             <h3 className="text-lg font-semibold mb-4">Package Enquiry</h3>
             <p className="text-gray-600 mb-4">Airport Hotels The Right Way To Start A Short Break Holiday</p>
             <table className="w-full table-auto">

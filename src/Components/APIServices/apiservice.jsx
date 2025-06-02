@@ -47,7 +47,7 @@ export const getAllStates = async () =>{
 export const getStateByName = async (name) =>{
 
     const url = `${API_BASE_URL}${API_URLs.GET_STATES}/${name}`
-    console.log(url)
+
     try {
         const response = await axios.get(url)
         return response.data;
@@ -61,7 +61,35 @@ export const getStateByName = async (name) =>{
 export const getCitiesByStateName = async (name) =>{
 
     const url = `${API_BASE_URL}${API_URLs.GET_CITIES}/${name}`
-    console.log(url)
+ 
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+}
+
+export const getHotelList = async (name) =>{
+
+    const url = `${API_BASE_URL}${API_URLs.GET_HOTELS}/${name}`
+
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+}
+
+export const getPlaceList = async (name) =>{
+
+    const url = `${API_BASE_URL}${API_URLs.GET_PLACES}/${name}`
+    console.log(url);
     try {
         const response = await axios.get(url)
         return response.data;

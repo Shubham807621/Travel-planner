@@ -7,12 +7,14 @@ import CityPalaceJaipur from '../../Images/Jaipur/City-Palace1.jpg';
 import NahargarhFort from '../../Images/Jaipur/Nahargarh-fort.jpg';
 import AmberFort from '../../Images/Jaipur/ambur-fort.jpg';
 import HotelCard from './HotelCard';
+import { getPlaceList } from '../../Components/APIServices/apiservice';
 
 
 export default function DestinationCity() {
   const { state, city } = useParams();
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
+  const [places , setPlaces] = useState([])
 
   useEffect(() => {
     setSelectedState(state);
@@ -22,32 +24,26 @@ export default function DestinationCity() {
 
   const cityDescription = 'The Pink City, famous for its forts and palaces.';
 
-  const [attraction , setAttraction] = useState( [
-    {
-      id: 1,
-      image: HawaMahal,
-      name: 'Hawa Mahal',
-      description: 'The Palace of Winds, famous for its intricate latticework and pink facade.',
-    },
-    {
-      id: 2,
-      image: CityPalaceJaipur,
-      name: 'City Palace',
-      description: 'A royal residence with stunning architecture and museums.',
-    },
-    {
-      id: 3,
-      image: NahargarhFort,
-      name: 'Nahargarh Fort',
-      description: 'A historic fort offering panoramic views of Jaipur.',
-    },
-    {
-      id: 4,
-      image: AmberFort,
-      name: 'Amber Fort',
-      description: 'A majestic fort known for its artistic Hindu-style elements.',
-    },
-  ],)
+
+
+  useEffect(()=>{
+      const fetchPlaceList = async ()=>{
+           if (!selectedCity) return; //
+    
+        try {
+          const response = await getPlaceList(selectedCity);
+          console.log(response);
+          setPlaces(response)
+        
+          
+        } catch (error) {
+            console.error("Error fetching documents:", error);
+          }
+    
+      };
+      fetchPlaceList();
+    
+    },[selectedCity])
 
   return (
     <>
@@ -75,20 +71,20 @@ export default function DestinationCity() {
                 <h1 className="main-heading mb-4">{selectedCity}</h1>
                 <p className="main-description ms-2">{cityDescription}</p>
                 <div className="destination-box">
-                    {attraction.map((attraction) => (
-                    <div key={attraction.id} className="destination-card">
+                    {places.map((place) => (
+                    <div key={place.id} className="destination-card">
                         <div className="image-wrapper">
                             <img
-                                src={attraction.image}
-                                alt={attraction.name}
+                                src={place.imgUrl}
+                                alt={place.name}
                                 className={`destination-image `}
                             
                             />
                         </div>
                         <div className="city-info">
 
-                            <h4 className="destination-name">{attraction.name}</h4>
-                            <p className="destination-description">{attraction.description}</p>
+                            <h4 className="destination-name">{place.name}</h4>
+                            <p className="destination-description">{place.description}</p>
                         </div>
                     </div>
                     ))}

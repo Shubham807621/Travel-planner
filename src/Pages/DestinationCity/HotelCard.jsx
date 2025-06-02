@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './HotelCard.css'
 import { useNavigate } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
+import { getHotelList } from '../../Components/APIServices/apiservice';
+
 
 
 export default function HotelCard({selectedCity, selectedState}) {
 
-    console.log(selectedState,selectedCity )
+ 
 
     const Navigate = useNavigate();
 
@@ -39,6 +41,32 @@ const Accommodations = [
   },
 ];
 
+const [hotels, setHotels] = useState([]);
+
+  useEffect(()=>{
+    const fetchAllHotels = async ()=>{
+         if (!selectedCity) return; //
+  
+      try {
+        const response = await getHotelList(selectedCity);
+        console.log(response);
+        setHotels(response);
+        
+      } catch (error) {
+          console.error("Error fetching documents:", error);
+        }
+  
+    };
+    fetchAllHotels();
+  
+  },[selectedCity])
+
+    if (!selectedCity) {
+    return <div>Loading...</div>;
+  }
+
+
+
 const handleClick = (id) => {
     Navigate(`/destination/${selectedState}/${selectedCity}/hotel-details/${id}`)
 }
@@ -46,10 +74,10 @@ const handleClick = (id) => {
     <>
         <div className="hotel-card-wrapper container">
             <div className='d-flex justify-content-between'>
-                {Accommodations.map((hotel)=>(
+                {hotels.map((hotel)=>(
                 <div className="hotel-card" key={hotel.id} onClick={()=> handleClick(hotel.id)}>
                     <div className="hotel-img-wrapper">
-                        <img src={hotel.image} alt="" />
+                        <img src={hotel.imgUrl} alt="" />
                     </div>
                     <div className="hotel-info">
                         <h4 className="hotel-name">{hotel.name}</h4>

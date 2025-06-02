@@ -49,42 +49,34 @@ export default function Header() {
             <div className="nav-bar-menu">
             
                 <ul className='p-0 m-0 nav-bar'>
-                    <li><Link to='/'>Home       </Link> </li>
-                    <li><Link to='/aboutus'>About Us   </Link> </li>
                     <li>
-                        <Link to='/destination'>Destinations</Link> 
-
-                    
-                        
+                        <Link to='/'>Home </Link> 
                     </li>
-                    <li><Link to='/contact'>Contact Us </Link> </li>
                     <li>
-                        <Link onClick={handleClick1}>Pages<ArrowDown/> </Link> 
-                         {dropDownMenu1 && (
-                            <div className='dropdown-menu'>
-                                <ul className='px-2 m-0'>
-                                    <li><Link to='/addMembers' onClick={() => setDropDownMenu1(false)}><h6>Add Members Details </h6></Link></li>
-                                    <li></li>
-                                    <li>Goa</li>
-                                    <li>Kerala</li>
-                                </ul>
-                            </div>
-                        )}
+                        <Link to='/aboutus'>About Us</Link> 
+                    </li>
+                    <li>
+                        <Link to='/destination'>Destinations</Link>  
+                    </li>
+                    <li>
+                        <Link to='/contact'>Contact Us </Link> 
+                    </li>
+                    <li>
+                        <Link to='/book-flight'>Flight Booking</Link> 
                     </li>
                     {userRole === 'Admin' && (
                         <li>
                             <Link to='/admin/dashboard'>Dashboard </Link> 
                         </li>
-
                     )}
                 </ul>
                
             </div>
             <div className="utility-box">
-                <div className="search-box ">
+                {/* <div className="search-box ">
                     <input type="text" placeholder='search...'/>
                     <span><SearchIcon/></span>
-                </div>
+                </div> */}
                 <div className="favourite-icon mt-1">
                     <Favorite/>
                 </div>

@@ -62,8 +62,8 @@ const NewUser = () => {
 
   return (
     <div className="form-container">
-        <div className='newuserform'>
-      <h4>ADD NEW USER</h4>
+      <div className='newuserform'>
+        <h4>ADD NEW USER</h4>
       
       <form onSubmit={handleSubmit}>
         <table>

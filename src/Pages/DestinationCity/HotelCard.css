@@ -7,7 +7,7 @@
 
 .hotel-card-wrapper .hotel-card{
     width: 400px;
-    height: 450px;
+    height: auto;
     margin:  0 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 15px;

@@ -7,7 +7,7 @@ import {  getCitiesByStateName, getStateByName } from '../../Components/APIServi
 export default function DestinationDetail() {
   const { state } = useParams();
   const [states, setStates] =useState();
-  const [cities, setCities] = useState();
+  const [cities, setCities] = useState([]);
 
   const navigate = useNavigate();
 
