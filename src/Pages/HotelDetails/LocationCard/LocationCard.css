@@ -9,33 +9,33 @@
     border: 1px solid #ddd;
 }
 
-.map-container {
+.location-card__map-container {
     height: 200px;
     width: 100%;
 }
 
-.map {
+.location-card__map {
     height: 100%;
     width: 100%;
 }
 
-.details {
+.location-card__details {
     padding: 16px;
 }
 
-.score {
+.location-card__score {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
 }
 
-.subtext {
+.location-card__subtext {
     font-size: 0.85rem;
     color: #777;
     margin-bottom: 10px;
 }
 
-.features {
+.location-card__features {
     list-style: none;
     padding-left: 0;
     color: #444;
@@ -43,7 +43,7 @@
     margin-bottom: 10px;
 }
 
-.parking {
+.location-card__parking {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
@@ -51,18 +51,18 @@
     color: #333;
 }
 
-.free {
+.location-card__parking--free {
     color: green;
     font-weight: bold;
 }
 
-.walkable {
+.location-card__walkable {
     margin-top: 12px;
     font-size: 0.9rem;
     color: #444;
 }
 
-.see-nearby {
+.location-card__button {
     margin-top: 16px;
     width: 100%;
     background-color: #2563eb;
@@ -75,6 +75,6 @@
     transition: background 0.3s;
 }
 
-.see-nearby:hover {
+.location-card__button:hover {
     background-color: #1d4ed8;
 }

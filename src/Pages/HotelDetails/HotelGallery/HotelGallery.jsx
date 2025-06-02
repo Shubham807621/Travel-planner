@@ -1,12 +1,11 @@
-// HotelGallery.jsx
 import "./HotelGallery.css";
-import HotelFront from '../../../Images/HotelDetails/HotelGallery/frontview.jpeg'
-import HotelRoom from '../../../Images/HotelDetails/HotelGallery/hotelroom.jpeg'
-import DiningArea from '../../../Images/HotelDetails/HotelGallery/dining.jpeg'
-import Lobby from '../../../Images/HotelDetails/HotelGallery/Lobby.jpeg'
-import PoolNightView from '../../../Images/HotelDetails/HotelGallery/poolviewnight.jpeg'
-import Restaurant from '../../../Images/HotelDetails/HotelGallery/Resturant.jpeg'
-import DayPoolView from '../../../Images/HotelDetails/HotelGallery/poolviewday.jpeg'
+import HotelFront from '../../../Images/HotelDetails/HotelGallery/frontview.jpeg';
+import HotelRoom from '../../../Images/HotelDetails/HotelGallery/hotelroom.jpeg';
+import DiningArea from '../../../Images/HotelDetails/HotelGallery/dining.jpeg';
+import Lobby from '../../../Images/HotelDetails/HotelGallery/Lobby.jpeg';
+import PoolNightView from '../../../Images/HotelDetails/HotelGallery/poolviewnight.jpeg';
+import Restaurant from '../../../Images/HotelDetails/HotelGallery/Resturant.jpeg';
+import DayPoolView from '../../../Images/HotelDetails/HotelGallery/poolviewday.jpeg';
 
 const photos = [
     { src: HotelFront, alt: "Hotel Front" },
@@ -20,26 +19,25 @@ const photos = [
 
 export default function HotelGallery() {
     return (
-        <section className="hotel-section">
-            <h2 className="hotel-heading">Explore Our Hotel</h2>
-            <div className="hotel-grid">
-                <div className="hotel-main-image">
-                    <img src={photos[0].src} alt={photos[0].alt} className="hotel-main-img" />
-                    <span className="hotel-tag">360° Tour</span>
+        <section className="hotel-gallery">
+            <h2 className="hotel-gallery__heading">Explore Our Hotel</h2>
+            <div className="hotel-gallery__grid">
+                <div className="hotel-gallery__main">
+                    <img src={photos[0].src} alt={photos[0].alt} className="hotel-gallery__main-img" />
+                    <span className="hotel-gallery__tag">360° Tour</span>
                 </div>
                 {photos.slice(1).map((photo, index) => (
-                    <div key={index} className="hotel-thumb-wrapper">
-                        <img src={photo.src} alt={photo.alt} className="hotel-thumb-img" />
-                        <div className="hotel-thumb-overlay">
-                            <p className="hotel-thumb-text">{photo.alt}</p>
+                    <div key={index} className="hotel-gallery__thumb">
+                        <img src={photo.src} alt={photo.alt} className="hotel-gallery__thumb-img" />
+                        <div className="hotel-gallery__overlay">
+                            <p className="hotel-gallery__overlay-text">{photo.alt}</p>
                         </div>
                     </div>
                 ))}
             </div>
-            <div className="hotel-button-container">
-                <button className="hotel-button">See all photos</button>
+            <div className="hotel-gallery__button-container">
+                <button className="hotel-gallery__button">See all photos</button>
             </div>
         </section>
     );
 }
-
