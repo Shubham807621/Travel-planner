@@ -20,6 +20,7 @@ import BookingEnquiry from './Admin-Panel/Booking-Enquiry/BookingEnquiry'
 import HotelDetails from './Pages/HotelDetails/HotelDetails'
 import Booking from './Pages/Travel-Booking/Payment Gateway/Booking'
 import Dashboard from './Admin-Panel/Dashboard/Dashboard'
+import Form from './Pages/Admin-Pages/AddPackage/Form'
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path='/destination/:state/:city/hotel-details/:id' element={<HotelDetails/>}/>
           <Route path="/admin/dashboard" element={<Dashboard/>} />
           <Route path="?booking" element={<Booking />} />
+          <Route path="/AddPackage" element={<Form />} />
         </Routes>
 
       </BrowserRouter>

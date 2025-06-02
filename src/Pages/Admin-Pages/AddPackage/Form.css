@@ -1,0 +1,211 @@
+.header-wrapper {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 10000;
+}
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #e6f4f1;
+    font-family: Arial, sans-serif;
+  }
+  
+  .main-section {
+    flex: 3;
+  }
+  
+  .sidebar {
+    flex: 1;
+    background-color: #f0faf8;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input-field, .textarea-field {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .textarea-field {
+    height: 100px;
+    resize: none;
+  }
+  
+  .section-box {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .date-places-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .input-with-label {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .small-input {
+    width: 100px;
+  }
+  
+  .countdown-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .countdown-wrapper {
+    position: relative;
+    width: 80px;
+  }
+  
+  .countdown-input {
+    width: 100%;
+    padding-right: 20px;
+  }
+  
+  .countdown-buttons {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .countdown-button {
+    padding: 2px 6px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    background-color: #00c4b4;
+    cursor: pointer;
+    border-radius: 2px;
+    line-height: 1;
+    width: 20px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sub-label-fired {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .gallery-upload {
+    border: 1px dashed #ddd;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gallery-upload p {
+    margin: 5px 0;
+  }
+  
+  .upload-button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .location-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .map-placeholder {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #666;
+  }
+  
+  .publish-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .save-draft-button, .preview-button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background-color: #00c4b4;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .status-visibility {
+    margin-bottom: 10px;
+  }
+  
+  .status-visibility p {
+    margin: 5px 0;
+  }
+  
+  .edit-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  .publish-button {
+    background-color: #00c4b4;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .checkbox-group label {
+    font-weight: normal;
+  }
+  
+  .add-image-button {
+    background-color: #00c4b4;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
