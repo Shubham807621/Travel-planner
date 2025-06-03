@@ -1,17 +1,15 @@
 .hotel-details {
-    position: absolute;
-    top: 15%;
-    padding: 0 15px;
+    padding-top: 3%;
 }
 
-.hotel-details__top {
+.hotel-details .hotel-details-top {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
 /* Main content column */
-.hotel-details__main {
+.hotel-details .hotel-details-top .hotel-details-main {
     width: 70%;
     padding: 20px;
     border-radius: 12px;
@@ -19,7 +17,7 @@
 }
 
 /* Sticky right column */
-.hotel-details__side {
+.hotel-details .hotel-details-top .hotel-details-side {
     width: 27%;
     position: sticky;
     top: 15%;
@@ -31,23 +29,23 @@
 }
 
 /* RoomOptions spacing wrapper */
-.hotel-details__rooms {
+.hotel-details-rooms {
     margin-top: 30px;
 }
 
 /* Responsive: stack layout on small screens */
 @media screen and (max-width: 768px) {
-    .hotel-details__top {
+    .hotel-details-top {
         flex-direction: column;
     }
 
-    .hotel-details__side {
+    .hotel-details-side {
         position: static;
         width: 100%;
         margin-top: 20px;
     }
 
-    .hotel-details__main {
+    .hotel-details-main {
         width: 100%;
     }
 }

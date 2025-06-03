@@ -19,7 +19,7 @@ export const loginUser = async (body) =>{
 export const registerUser = async (body) =>{
 
     const url = `${API_BASE_URL}${API_URLs.SIGNUP}`
-
+    console.log(body)
     try {
         const response = await axios.post(url, body)
         return response.data;
@@ -92,6 +92,20 @@ export const getPlaceList = async (name) =>{
     console.log(url);
     try {
         const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+}
+
+export const SearchHotels = async (body) =>{
+
+    const url = `${API_BASE_URL}${API_URLs.SEARCH_HOTEL}`
+ 
+    try {
+        const response = await axios.post(url,body)
         return response.data;
         
     } catch (error) {

@@ -1,15 +1,16 @@
 import React,{ useState } from "react";
 import "./newuser.css"; // Make sure to create this CSS file
+import { registerUser } from "../../Components/APIServices/apiservice";
 
 const NewUser = () => {
     const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    mobile: "",
-    phone: "",
-    password: "",
-    confirmPassword: "",
-    email: "",
+     firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    phoneNumber: '',
+    roleCode:''
   
   });
 
@@ -39,12 +40,8 @@ const NewUser = () => {
     }
 
     // Phone number (numeric check)
-    if (formData.phone && !/^\d+$/.test(formData.phone)) {
-      newErrors.phone = "Phone must be numeric";
-    }
-
-    if (formData.mobile && !/^\d+$/.test(formData.mobile)) {
-      newErrors.mobile = "Mobile must be numeric";
+    if (formData.phoneNumber && !/^\d+$/.test(formData.phoneNumber)) {
+      newErrors.phoneNumber = "Phone must be numeric";
     }
 
     setErrors(newErrors);
@@ -52,88 +49,122 @@ const NewUser = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      alert("Form submitted successfully!");
-      // Submit to API or clear form here
-    }
-  };
+   const handleSubmit = async (e) => {
+     e.preventDefault();
+     const validationError = validate();
+     setErrors(validationError);
+ 
+     if (Object.keys(validationError).length === 0) {
+       try {
+         const response = await registerUser(formData); // Make sure this function is implemented elsewhere
+         if (response?.code === 201) {
+           alert('Registration successful! Please check your email for the verification code.');
+         } else {
+           setErrors({ general: 'Invalid or Email already exists!' });
+         }
+       } catch (err) {
+         setErrors({ general: 'Something went wrong. Try again!' });
+       }
+     }
+   };
 
   return (
     <div className="form-container">
       <div className='newuserform'>
-        <h4>ADD NEW USER</h4>
+        <h4>Add New User</h4>
       
-      <form onSubmit={handleSubmit}>
-        <table>
-          <tbody>
-            <tr>
-              <td><label>First name</label></td>
-              <td><label>Last name</label></td>
-              
-            </tr>
-            <tr>
-              
-              <td><input type="text" name="firstName" 
-              value={formData.firstName}
-                onChange={handleChange}
-              />
-              {errors.firstName && <span className="error">{errors.firstName}</span>}
-              </td>
-              <td><input type="text" name="lastName" 
-              value={formData.lastName}
-                onChange={handleChange}
-              />{errors.lastName && <span className="error">{errors.lastName}</span>}
-              </td>
-              
-            </tr>
-            <tr>
-                <td><label>Mobile</label></td>        
-            </tr>
-            <tr>
-                <td>
-                  <input type="text" name="mobile" value={formData.mobile}
-                  onChange={handleChange}/>
-                  {errors.mobile && <span className="error">{errors.mobile}</span>}
-                </td>
-              
-              
-            </tr>
-            <tr>
-                <td><label>Password</label></td>
-                <td><label>Confirm Password</label></td>
-            </tr>
-            <tr>
-            <td><input type="password" name="password" value={formData.password}
-                  onChange={handleChange}/>{errors.password && <span className="error">{errors.password}</span>}
-                  </td>
-              <td><input type="password" name="confirmPassword" value={formData.confirmPassword}
-                  onChange={handleChange}/>
-                  {errors.confirmPassword && (
-                  <span className="error">{errors.confirmPassword}</span>
-                )}
-                  </td>
-            </tr>
-            <tr>
-            <td><label>Email</label></td>
+        <form onSubmit={handleSubmit}>
 
-            </tr>
-            <tr>
-            <td>
-              <input type="email" name="email" value={formData.email}
-                  onChange={handleChange}/>{errors.email && <span className="error">{errors.email}</span>}
-            </td>
-            </tr>
-            <tr className="form-actions">
-               <button type="submit">Submit</button> 
-            </tr>
-          </tbody>
-        </table>
-        <div >
-          
-        </div>
-      </form>
+          <div className='my-4'>
+            <div className='d-flex input-container'>
+              <div className="form-group">
+                <label>Enter Your First Name*</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="Enter Your First Name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                />
+                {errors.firstName && <span className="errors">{errors.firstName}</span>}
+              </div>
+              <div className="form-group">
+                <label>Last Name*</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Enter Your Last Name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
+                {errors.lastName && <span className="errors">{errors.lastName}</span>}
+              </div>
+            </div>
+            <div className="form-group">
+              <label>Email*</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                value={formData.email}
+                onChange={handleChange}
+            
+              />
+              {errors.email && <span className="errors">{errors.email}</span>}
+            </div>
+            <div className='d-flex input-container'>
+              <div className="form-group">
+                <label>Password*</label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+                {errors.password && <span className="errors">{errors.password}</span>}
+              </div>
+              <div className="form-group">
+                <label>Confirm Password*</label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm Password"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                />
+                {errors.confirmPassword && <span className="errors">{errors.confirmPassword}</span>}
+              </div>
+            </div>
+            <div className='d-flex input-container'>
+              <div className="form-group">
+                <label>Phone Number*</label>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  placeholder="Enter your Phone Number"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                />
+                {errors.phoneNumber && <span className="errors">{errors.phoneNumber}</span>}
+              </div>
+              <div className="form-group">
+                <label>Add Role Code</label>
+                <input
+                  type="text"
+                  name="roleCode"
+                  placeholder="Enter role code"
+                  value={formData.roleCode}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" className='submit-btn'>Add User</button>
+        </form>
+       
+      
       </div>
     </div>
   );

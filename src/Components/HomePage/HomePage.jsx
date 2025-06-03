@@ -6,7 +6,7 @@ import FilterForm from '../../Pages/FilterForm/FilterForm'
 import WhyChoose from '../../Pages/WhyChoose/WhyChoose'
 import TrendingDestinations from '../../Pages/TrendingDestinations/TrendingDestinations'
 import About_Us from '../../Pages/About-Us/About_Us'
-import Destination1 from '../../Pages/Destination/DestinationDetail'
+
 
 
 export default function HomePage() {
@@ -17,11 +17,12 @@ export default function HomePage() {
       
        <FilterForm/>
 
+       <TrendingDestinations/>
+       
        <About_Us/>
 
        <WhyChoose/>
 
-       <TrendingDestinations/>
 
      
     </>

@@ -92,7 +92,7 @@ export default function DestinationCity() {
                 </div>    
             </div>    
 
-            <HotelCard selectedCity={selectedCity} selectedState={selectedState}/>  
+            <HotelCard selectedCity={selectedCity}/>  
         </div>
     
     </>

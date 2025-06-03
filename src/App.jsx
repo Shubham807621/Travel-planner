@@ -20,6 +20,7 @@ import BookingEnquiry from './Admin-Panel/Booking-Enquiry/BookingEnquiry'
 import HotelDetails from './Pages/HotelDetails/HotelDetails'
 import Booking from './Pages/Travel-Booking/Payment Gateway/Booking'
 import Dashboard from './Admin-Panel/Dashboard/Dashboard'
+import Footer from './Components/Footer/Footer'
 
 
 function App() {
@@ -45,11 +46,11 @@ function App() {
           <Route path='/expiredpage' element={<ExpiredPage />} />
           <Route path='/admin/new-users' element={<NewUser />} />
           <Route path='/booking' element={<BookingEnquiry />} />
-          <Route path='/destination/:state/:city/hotel-details/:id' element={<HotelDetails/>}/>
+          <Route path='/destination/:city/hotel-details/:id' element={<HotelDetails/>}/>
           <Route path="/admin/dashboard" element={<Dashboard/>} />
-          <Route path="?booking" element={<Booking />} />
+          <Route path="/booking" element={<Booking />} />
         </Routes>
-
+      <Footer/>
       </BrowserRouter>
 
 

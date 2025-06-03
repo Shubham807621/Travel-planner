@@ -35,15 +35,18 @@
 
 .hotel-card-wrapper .hotel-card .hotel-info .review-box{
     width: 70%;
-   margin: 15px !important;
-   display: flex;
-   justify-content: space-between;
-   align-items: self-start;
+    margin: 15px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
 }
 
 .hotel-card-wrapper .hotel-card .hotel-info .hotel-name{
     margin: 15px !important;
     color: #000;
+    padding: 0 !important;
+    height: 60px;
+    
 }
 .hotel-card-wrapper .hotel-card .hotel-info .hotel-description{
     margin: 15px !important;

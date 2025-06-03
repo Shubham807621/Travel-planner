@@ -6,71 +6,75 @@
   left: 20%;
 
 }
-.newuserform{
+.form-container .newuserform{
     margin-top: 80px;
-    
-    
-    
+      
 }
-h4 {
+.form-container .newuserform h4 {
   color: #1f2c5c;
-  margin-left: 310px;
- 
+ margin: 10px;
 }
 
-table {
-  width: 800px;
-  border: none;
-  margin-top: 10px;
-  margin-left: 25%;
-  background-color: rgb(235, 245, 245);
+.form-container .newuserform form .input-container{
+  width: 100%;
+  justify-content: space-between;
 }
 
-td {
-  padding: 10px;
-  vertical-align: top;
+.form-container .newuserform form .form-group {
+  width: 98.5%;
+  margin: 0 10px;
+} 
+
+.form-container .newuserform form .input-container .form-group {
+  width: 100%;
+  margin: 10px;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  margin-left: 8px;
+.form-container .newuserform form .form-group label {
+  font-weight: 500;
+  text-align: start !important;
+  margin: 10px 5px;
+  width: 100%;
 }
-
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-  width: 95%;
+.form-container .newuserform form .form-group input {
+  width: 100%;
   padding: 8px;
-  box-sizing: border-box;
- 
+  border: 1px solid #aaa;
+  border-radius: 10px;
+}
+.form-container .newuserform form .input-container .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
 }
 
-.form-actions {
-  margin-top: 20px;
-  
-  text-align: left;
-  
+.form-container .newuserform form .form-group .error {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 4px;
+  text-align: start;
 }
 
-button {
-  padding: 5px 20px;
-  background-color: #1f2c5c;
+.form-container .newuserform form .success {
+  color: green;
+   text-align: start;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.form-container .newuserform form .submit-btn {
+  width: 98%;
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #14b8a6;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
+  font-weight: bold;
   cursor: pointer;
-  margin-left: 20px;
-  margin-bottom: 8px;
 }
 
-button:hover {
-  background-color: #3a4b7c;
-}
-.error {
-  color: red;
-  font-size: 12px;
-  display: block;
-  margin-top: 4px;
+.signup-container form button:hover {
+  background: #0056b3;
 }

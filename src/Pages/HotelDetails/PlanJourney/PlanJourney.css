@@ -1,30 +1,30 @@
-.plan-journey {
+.plan-journey-container {
     max-width: 1000px;
     margin: 40px auto;
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
 }
 
-.plan-journey__title {
+.plan-journey-container .title {
     font-size: 24px;
     font-weight: 600;
     color: #333;
 }
 
-.plan-journey__subtitle {
+.plan-journey-container .subtitle {
     font-size: 14px;
     color: #777;
     margin-bottom: 30px;
 }
 
-.plan-journey__card-grid {
+.plan-journey-container  .card-grid {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     gap: 10px;
 }
 
-.plan-journey__card {
+.plan-journey-container  .card-grid .card {
     background: #fff;
     border: 1px solid #eee;
     border-radius: 16px;
@@ -35,46 +35,46 @@
     flex-shrink: 0;
 }
 
-.plan-journey__card:hover {
+.plan-journey-container  .card-grid .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-.plan-journey__image {
+ .plan-journey-container  .card-grid .card .card-image {
     width: 100px;
     height: auto;
     margin: 20px auto 10px;
     display: block;
 }
 
-.plan-journey__content {
+.plan-journey-container .card-grid .card .card-content {
     padding: 0 20px 20px;
 }
 
-.plan-journey__content h3 {
+.plan-journey-container .card-grid .card .card-content h3 {
     font-size: 18px;
     color: #222;
     margin-bottom: 5px;
 }
 
-.plan-journey__description {
+.plan-journey-container .card-grid .card .card-content .description {
     font-size: 13px;
     color: #666;
     margin-bottom: 16px;
 }
 
-.plan-journey__footer {
+.plan-journey-container .card-grid .card .card-content .card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
 }
 
-.plan-journey__date {
+.plan-journey-container .card-grid .card .card-content .card-footer .date {
     color: #666;
 }
 
-.plan-journey__search-btn {
+.plan-journey-container .card-grid .card .card-content .card-footer .search-btn {
     background-color: #0066ff;
     color: white;
     border: none;
@@ -85,6 +85,6 @@
     transition: background-color 0.3s ease;
 }
 
-.plan-journey__search-btn:hover {
+.plan-journey-container .card-grid .card .card-content .card-footer .search-btn:hover {
     background-color: #0052cc;
 }

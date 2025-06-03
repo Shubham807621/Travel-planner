@@ -1,6 +1,6 @@
 .filter-form-wrapper{
     width:80%;
-    height: 178px;
+    height: autox;
     /* background-color: aqua; */
     margin: auto;
     margin-bottom: 80px;
@@ -100,4 +100,30 @@
     background-color: #3ea6ff;
     color: white;
     border: 1px solid rgba(0, 0, 0, 0.293);
+}
+
+.filter-form-wrapper .result-hotels{
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.filter-form-wrapper .result-hotels ul{
+    list-style: none;
+    padding: 0;
+}
+.filter-form-wrapper .result-hotels ul li{
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.filter-form-wrapper .result-hotels ul li img{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
 }

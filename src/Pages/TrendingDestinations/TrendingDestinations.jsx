@@ -40,7 +40,6 @@ useEffect(()=>{
 
 },[])
 
-console.log(states);
   return (
     <div className="trending-container mt-4">
       <h2 className="title">
