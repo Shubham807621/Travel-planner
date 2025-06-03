@@ -12,27 +12,28 @@ import './HotelDetails.css';
 
 export default function HotelDetails() {
     return (
+=
         <div className="hotel-details">
             <div className="hotel-details-top">
                 <div className="hotel-details-main">
                     <HotelName />
+                    <BookingPage />
                     <HotelGallery />
                     <DetailsSection />
                     <HotelFeatures />
                     <GallerySection />
                     <PlanJourney />
                 </div>
-
                 <div className="hotel-details-side">
                     <LocationCard />
                     <BookingCard />
                 </div>
             </div>
-
             {/* Room Section */}
             <div className="hotel-details-rooms">
                 <RoomOptions />
             </div>
+
         </div>
     );
 }

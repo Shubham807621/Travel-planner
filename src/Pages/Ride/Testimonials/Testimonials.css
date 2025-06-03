@@ -17,14 +17,14 @@
     flex-wrap: wrap;
 }
 
-.testimonial-section .testimonial {
+.testimonial-section .testimonial-container .testimonial {
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.testimonial-section .testimonial .speech-bubble {
+.testimonial-section .testimonial-container .testimonial .speech-bubble {
     background-color: white;
     padding: 1.2rem;
     border-radius: 8px;
@@ -32,7 +32,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-section .testimonial .speech-bubble::after {
+.testimonial-section .testimonial-container .testimonial .speech-bubble::after {
     content: "";
     position: absolute;
     bottom: -12px;
@@ -44,21 +44,21 @@
     border-right: 12px solid transparent;
 }
 
-.testimonial-section .testimonial .customer {
+.testimonial-section .testimonial-container .testimonial .customer {
     margin-top: 2.5rem;
     display: flex;
     align-items: center;
     gap: 0.8rem;
 }
 
-.testimonial-section .testimonial .customer img {
+.testimonial-section .testimonial-container .testimonial .customer img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.testimonial-section .testimonial .customer p {
+.testimonial-section .testimonial-container .testimonial .customer p {
     margin: 0;
     font-weight: 500;
 }

@@ -8,18 +8,7 @@
     margin: auto;
 }
 
-/* Left section: Tab content */
-.details-wrapper .tab-content {
-    flex: 2;
-    padding: 25px;
-    text-align: left;
-    background: #ffffff;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* Tabs container inside tab-content */
+/* Tabs container */
 .details-wrapper .tab-content .tabs {
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +16,7 @@
     margin-bottom: 20px;
 }
 
-/* Tab buttons inside tabs */
+/* Tab buttons */
 .details-wrapper .tab-content .tabs button {
     background: none;
     border: none;
@@ -51,7 +40,18 @@
     color: #fd6c63;
 }
 
-/* Paragraphs inside tab-content */
+/* Left content section */
+.details-wrapper .tab-content {
+    flex: 2;
+    padding: 25px;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Paragraphs inside content */
 .details-wrapper .tab-content p {
     margin-bottom: 16px;
     font-size: 15px;
@@ -59,7 +59,7 @@
     line-height: 1.6;
 }
 
-/* Feature list inside tab-content */
+/* Feature list */
 .details-wrapper .tab-content .feature-list {
     list-style: disc;
     padding-left: 25px;
@@ -68,7 +68,7 @@
     line-height: 1.5;
 }
 
-/* Right section: Travel tips box */
+/* Right: Travel tips section */
 .details-wrapper .travel-tips-box {
     flex: 1;
     background: linear-gradient(to bottom right, #fef2f1, #e3f2fd);
@@ -79,8 +79,6 @@
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-
-/* Travel tips heading small */
 .details-wrapper .travel-tips-box h5 {
     font-size: 13px;
     color: #fd6c63;
@@ -91,7 +89,6 @@
     letter-spacing: 0.5px;
 }
 
-/* Decorative line next to h5 */
 .details-wrapper .travel-tips-box .line {
     width: 30px;
     height: 1.5px;
@@ -99,7 +96,6 @@
     margin-right: 10px;
 }
 
-/* Travel tips main heading */
 .details-wrapper .travel-tips-box h3 {
     font-size: 20px;
     margin: 18px 0;
@@ -107,7 +103,6 @@
     line-height: 1.4;
 }
 
-/* Paragraph inside travel tips box */
 .details-wrapper .travel-tips-box p {
     font-size: 14.5px;
     color: #555;
@@ -115,7 +110,6 @@
     line-height: 1.6;
 }
 
-/* Button inside travel tips box */
 .details-wrapper .travel-tips-box .quote-btn {
     background: #fd6c63;
     color: white;

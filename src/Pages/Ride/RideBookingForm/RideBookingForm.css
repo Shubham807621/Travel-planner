@@ -46,18 +46,18 @@
     justify-content: space-between;
 }
 
-.booking-container .input-group {
+.booking-container .booking-card .input-group {
     flex: 1 1 48%;
     text-align: left;
 }
 
-.booking-container .input-group label {
+.booking-container .booking-card .input-group label {
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
 }
 
-.booking-container .input-group .input-with-icon {
+.booking-container .booking-card .input-group .input-with-icon {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -66,7 +66,7 @@
     border-radius: 8px;
 }
 
-.booking-container .input-group .input-with-icon input {
+.booking-container .booking-card .input-group .input-with-icon input {
     border: none;
     outline: none;
     flex: 1;
@@ -74,7 +74,7 @@
     font-size: 1rem;
 }
 
-.booking-container .input-group select {
+.booking-container .booking-card .input-group select {
     width: 100%;
     padding: 10px 12px;
     border: none;

@@ -17,11 +17,13 @@
     margin-bottom: 30px;
 }
 
+
 .plan-journey-container  .card-grid {
+
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .plan-journey-container  .card-grid .card {
@@ -32,15 +34,17 @@
     padding: 40px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 0;
 }
 
 .plan-journey-container  .card-grid .card:hover {
+
     transform: translateY(-6px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
+
  .plan-journey-container  .card-grid .card .card-image {
+
     width: 100px;
     height: auto;
     margin: 20px auto 10px;
@@ -52,29 +56,40 @@
 }
 
 .plan-journey-container .card-grid .card .card-content h3 {
+
+    padding: 0 20px 20px;
+}
+
+.card-grid .card .card-content h3 {
+
     font-size: 18px;
     color: #222;
     margin-bottom: 5px;
 }
 
 .plan-journey-container .card-grid .card .card-content .description {
+
     font-size: 13px;
     color: #666;
     margin-bottom: 16px;
 }
 
+
 .plan-journey-container .card-grid .card .card-content .card-footer {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
 }
 
+
 .plan-journey-container .card-grid .card .card-content .card-footer .date {
     color: #666;
 }
 
 .plan-journey-container .card-grid .card .card-content .card-footer .search-btn {
+
     background-color: #0066ff;
     color: white;
     border: none;
@@ -85,6 +100,20 @@
     transition: background-color 0.3s ease;
 }
 
+
 .plan-journey-container .card-grid .card .card-content .card-footer .search-btn:hover {
+
     background-color: #0052cc;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-grid .card {
+    width: 300px;
+    flex-shrink: 0;
 }

@@ -21,6 +21,8 @@ import HotelDetails from './Pages/HotelDetails/HotelDetails'
 import Booking from './Pages/Travel-Booking/Payment Gateway/Booking'
 import Dashboard from './Admin-Panel/Dashboard/Dashboard'
 import Footer from './Components/Footer/Footer'
+import Form from './Pages/Admin-Pages/AddPackage/Form'
+
 
 
 function App() {
@@ -45,10 +47,12 @@ function App() {
           <Route path='/admin/pending-package' element={<PendingPage />} />
           <Route path='/expiredpage' element={<ExpiredPage />} />
           <Route path='/admin/new-users' element={<NewUser />} />
-          <Route path='/booking' element={<BookingEnquiry />} />
+          <Route path='/enquiry-booking' element={<BookingEnquiry />} />
           <Route path='/destination/:city/hotel-details/:id' element={<HotelDetails/>}/>
           <Route path="/admin/dashboard" element={<Dashboard/>} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/AddPackage" element={<Form />} />
+
         </Routes>
       <Footer/>
       </BrowserRouter>

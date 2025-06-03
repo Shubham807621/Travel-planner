@@ -1,3 +1,4 @@
+
 .hotel-details {
     padding-top: 3%;
 }
@@ -28,13 +29,60 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* RoomOptions spacing wrapper */
-.hotel-details-rooms {
-    margin-top: 30px;
+/* Base styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-/* Responsive: stack layout on small screens */
+/* Wraps everything */
+.AppWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 40px;
+}
+
+/* Top section with two side-by-side containers */
+.AppWrapper .TopContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Main content */
+.AppWrapper .MainContainer {
+  flex: 3;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Sticky right-side container */
+.AppWrapper .SideContainer {
+  flex: 1;
+  position: sticky;
+  top: 30px;
+  align-self: flex-start;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+/* RoomOptions styling already in its file, just add spacing */
+.RoomOptions {
+  margin-top: 30px;
+}
+
+/* Responsive for mobile */
 @media screen and (max-width: 768px) {
+
     .hotel-details-top {
         flex-direction: column;
     }
@@ -48,4 +96,13 @@
     .hotel-details-main {
         width: 100%;
     }
+
+  .AppWrapper .TopContent {
+    flex-direction: column;
+  }
+
+  .AppWrapper .SideContainer {
+    position: static;
+  }
+
 }
