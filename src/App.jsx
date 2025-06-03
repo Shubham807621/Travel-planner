@@ -22,6 +22,7 @@ import Booking from './Pages/Travel-Booking/Payment Gateway/Booking'
 import Dashboard from './Admin-Panel/Dashboard/Dashboard'
 import Footer from './Components/Footer/Footer'
 import Form from './Pages/Admin-Pages/AddPackage/Form'
+import Ride from './Pages/Ride/Ride'
 
 
 
@@ -52,6 +53,7 @@ function App() {
           <Route path="/admin/dashboard" element={<Dashboard/>} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/AddPackage" element={<Form />} />
+          <Route path='/book-ride' element={<Ride/>}/>
 
         </Routes>
       <Footer/>

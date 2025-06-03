@@ -10,19 +10,10 @@
   import LuggageOutlinedIcon from '@mui/icons-material/LuggageOutlined';
   import PeopleIcon from '@mui/icons-material/People';
   import user from '../../Images/Users/user.jpg'
-  import AssignmentIcon from '@mui/icons-material/Assignment';
-  import SchoolIcon from '@mui/icons-material/School';
-  import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-  import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
-  import HeadphonesIcon from '@mui/icons-material/Headphones';
-  import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
   import { Link, useLocation } from 'react-router-dom';
-//   import { Dropdown } from "react-bootstrap";
+
   import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
   import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-  import MoveUpOutlinedIcon from '@mui/icons-material/MoveUpOutlined';
-  import ArrowCircleUpOutlinedIcon from '@mui/icons-material/ArrowCircleUpOutlined';
-  import QuestionMarkOutlinedIcon from '@mui/icons-material/QuestionMarkOutlined';
   import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
   import ExpandLessIcon from '@mui/icons-material/ExpandLess';
   import LoginIcon from '@mui/icons-material/Login';
@@ -73,7 +64,6 @@ export default function AdminHeader() {
   return (
     <>  
      {hideElement &&(
-
 
         <div className="admin-header-wrapper">
             <div className="container-fluid header">

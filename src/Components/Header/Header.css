@@ -66,44 +66,70 @@
     padding-left: 15px;
 }
 
-.header-wrapper .utility-box{
-    width: 28%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* height: 100%; */
-    /* background-color: beige; */
-}
-
-.header-wrapper .utility-box .search-box{
-    width: 60%;
+.header-wrapper .profile-dropdown {
     position: relative;
-    border: 1px solid black;
-    border-radius: 15px;
-    background-color: rgb(26, 91, 148);
-}
-
-.header-wrapper .utility-box .search-box input{
-     width: 100%;
-    border-radius: 15px;
-    border: none;
-    height: 40px;
-   
-    /* padding: 10px; */
-    /* padding-right: 35px; */
-
-}
-
-.header-wrapper .utility-box .search-box span{
-    color: rgba(0, 0, 0, 0.615);
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
-
-.header-wrapper .utility-box .login-btn a{
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
+    display: inline-block;
     
-}
+  }
+  
+.header-wrapper .profile-dropdown .profile-btn {
+    background-color:transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+.header-wrapper .profile-dropdown .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+ .header-wrapper  .profile-dropdown .dropdown-menu {
+    position: absolute;
+    top: 113%;
+    right: -20%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: auto;
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+  }
+
+
+.header-wrapper  .profile-dropdown .dropdown-menu  .user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+.header-wrapper  .profile-dropdown .dropdown-menu  .user-info .user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+.header-wrapper  .profile-dropdown .dropdown-menu  .dropdown-item {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+.header-wrapper  .profile-dropdown .dropdown-menu  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }

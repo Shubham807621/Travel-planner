@@ -1,19 +1,17 @@
-import RideBookingForm from "./RideBookingForm";
-import BookingSteps from "./BookingSteps";
-import MapCoverage from "./MapCoverage";
-import Testimonials from "./Testimonials";
+import React from 'react'
+import RideBookingForm from './RideBookingForm/RideBookingForm'
+import BookingSteps from './BookingSteps/BookingSteps'
+import MapCoverage from './MapCoverage/MapCoverage'
+import Testimonials from './Testimonials/Testimonials'
 
-function App() {
-
-
-    return (
-        <>
+export default function Ride() {
+  return (
+   <>
         <RideBookingForm/>
         <BookingSteps/>
         <MapCoverage/>
         <Testimonials/>
-        </>
-    )
-}
 
-export default App
+   </>
+  )
+}

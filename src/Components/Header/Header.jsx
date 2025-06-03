@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react'
 import './Header.css'
-import ArrowDown from '@mui/icons-material/ArrowDropDownOutlined';
-import { Button } from '@mui/material';
-import SearchIcon from '@mui/icons-material/SearchOutlined';
 import Favorite from '@mui/icons-material/FavoriteBorderOutlined';
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
+ import user from '../../Images/Users/user.jpg'
 
 export default function Header() {
 
@@ -14,20 +16,8 @@ export default function Header() {
     const location = useLocation();
     const hideElement = location.pathname.startsWith("/admin"); 
     const userRole = localStorage.getItem("role");
-
-    const [dropDownMenu1, setDropDownMenu1] = useState(false);
-
-
-    const handleClick1 = ()=>{
-        if(dropDownMenu1){
-            
-            setDropDownMenu1(false)
-        }
-        else
-        setDropDownMenu1(true)
-    }
-
-
+    const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate    ();
 
 
   useEffect(() => {
@@ -38,6 +28,12 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+    const employee={
+
+        name:"Shubham Musale",
+        email:"shubhammusale111@gmail.com"
+    }
   return (
     <>  
     {!hideElement &&(
@@ -72,11 +68,7 @@ export default function Header() {
                 </ul>
                
             </div>
-            <div className="utility-box">
-                {/* <div className="search-box ">
-                    <input type="text" placeholder='search...'/>
-                    <span><SearchIcon/></span>
-                </div> */}
+            {/* <div className="utility-box">
                 <div className="favourite-icon mt-1">
                     <Favorite/>
                 </div>
@@ -84,7 +76,55 @@ export default function Header() {
                     <Link to='/login'>Login</Link>
                 </div>
 
-            </div>
+            </div> */}
+                <div className="profile-dropdown">
+        
+                    <button className="profile-btn" onClick={() => setMenuOpen(!menuOpen)}>
+                    <img
+                        src={user}
+                        alt="User"
+                        className="profile-img"
+                    />
+                    <div className="profile-info">
+                        <p className="fw-bold mb-0 d-none d-md-inline">Shubham Musale</p>
+                    
+                    </div>
+                    </button>
+
+                    {menuOpen && (
+                    <div className="dropdown-menu show">
+                        <div className="user-info">
+                            <img src={user}  className="user-img" alt="profile pic"/>
+                            <div>
+                                <h6 className="mb-0 fw-bold">{employee.name}</h6>
+                                <p className="text-muted small mb-0">{employee.email}</p>
+                            </div>
+                        </div>
+
+                        <Link className="dropdown-item">
+                            <AccountCircleOutlinedIcon className="me-2" /> My Profile
+                        </Link>
+                        <Link className="dropdown-item">
+                            <Favorite className="me-2" /> Wishlist
+                        </Link>
+                        <Link className="dropdown-item">
+                            <SettingsOutlinedIcon className="me-2" /> Settings
+                        </Link>
+
+                        <button
+                            className="dropdown-item text-danger"
+                            onClick={() => {
+                            localStorage.clear(); // ✅ Clears all stored data (token, empId, etc.)
+                            navigate("/login");
+                            setMenuOpen(false)
+                             // ✅ Redirect to Login page
+                            }}
+                        >
+                            <ExitToAppOutlinedIcon className="me-2" /> Logout
+                </button>
+                    </div>
+                    )}
+                </div>
         </div>
 
     )}

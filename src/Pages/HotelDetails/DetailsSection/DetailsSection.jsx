@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import './DetailsSection.css';
+import Weather from '../../../Components/Weather/Weather';
 
 const DetailsSectionTabs = [
     'Overview',
     'Trip Recommendations',
-    'Reviews',
-    'Map',
-    'Rooms',
-    'Policies'
+    'Weather'
 ];
 
 const MainPage = () => {
@@ -51,10 +49,14 @@ const MainPage = () => {
                             </ul>
                         </div>
                     )}
-
-                    {activeTab !== 'Overview' && (
-                        <p>Content for the "{activeTab.toUpperCase()}" tab goes here.</p>
+                    
+                    {activeTab === 'Weather' && (
+                        <div>
+                              <Weather/>
+                        </div>
                     )}
+
+                  
                 </div>
 
                 {/* Right: Travel tips */}

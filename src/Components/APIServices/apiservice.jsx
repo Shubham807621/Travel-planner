@@ -89,7 +89,7 @@ export const getHotelList = async (name) =>{
 export const getPlaceList = async (name) =>{
 
     const url = `${API_BASE_URL}${API_URLs.GET_PLACES}/${name}`
-    console.log(url);
+
     try {
         const response = await axios.get(url)
         return response.data;
@@ -112,4 +112,33 @@ export const SearchHotels = async (body) =>{
         console.error('Error:', error.response || error.message);
         throw error;
     }
+}
+
+export const getCityDetails = async (name) =>{
+
+    const url = `${API_BASE_URL}${API_URLs.GET_CITY}/${name}`
+ 
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+}
+
+export const getWeather = async (city) =>{
+    console.log(city)
+ const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`
+ 
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+
 }

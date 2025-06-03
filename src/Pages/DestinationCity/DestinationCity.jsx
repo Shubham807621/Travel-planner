@@ -2,12 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './DestinationCity.css'
 import HomeIcon from '@mui/icons-material/Home';
 import { Link, useParams } from 'react-router-dom';
-import HawaMahal from '../../Images/Jaipur/Hawa Mahal.jpg';
-import CityPalaceJaipur from '../../Images/Jaipur/City-Palace1.jpg';
-import NahargarhFort from '../../Images/Jaipur/Nahargarh-fort.jpg';
-import AmberFort from '../../Images/Jaipur/ambur-fort.jpg';
 import HotelCard from './HotelCard';
-import { getPlaceList } from '../../Components/APIServices/apiservice';
+import { getCityDetails, getPlaceList } from '../../Components/APIServices/apiservice';
 
 
 export default function DestinationCity() {
@@ -15,15 +11,13 @@ export default function DestinationCity() {
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [places , setPlaces] = useState([])
+  const [cityDetails ,setCityDetails] = useState();
+  const [cityImg, setCityImg] = useState();
 
   useEffect(() => {
     setSelectedState(state);
     setSelectedCity(city);
   }, [state, city]);
-
-
-  const cityDescription = 'The Pink City, famous for its forts and palaces.';
-
 
 
   useEffect(()=>{
@@ -32,7 +26,6 @@ export default function DestinationCity() {
     
         try {
           const response = await getPlaceList(selectedCity);
-          console.log(response);
           setPlaces(response)
         
           
@@ -45,31 +38,46 @@ export default function DestinationCity() {
     
     },[selectedCity])
 
+    
+  useEffect(()=>{
+      const fetchCityDetails = async ()=>{
+
+           if (!selectedCity) return; //
+    
+        try {
+          const response = await getCityDetails(selectedCity);
+         setCityDetails(response);
+        setCityImg(`${response.imgUrl}`);
+          
+        } catch (error) {
+            console.error("Error fetching documents:", error);
+          }
+    
+      };
+      fetchCityDetails();
+    
+    },[selectedCity])
+
+    console.log(cityImg)
+
   return (
     <>
         <div className="destination-city-wrapper">
             <div className="destination-img-wrapper ">
-                <div className="image-banner">
+                <div className="image-banner"
+                    style={{backgroundImage:`url(${cityImg})`}}
+                >
                     <div className="destination-city-content">
-                        <h2>{selectedCity}</h2>
-                        <div className="bread-crumb mt-2">
-                            <ul className='d-flex p-0'>
-                                <li className='arrow-icon'>
-                                    <span className='me-2'><HomeIcon/></span>
-                                    <Link to='/'>Home</Link>
-                                </li>
-                                <li>Destination </li>
-                            </ul>
-                        </div>
+                         <h2>{cityDetails?.name}</h2>
+                
                     </div>
                 </div>
             
             </div>
 
             <div className="destination-city-info ">
-
-                <h1 className="main-heading mb-4">{selectedCity}</h1>
-                <p className="main-description ms-2">{cityDescription}</p>
+                {/* <h1 className="main-heading mb-4">{selectedCity}</h1> */}
+                <p className="main-description ms-2">{cityDetails?.description}</p>
                 <div className="destination-box">
                     {places.map((place) => (
                     <div key={place.id} className="destination-card">
