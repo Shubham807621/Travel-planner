@@ -1,8 +1,9 @@
 .hotel-card-wrapper{
-    width: 100%;
+    width: 80%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 5%;
     margin-bottom: 20px;
+    margin-left: 10%;
 }
 
 .hotel-card-wrapper .hotel-card{

@@ -12,12 +12,11 @@ import './HotelDetails.css';
 
 export default function HotelDetails() {
     return (
-=
+
         <div className="hotel-details">
             <div className="hotel-details-top">
                 <div className="hotel-details-main">
                     <HotelName />
-                    <BookingPage />
                     <HotelGallery />
                     <DetailsSection />
                     <HotelFeatures />

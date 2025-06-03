@@ -40,7 +40,7 @@ const handleClick = (id) => {
 }
   return (
     <>
-        <div className="hotel-card-wrapper container">
+        <div className="hotel-card-wrapper ">
             <div className='d-flex justify-content-between'>
                 {hotels.map((hotel)=>(
                 <div className="hotel-card" key={hotel.id} onClick={()=> handleClick(hotel.id)}>

@@ -8,12 +8,12 @@ const LocationCard = () => {
 
     return (
         <div className="location-card">
-            <div className="location-card__map-container">
+            <div className="map-container">
                 <MapContainer
                     center={position}
                     zoom={6}
                     scrollWheelZoom={false}
-                    className="location-card__map"
+                    className="map"
                 >
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -24,29 +24,29 @@ const LocationCard = () => {
                 </MapContainer>
             </div>
 
-            <div className="location-card__details">
-                <h2 className="location-card__score">8.5 Excellent</h2>
-                <p className="location-card__subtext">Location rating score</p>
+            <div className="details">
+                <h2 className="score">8.5 Excellent</h2>
+                <p className="subtext">Location rating score</p>
 
-                <ul className="location-card__features">
+                <ul className="features">
                     <li><strong>🌟 Excellent location</strong> - Inside city center</li>
                     <li><strong>🏙️ Popular neighborhood</strong></li>
                     <li><strong>🚶 Excellent for walking</strong></li>
                 </ul>
 
-                <div className="location-card__parking">
+                <div className="parking">
                     <span>🅿️ Parking</span>
-                    <span className="location-card__parking--free">FREE</span>
+                    <span className="parking--free">FREE</span>
                 </div>
 
-                <div className="location-card__walkable">
+                <div className="walkable">
                     <p><strong>Walkable places:</strong></p>
                     <ul>
                         <li>Ajmera Marol Naka Station – 270 m</li>
                     </ul>
                 </div>
 
-                <button className="location-card__button">SEE NEARBY PLACES</button>
+                <button className="button">SEE NEARBY PLACES</button>
             </div>
         </div>
     );

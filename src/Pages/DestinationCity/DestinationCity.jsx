@@ -66,7 +66,7 @@ export default function DestinationCity() {
             
             </div>
 
-            <div className="destination-city-info container ">
+            <div className="destination-city-info ">
 
                 <h1 className="main-heading mb-4">{selectedCity}</h1>
                 <p className="main-description ms-2">{cityDescription}</p>

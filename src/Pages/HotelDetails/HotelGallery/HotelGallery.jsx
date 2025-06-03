@@ -20,23 +20,23 @@ const photos = [
 export default function HotelGallery() {
     return (
         <section className="hotel-gallery">
-            <h2 className="hotel-gallery__heading">Explore Our Hotel</h2>
-            <div className="hotel-gallery__grid">
-                <div className="hotel-gallery__main">
-                    <img src={photos[0].src} alt={photos[0].alt} className="hotel-gallery__main-img" />
-                    <span className="hotel-gallery__tag">360° Tour</span>
+            <h2 className="hotel-gallery-heading">Explore Our Hotel</h2>
+            <div className="hotel-gallery-grid">
+                <div className="hotel-gallery-main">
+                    <img src={photos[0].src} alt={photos[0].alt} className="hotel-gallery-main-img" />
+                    <span className="hotel-gallery-tag">360° Tour</span>
                 </div>
                 {photos.slice(1).map((photo, index) => (
-                    <div key={index} className="hotel-gallery__thumb">
-                        <img src={photo.src} alt={photo.alt} className="hotel-gallery__thumb-img" />
-                        <div className="hotel-gallery__overlay">
-                            <p className="hotel-gallery__overlay-text">{photo.alt}</p>
+                    <div key={index} className="hotel-gallery-thumb">
+                        <img src={photo.src} alt={photo.alt} className="hotel-gallery-thumb-img" />
+                        <div className="hotel-gallery-overlay">
+                            <p className="hotel-gallery-overlay-text">{photo.alt}</p>
                         </div>
                     </div>
                 ))}
             </div>
-            <div className="hotel-gallery__button-container">
-                <button className="hotel-gallery__button">See all photos</button>
+            <div className="hotel-gallery-button-container">
+                <button className="hotel-gallery-button">See all photos</button>
             </div>
         </section>
     );

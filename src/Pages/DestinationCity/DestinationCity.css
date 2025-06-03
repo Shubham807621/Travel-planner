@@ -1,3 +1,4 @@
+
 .destination-img-wrapper {
     padding-top: 5%;
     position: relative;
@@ -48,7 +49,7 @@
     animation: 80s linear 0s infinite normal none running slide;
 }
 
-.destination-img-wrapper .destination-city-content {
+.destination-city-wrapper .destination-city-content {
     position: absolute;
     top: 50%;
     left: 41%;
@@ -98,6 +99,11 @@
     text-decoration: none;
     color: white;
     font-size: 20px;
+}
+
+.destination-city-wrapper .destination-city-info{
+    width: 90%;
+    margin:auto;
 }
 
 .destination-city-wrapper .destination-city-info .destination-box {

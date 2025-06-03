@@ -21,20 +21,20 @@ const rooms = [
 
 const RoomOptions = () => {
     return (
-        <div className="room-options">
-            <h2 className="room-options__title">
+        <div className="room-options-container">
+            <h2 className="title">
                 Rooms available at Lemon Tree Premier, Mumbai International Airport
             </h2>
-            <div className="room-options__grid">
+            <div className="room-cards-grid">
                 {rooms.map((room, index) => (
                     <div className="room-card" key={index}>
-                        <img src={room.image} alt={room.title} className="room-card__image" />
-                        <div className="room-card__info">
-                            <h3 className="room-card__title">{room.title}</h3>
+                        <img src={room.image} alt={room.title} className="room-image" />
+                        <div className="room-info">
+                            <h3 >{room.title}</h3>
                             <p>🛏️ Room size: {room.size}</p>
                             <p>🌇 {room.view}</p>
                             <p>🛌 {room.bed}</p>
-                            <button className="room-card__price-button">Enter dates to see prices</button>
+                            <button className="price-button">Enter dates to see prices</button>
                         </div>
                     </div>
                 ))}
