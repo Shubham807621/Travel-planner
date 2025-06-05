@@ -37,18 +37,22 @@ font-weight: bold;
 .emp-table{
 width: 95%;
 overflow: hidden;
+
 }
 .emp-table table{
 width: 100%;
+
 }
+
 .emp-table table tbody tr td .emp-title{
 color: #000 !important;
+
 }
 
 .emp-table table th{
 padding-left: 15px;
 border: none;
-/* background-color: #e5e7eb !important; */
+ background-color: #e5e7eb !important; 
 
 }
 
