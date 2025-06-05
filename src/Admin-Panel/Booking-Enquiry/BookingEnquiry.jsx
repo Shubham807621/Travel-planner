@@ -60,7 +60,7 @@ const handlePrev = () => {
 };
 
   return (
-    <div className="container">
+    <div className="booking-wrapper">
       <div className="activeform">
         <h4>RECENT BOOKING</h4>
         <table>

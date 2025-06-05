@@ -3,7 +3,7 @@ import './Form.css';
 
 const Form = () => {
   return (
-    <div className="container">
+    <div className="add-package-wrapper container">
       <div className="main-section">
         <div className="title-section">
           <label className="label">Title</label>

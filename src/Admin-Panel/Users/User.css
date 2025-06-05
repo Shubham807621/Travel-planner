@@ -1,0 +1,117 @@
+.user-wrapper{
+    width: 75%;
+
+    position: absolute;
+    top: 15%;
+    left: 22%;
+    border-radius: 8px;
+  padding: 10px 0px 10px 0px;
+  border: 1px solid rgba(128, 128, 128, 0.514);
+  box-shadow: 5px 5px 15px rgba(0 0 0 / 20%);
+  background: rgba(255, 255, 255, 0.627);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+}
+
+
+.emp-list-contrainer{
+display: flex;
+padding: 10px 20px 0px 20px; 
+}
+
+.emp-list-contrainer h6{
+flex: 1;
+padding-top: 5px;
+font-weight: bold;
+}
+
+.emp-filters {
+    width: 98%;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.emp-table{
+width: 95%;
+overflow: hidden;
+}
+.emp-table table{
+width: 100%;
+}
+.emp-table table tbody tr td .emp-title{
+color: #000 !important;
+}
+
+.emp-table table th{
+padding-left: 15px;
+border: none;
+/* background-color: #e5e7eb !important; */
+
+}
+
+.emp-table table td{
+padding-left: 15px;
+}
+
+.emp-table th{
+height: 30px !important;
+}
+
+.emp-table table tbody tr{
+height: 30px !important;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 40%; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.356);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box{
+  width: 95%;
+}
+.modal-box .modal-header{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.modal-box .modal-header .close-btn{
+  color: white;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}

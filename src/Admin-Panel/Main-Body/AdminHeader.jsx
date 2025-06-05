@@ -155,15 +155,12 @@ export default function AdminHeader() {
                     </div>
                     {openMenu === "users" && (
                         <div className="ms-5 sub-menu open">
-                            <Link to="/admin/dashboard/user" className={`submenu-item ${location.pathname === "/admin/dashboard/user" ? "active" : "" }`}>
+                            <Link to="/admin/user" className={`submenu-item ${location.pathname === "/admin/user" ? "active" : "" }`}>
                                 <p className="py-1">User</p>
                             </Link>
                     
                             <Link to='/admin/new-users' className={`submenu-item ${location.pathname === "/admin/new-users" ? "active" : ""}`}>
                                 <p className="py-1 mt-2">New User</p>
-                            </Link>
-                            <Link to='/admin/edit-users' className={`submenu-item ${location.pathname === "/admin/edit-users" ? "active" : ""}`}>
-                                <p className="py-1 mt-2">Edit User</p>
                             </Link>
                         </div>
                     )}
@@ -209,7 +206,7 @@ export default function AdminHeader() {
                     <div className="d-flex align-items-center p-2 cursor-pointer">
                         <i class="fa-solid fa-ticket me-2"></i>
                     
-                        <Link to='/admin/booking'>
+                        <Link to='/admin/enquiry-booking'>
                             <p className="fw-semibold main-title">Booking</p>
                         </Link>
                     </div>
@@ -224,13 +221,13 @@ export default function AdminHeader() {
             <h3 className="text-secondary text-uppercase fs-6 fw-bold mt-4">AUTHENTICATION</h3>
             <div className="d-flex align-items-center p-2 cursor-pointer">
                 <LoginIcon className="fs-5 me-2" />
-                <Link to='/'>
+                <Link to='/login'>
                 <p className="fw-semibold main-title">Login</p>
                 </Link>
             </div>
             <div className="d-flex align-items-center p-2 cursor-pointer">
                 <AppRegistrationIcon className="fs-5 me-2" />
-                <Link to='/register'>
+                <Link to='/sign-up'>
                     <p className="fw-semibold main-title">Register</p>
                 </Link>
                 </div>

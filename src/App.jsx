@@ -23,6 +23,7 @@ import Dashboard from './Admin-Panel/Dashboard/Dashboard'
 import Footer from './Components/Footer/Footer'
 import Form from './Pages/Admin-Pages/AddPackage/Form'
 import Ride from './Pages/Ride/Ride'
+import User from './Admin-Panel/Users/User'
 
 
 
@@ -48,12 +49,13 @@ function App() {
           <Route path='/admin/pending-package' element={<PendingPage />} />
           <Route path='/expiredpage' element={<ExpiredPage />} />
           <Route path='/admin/new-users' element={<NewUser />} />
-          <Route path='/enquiry-booking' element={<BookingEnquiry />} />
+          <Route path='/admin/enquiry-booking' element={<BookingEnquiry />} />
           <Route path='/destination/:city/hotel-details/:id' element={<HotelDetails/>}/>
           <Route path="/admin/dashboard" element={<Dashboard/>} />
           <Route path="/booking" element={<Booking />} />
-          <Route path="/AddPackage" element={<Form />} />
+          <Route path="/admin/add-package" element={<Form />} />
           <Route path='/book-ride' element={<Ride/>}/>
+          <Route path='/admin/user' element={<User/>}/>
 
         </Routes>
       <Footer/>
