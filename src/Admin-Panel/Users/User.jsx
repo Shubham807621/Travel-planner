@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from '@mui/icons-material/Delete';
 import './User.css'
 
 export default function User() {
       const [showModal, setShowModal] = useState(false);
     const [selectedEmpId, setSelectedEmpId] = useState(null);
     const [formData, setFormData] = useState({ userName: '', roleCode: '' });
+    const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+    const [empToDelete, setEmpToDelete] = useState(null);
 
     const [employees, setEmployees] = useState([
   {
@@ -67,6 +70,15 @@ export default function User() {
             alert("Failed to update role.");
         }
     };
+      
+            const handleDelete = () => {
+            if (empToDelete) {
+                const updatedEmployees = employees.filter(emp => emp.userName !== empToDelete.userName);
+                setEmployees(updatedEmployees);
+                setShowDeleteConfirm(false);
+                setEmpToDelete(null);
+            }
+        };
 
 
   return (
@@ -104,6 +116,13 @@ export default function User() {
                                     </td>
                                     <td>
                                         <EditIcon className="fs-5 me-2 cursor-pointer" onClick={() => openEditModal(emp)} />
+                                        <DeleteIcon
+                                        className="fs-5 me-2 cursor-pointer"
+                                        onClick={() => {
+                                            setEmpToDelete(emp);
+                                            setShowDeleteConfirm(true);
+                                        }}
+/>
                                     </td>
                                 </tr>
                             ))}
@@ -122,7 +141,7 @@ export default function User() {
                                 <div className="form-grid mt-2">
                                     <div className="form-group">
                                         <label>User Name</label>
-                                        <input name="userName" value={formData.userName} onChange={handleChange} disabled />
+                                        <input name="userName" value={formData.userName} onChange={handleChange}  />
                                     </div>
                                     <div className="form-group">
                                         <label>Role</label>
@@ -141,6 +160,27 @@ export default function User() {
                             </div>
                         </div>
                     )}
+
+                    {showDeleteConfirm && (
+                        <div className="modal-backdrop">
+                            <div className="modal-box">
+                            <div className="modal-header">
+                                <h4>Confirm Deletion</h4>
+                                <button className="close-btn" onClick={() => setShowDeleteConfirm(false)}>&times;</button>
+                            </div>
+
+                            <div className="modal-body">
+                                <p>Are you sure you want to delete <strong>{empToDelete?.name}</strong>?</p>
+                            </div>
+
+                            <div className="modal-footer">
+                                <button className="btn btn-light" onClick={() => setShowDeleteConfirm(false)}>Cancel</button>
+                                <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
+                            </div>
+                            </div>
+                        </div>
+                        )}
+
 
         </div>
     </>
