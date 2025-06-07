@@ -77,7 +77,9 @@ export default function DestinationCity() {
             <div className="destination-city-info ">
                 {/* <h1 className="main-heading mb-4">{selectedCity}</h1> */}
                 <p className="main-description ms-2">{cityDetails?.description}</p>
+                <h3>Popular Places to Visit</h3>
                 <div className="destination-box">
+                  
                     {places.map((place) => (
                     <div key={place.id} className="destination-card">
                         <div className="image-wrapper">

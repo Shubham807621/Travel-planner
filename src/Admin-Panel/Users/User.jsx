@@ -84,104 +84,102 @@ export default function User() {
   return (
     <>
         <div className="user-wrapper row2">
-                <div className='emp-list-contrainer'>
-                    <h6>Users List</h6>
-                </div>
+            <div className='emp-list-contrainer'>
+                <h6>Users List</h6>
+            </div>
 
-                <div className="table-responsive emp-table">
-                    <table className="table table-hover align-middle">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {employees.map((emp, index) => (
-                                <tr key={index}>
-                                    <td><p className='emp-title my-0'>{emp.name}</p></td>
-                                    <td style={{ color: 'gray' }}>{emp.userName}</td>
-                                    <td>
-                                        <span
-                                            className="badge"
-                                            style={{
-                                                backgroundColor: emp.roleCode === "HR" ? "#9576b046" : "#d95f945d",
-                                                color: emp.roleCode === "HR" ? "#483b53f4" : "#a9064da5"
-                                            }}
-                                        >
-                                            {emp.roleCode}
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <EditIcon className="fs-5 me-2 cursor-pointer" onClick={() => openEditModal(emp)} />
-                                        <DeleteIcon
-                                        className="fs-5 me-2 cursor-pointer"
-                                        onClick={() => {
-                                            setEmpToDelete(emp);
-                                            setShowDeleteConfirm(true);
+            <div className="table-responsive emp-table">
+                <table className="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {employees.map((emp, index) => (
+                            <tr key={index}>
+                                <td><p className='emp-title my-0'>{emp.name}</p></td>
+                                <td style={{ color: 'gray' }}>{emp.userName}</td>
+                                <td>
+                                    <span
+                                        className="badge"
+                                        style={{
+                                            backgroundColor: emp.roleCode === "HR" ? "#9576b046" : "#d95f945d",
+                                            color: emp.roleCode === "HR" ? "#483b53f4" : "#a9064da5"
                                         }}
+                                    >
+                                        {emp.roleCode}
+                                    </span>
+                                </td>
+                                <td>
+                                    <EditIcon className="fs-5 me-2 cursor-pointer" onClick={() => openEditModal(emp)} />
+                                    <DeleteIcon
+                                    className="fs-5 me-2 cursor-pointer"
+                                    onClick={() => {
+                                        setEmpToDelete(emp);
+                                        setShowDeleteConfirm(true);
+                                    }}
 />
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+
+            {showModal && (
+                <div className="modal-backdrop">
+                    <div className="modal-box">
+                        <div className="modal-header">
+                            <h4>Edit User Role</h4>
+                            <button className="close-btn" onClick={() => setShowModal(false)}>&times;</button>
+                        </div>
+
+                        <div className="form-grid mt-2">
+                            <div className="form-group">
+                                <label>User Name</label>
+                                <input name="userName" value={formData.userName} onChange={handleChange}  />
+                            </div>
+                            <div className="form-group">
+                                <label>Role</label>
+                                <select name="roleCode" value={formData.roleCode} onChange={handleChange}>
+                                    <option value="">Select</option>
+                                    <option value="Employee">Employee</option>
+                                    <option value="HR">HR</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="modal-footer mt-4">
+                            <button className="btn btn-light" onClick={() => setShowModal(false)}>Cancel</button>
+                            <button className="btn btn-success" onClick={handleSubmit}>Save</button>
+                        </div>
+                    </div>
                 </div>
+            )}
 
-                    {showModal && (
-                        <div className="modal-backdrop">
-                            <div className="modal-box">
-                                <div className="modal-header">
-                                    <h4>Edit User Role</h4>
-                                    <button className="close-btn" onClick={() => setShowModal(false)}>&times;</button>
-                                </div>
+            {showDeleteConfirm && (
+                <div className="modal-backdrop">
+                    <div className="modal-box">
+                    <div className="modal-header">
+                        <h4>Confirm Deletion</h4>
+                        <button className="close-btn" onClick={() => setShowDeleteConfirm(false)}>&times;</button>
+                    </div>
 
-                                <div className="form-grid mt-2">
-                                    <div className="form-group">
-                                        <label>User Name</label>
-                                        <input name="userName" value={formData.userName} onChange={handleChange}  />
-                                    </div>
-                                    <div className="form-group">
-                                        <label>Role</label>
-                                        <select name="roleCode" value={formData.roleCode} onChange={handleChange}>
-                                            <option value="">Select</option>
-                                            <option value="Employee">Employee</option>
-                                            <option value="HR">HR</option>
-                                        </select>
-                                    </div>
-                                </div>
+                    <div className="modal-body">
+                        <p>Are you sure you want to delete <strong>{empToDelete?.name}</strong>?</p>
+                    </div>
 
-                                <div className="modal-footer">
-                                    <button className="btn btn-light" onClick={() => setShowModal(false)}>Cancel</button>
-                                    <button className="btn btn-success" onClick={handleSubmit}>Save</button>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-
-                    {showDeleteConfirm && (
-                        <div className="modal-backdrop">
-                            <div className="modal-box">
-                            <div className="modal-header">
-                                <h4>Confirm Deletion</h4>
-                                <button className="close-btn" onClick={() => setShowDeleteConfirm(false)}>&times;</button>
-                            </div>
-
-                            <div className="modal-body">
-                                <p>Are you sure you want to delete <strong>{empToDelete?.name}</strong>?</p>
-                            </div>
-
-                            <div className="modal-footer">
-                                <button className="btn btn-light" onClick={() => setShowDeleteConfirm(false)}>Cancel</button>
-                                <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
-                            </div>
-                            </div>
-                        </div>
-                        )}
-
-
+                    <div className="modal-footer">
+                        <button className="btn btn-light" onClick={() => setShowDeleteConfirm(false)}>Cancel</button>
+                        <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
+                    </div>
+                    </div>
+                </div>
+            )}
         </div>
     </>
   )

@@ -1,90 +1,92 @@
 .user-wrapper{
-    width: 75%;
-
-    position: absolute;
-    top: 15%;
-    left: 22%;
-    border-radius: 8px;
+  width: 78%;
+  height: 85%;
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  border-radius: 8px;
   padding: 10px 0px 10px 0px;
-  border: 1px solid rgba(128, 128, 128, 0.514);
-  box-shadow: 5px 5px 15px rgba(0 0 0 / 20%);
-  background: rgba(255, 255, 255, 0.627);
+
   backdrop-filter: blur(12px);
   border-radius: 12px;
 }
 
 
-.emp-list-contrainer{
-display: flex;
-padding: 10px 20px 0px 20px; 
+.user-wrapper .emp-list-contrainer{
+  display: flex;
+  padding: 10px 20px 0px 20px; 
+
 }
 
-.emp-list-contrainer h6{
+.user-wrapper .emp-list-contrainer h6{
 flex: 1;
 padding-top: 5px;
 font-weight: bold;
 }
 
-.emp-filters {
-    width: 98%;
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-}
+.user-wrapper .emp-table{
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(128, 128, 128, 0.514);
+  box-shadow: 5px 5px 15px rgba(0 0 0 / 20%);
+  background-color: #ccc;
 
-.emp-table{
-width: 95%;
-overflow: hidden;
 
 }
-.emp-table table{
+.user-wrapper .emp-table table{
 width: 100%;
+margin: 0 !important  ;
 
 }
 
-.emp-table table tbody tr td .emp-title{
+.user-wrapper .emp-table table tbody tr td .emp-title{
 color: #000 !important;
 
 }
 
-.emp-table table th{
+.user-wrapper .emp-table table th{
 padding-left: 15px;
 border: none;
  background-color: #e5e7eb !important; 
 
 }
 
-.emp-table table td{
+.user-wrapper .emp-table table td{
 padding-left: 15px;
 }
 
-.emp-table th{
+.user-wrapper .emp-table th{
 height: 30px !important;
 }
 
-.emp-table table tbody tr{
+.user-wrapper .emp-table table tbody tr{
 height: 30px !important;
 }
 
-.modal-backdrop {
-  position: fixed;
-  top: 100%; 
-  left: 10%;
-  width: 80%; 
-  height: 80%;
-  background-color: rgba(37, 35, 35, 0.445);
+.user-wrapper .modal-backdrop {
+  position: absolute;
+  top: -5%;
+  left: -2%; 
+  width: 104.5%; 
+  height: 105%;
+  background-color: rgba(0, 0, 0, 0.593);
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(8px); /* Adds the blur effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari support */
 }
 
-.modal-box{
+.user-wrapper .modal-backdrop .modal-box {
   width: 95%;
+  height: auto%;
+  background-color: rgb(243, 243, 243);
+  margin-top: -8%;
+  padding: 15px;
+  border-radius: 15px;
 }
-.modal-box .modal-header{
-  color: white;
+.user-wrapper .modal-backdrop .modal-box  .modal-header{
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,21 +94,21 @@ height: 30px !important;
 
 }
 
-.modal-box .modal-header .close-btn{
+.user-wrapper .modal-backdrop .modal-box  .modal-header .close-btn{
   color: white;
 }
-.form-grid {
+.user-wrapper .modal-backdrop .modal-box  .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem 2rem;
 }
 
-.form-group {
+.user-wrapper .modal-backdrop .modal-box  .form-grid .form-group {
   display: flex;
   flex-direction: column;
 }
 
-.form-group label {
+.user-wrapper .modal-backdrop .modal-box  .form-grid .form-group label {
   font-weight: 500;
   margin-bottom: 5px;
   color: #0c0b0b;
@@ -119,12 +121,7 @@ height: 30px !important;
   border: 1px solid #ccc;
   font-size: 14px;
 }
-.modal-footer {
-  display: flex;
-  justify-content: center; /* centers horizontally */
-  gap: 10px; /* adds spacing between buttons */
-  margin-top: 20px;
-}
+
 .user-wrapper .modal-backdrop .modal-body p{
   color: rgb(20, 19, 19);
   font-size: large;
