@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './DestinationCity.css'
-import HomeIcon from '@mui/icons-material/Home';
 import { Link, useParams } from 'react-router-dom';
 import HotelCard from './HotelCard';
 import { getCityDetails, getPlaceList } from '../../Components/APIServices/apiservice';

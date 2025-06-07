@@ -18,15 +18,15 @@
 /* Main grid layout */
 .grid-container {
   display: grid;
-  width: 960px;
+  width: 1060px;
   margin: 0 auto;
   gap: 16px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 200px 200px 200px;
+  grid-template-rows: 300px 300px 300px;
   grid-template-areas:
-    "img1 img1 img2"
-    "img4 img3 img3"
-    "img5 img5 img6";
+    "img4 img4 img5"
+    "img1 img3 img3"
+    "img6 img6 img2";
 }
 
 .img1 { grid-area: img1; }
