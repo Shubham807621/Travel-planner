@@ -2,13 +2,13 @@ import React from "react";
 import "./MapCoverage.css";
 
 const markers = [
-    { label: "850+", top: "25%", left: "15%", region: "North America" },
-    { label: "600+", top: "31%", left: "47%", region: "Europe" },
-    { label: "250+", top: "15%", left: "80%", region: "Asia" },
-    { label: "50+", top: "40%", left: "70%", region: "Central Asia" },
-    { label: "100+", top: "60%", left: "55%", region: "Africa" },
-    { label: "150+", top: "74%", left: "30%", region: "South America" },
-    { label: "75+", top: "75%", left: "82%", region: "Australia" },
+    { label: "850+", top: "57%", left: "22%", region: "Hydrabad" },
+    { label: "600+", top: "31%", left: "38%", region: "Maharashtra" },
+    { label: "250+", top: "24%", left: "70%", region: "Kashmir" },
+    { label: "50+", top: "30%", left: "57%", region: "Somnath" },
+    { label: "100+", top: "60%", left: "55%", region: "Manipur" },
+    { label: "150+", top: "47%", left: "44%", region: "Indore" },
+    { label: "75+", top: "61%", left: "81%", region: "Trivendrum" },
 ];
 
 const MapCoverage = () => {
