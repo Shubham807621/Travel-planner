@@ -9,12 +9,16 @@
     import LocalBarSharpIcon from '@mui/icons-material/LocalBarSharp';
     import RestaurantIcon from '@mui/icons-material/Restaurant';
     import './FlightResults.css';
+    import indigoLogo from '../../Images/Flights/indigo.png';
+    import airIndiaLogo from '../../Images/Flights/airindia.png';
+    import airIndiaExpressLogo from '../../Images/Flights/air-india-express.png';
+    import akasaLogo from '../../Images/Flights/akasa-air.png';
     import { useNavigate } from 'react-router-dom';
 
     const dummyFlights = [
     {
         airline: "IndiGo",
-        logo: "../Images/Flights/logos/indigo.png",
+        logo: indigoLogo,
         from: "Delhi",
         to: "Mumbai",
         price: 5200,
@@ -29,7 +33,7 @@
     },
     {
         airline: "Air India",
-        logo: "/logos/airindia.png",
+        logo: airIndiaLogo,
         from: "Delhi",
         to: "Mumbai",
         price: 6100,
@@ -43,7 +47,7 @@
     },
     {
         airline: "Air India Express",
-        logo: "/logos/air-india-express.png",
+        logo: airIndiaExpressLogo,
         from: "Delhi",
         to: "Mumbai",
         price: 8977,
@@ -57,7 +61,7 @@
     },
     {
         airline: "Akasa Air",
-        logo: "/logos/akasa-air.png",
+        logo: akasaLogo,
         from: "Delhi",
         to: "Mumbai",
         price: 11263,

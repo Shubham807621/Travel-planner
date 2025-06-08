@@ -69,7 +69,7 @@ function FlightBookingForm() {
   };
 
   return (
-    <div className="container flight-form p-4 shadow bg-white rounded">
+    <div className="container flight-form p-4 shadow  rounded">
       <div className="d-flex mb-3">
         <button className={`btn ${tripType === 'oneway' ? 'btn-primary' : 'btn-outline-primary'} me-2`} onClick={() => setTripType('oneway')}>One-way</button>
         <button className={`btn ${tripType === 'round' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => setTripType('round')}>Round-trip</button>
