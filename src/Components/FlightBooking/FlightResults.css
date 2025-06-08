@@ -1,0 +1,35 @@
+.results-container {
+  background: #f9f9f9;
+}
+
+.results-container .flight-card {
+  background: #fff;
+  border-left: 5px solid #0071c2;
+  transition: transform 0.2s ease;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.results-container .flight-card:hover {
+  transform: scale(1.02);
+}
+h3{
+    text-align: center;
+}
+h4 {
+  color: #ff5a5f;
+}
+.results-container .flight-card {
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease;
+}
+
+.results-container .flight-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.results-container .expanded-info {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 6px;
+}

@@ -14,7 +14,8 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     
     const location = useLocation();
-    const hideElement = location.pathname.startsWith("/admin"); 
+    const hideElement = location.pathname.startsWith("/admin") || location.pathname === "/flightbook" 
+    || location.pathname === "/flights" || location.pathname === "/book-now"; 
     const userRole = localStorage.getItem("role");
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate    ();
@@ -58,7 +59,7 @@ export default function Header() {
                         <Link to='/contact'>Contact Us </Link> 
                     </li>
                     <li>
-                        <Link to='/book-flight'>Flight Booking</Link> 
+                        <Link to='/flightbook'>Flight Booking</Link> 
                     </li>
                     {userRole === 'Admin' && (
                         <li>

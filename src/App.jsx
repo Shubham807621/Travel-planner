@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './Components/HomePage/HomePage'
 import Header from './Components/Header/Header'
@@ -24,6 +25,9 @@ import Footer from './Components/Footer/Footer'
 import Form from './Pages/Admin-Pages/AddPackage/Form'
 import Ride from './Pages/Ride/Ride'
 import User from './Admin-Panel/Users/User'
+import FlightBookingForm from './Components/FlightBooking/FlightBookingForm'
+import FlightResults from './Components/FlightBooking/FlightResults'
+import BookingPage from './Components/FlightBooking/BookingPage'
 
 
 
@@ -56,6 +60,9 @@ function App() {
           <Route path="/admin/add-package" element={<Form />} />
           <Route path='/book-ride' element={<Ride/>}/>
           <Route path='/admin/user' element={<User/>}/>
+          <Route path="/flightbook" element={<FlightBookingForm />} />
+          <Route path="/flights" element={<FlightResults />} />
+          <Route path="/book-now" element={<BookingPage />} />
 
         </Routes>
       <Footer/>

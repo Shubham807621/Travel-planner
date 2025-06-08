@@ -1,0 +1,29 @@
+.flight-form {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 80px;
+  background: white;
+
+}
+
+.flight-form .form-label svg {
+  margin-right: 5px;
+  color: #007bff;
+}
+.flight-form .passenger-box {
+  cursor: pointer;
+  position: relative;
+}
+
+.flight-form .passenger-dropdown {
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  width: 100%;
+  background: white;
+  border: 1px solid #dee2e6;
+}
+
+.flight-form .passenger-dropdown button {
+  min-width: 30px;
+}
