@@ -58,7 +58,7 @@ export default function Header() {
                         <Link to='/contact'>Contact Us </Link> 
                     </li>
                     <li>
-                        <Link to='/book-flight'>Flight Booking</Link> 
+                        <Link to='/flightbook'>Flight Booking</Link> 
                     </li>
                     {userRole === 'Admin' && (
                         <li>
