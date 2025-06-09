@@ -127,3 +127,8 @@
     border-radius: 15px;
     cursor: pointer;
 }
+
+.filter-form-wrapper .result-hotels ul li h4{
+  
+    color: black !important;
+}

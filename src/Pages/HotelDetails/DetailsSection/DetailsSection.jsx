@@ -4,12 +4,14 @@ import Weather from '../../../Components/Weather/Weather';
 
 const DetailsSectionTabs = [
     'Overview',
-    'Trip Recommendations',
     'Weather'
 ];
 
-const MainPage = () => {
+const MainPage = ({ hoteldetails }) => {
     const [activeTab, setActiveTab] = useState('Overview');
+    if (!hoteldetails) {
+        return <div className="hotel-name">Loading hotel details...</div>;
+    }
 
     return (
         <div>
@@ -32,21 +34,10 @@ const MainPage = () => {
                     {activeTab === 'Overview' && (
                         <div>
                             <p>
-                                Occaecat pariatur! Quaerat ligula, ab, consequuntur orci mus ultricies praesent aute blandit beatae
-                                nisl aut, totam mauris rhoncus? Tellus netus fringilla class auctor dui. Dolores excepteur, doloribus,
-                                blanditiis aliquid nisl. Occaecat iusto? Provident sociis rerum.
+                                {hoteldetails.description}
                             </p>
-                            <p>
-                                Occaecat pariatur! Quaerat ligula, ab, consequuntur orci mus ultricies praesent aute blandit beatae
-                                nisl aut, totam mauris rhoncus? Tellus netus fringilla class auctor dui.
-                            </p>
-                            <ul className="feature-list">
-                                <li>Travel cancellation insurance</li>
-                                <li>Breakfast and dinner included</li>
-                                <li>Health care included</li>
-                                <li>Transfer to the airport and return to the agency</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing</li>
-                            </ul>
+                       
+
                         </div>
                     )}
                     

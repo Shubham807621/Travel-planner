@@ -17,13 +17,14 @@
 .hotel-gallery .hotel-gallery-grid {
     display: grid;
     gap: 1.25rem;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 
 .hotel-gallery .hotel-gallery-grid .hotel-gallery-main {
     grid-column: span 2;
     grid-row: span 2;
+    height: 500px;
     position: relative;
     overflow: hidden;
     border-radius: 1.5rem;
@@ -43,10 +44,10 @@
 
 .hotel-gallery .hotel-gallery-grid .hotel--gallery-main-img .hotel-gallery-tag {
     position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
+    top: 1%;
+    left: 1%;
     background: rgba(0, 0, 0, 0.6);
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
     border-radius: 9999px;

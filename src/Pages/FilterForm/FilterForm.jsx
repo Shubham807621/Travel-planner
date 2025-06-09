@@ -156,7 +156,7 @@ export default function FilterForm() {
                                            onClick={()=>handleClick(hotel.id, hotel.cityName)}
                                         />
                                         <div>
-                                            <h3>{hotel.name}</h3>
+                                            <h4>{hotel.name}</h4>
                                             <p><strong>City:</strong> {hotel.cityName}</p>
                                             <p><strong>Rating:</strong> {hotel.rating}</p>
                                         </div>

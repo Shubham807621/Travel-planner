@@ -18,7 +18,7 @@ function HotelFeatures() {
                     </div>
                     <div className="feature-item">
                         <MdLocationOn className="icon red" />
-                        <span>Located in heart of Mumbai</span>
+                        <span>Located in heart of City</span>
                     </div>
                     <div className="feature-item">
                         <MdOutlineAccessTime className="icon blue" />

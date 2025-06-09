@@ -1,5 +1,5 @@
 .location-card {
-    max-width: 380px;
+    max-width: 420px;
     margin: auto;
     background: white;
     border-radius: 10px;
@@ -12,9 +12,10 @@
 .location-card .map-container {
     height: 200px;
     width: 100%;
+    padding: 10px !important;
 }
 
-.location-card .map-container .map {
+.location-card .map-container iframe {
     height: 100%;
     width: 100%;
 }

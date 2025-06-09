@@ -1,19 +1,20 @@
 import React from 'react';
 import './HotelName.css';
 
-const HotelName = ({hoteldetails}) => {
+const HotelName = ({ hoteldetails }) => {
+    if (!hoteldetails) {
+        return <div className="hotel-name">Loading hotel details...</div>;
+    }
 
-    console.log(hoteldetails)
     return (
         <div className="hotel-name">
             <div className="hotel-name__left">
                 <h1 className="hotel-name__heading">
-                    EXPERIENCE THE NATURAL <br />
-                    BEAUTY OF ISLAND
+                    {hoteldetails.name}
                 </h1>
                 <img
-                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
-                    alt="Nature"
+                    src={hoteldetails.imgUrl}
+                    alt={hoteldetails.name}
                     className="hotel-name__image"
                 />
             </div>

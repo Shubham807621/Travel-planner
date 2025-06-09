@@ -11,15 +11,13 @@
 
 /* Main content column */
 .hotel-details .hotel-details-top .hotel-details-main {
-    width: 70%;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 72%;
+    padding-top: 60px;
 }
 
 /* Sticky right column */
 .hotel-details .hotel-details-top .hotel-details-side {
-    width: 27%;
+    width: 28%;
     position: sticky;
     top: 80px; /* changed from 10% to 80px for delayed sticking */
     align-self: flex-start;

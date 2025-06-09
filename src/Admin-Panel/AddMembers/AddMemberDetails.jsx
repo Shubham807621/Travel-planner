@@ -43,9 +43,10 @@ import HomeIcon from '@mui/icons-material/Home';
       </div>
 
       <div className="container mt-4 position-relative" style={{ minHeight: '200px' }}>
-        {/* Add Member Button */}
+
+        <h2 className='mb-3'>Please Add the Member Details Here</h2>
         {!showModal && submittedMembers.length === 0 && (
-          <button className="btn btn-primary" onClick={() => setShowModal(true)}>
+          <button className="btn btn-primary p-2" onClick={() => setShowModal(true)}>
             Add Member
           </button>
         )}

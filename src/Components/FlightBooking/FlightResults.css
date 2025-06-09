@@ -1,6 +1,6 @@
 .results-container {
   background: #f9f9f9;
-  padding: 8% 0;
+  padding: 2% 0;
 }
 
 .results-container .flight-card {
@@ -33,4 +33,14 @@ h4 {
   background: #f9f9f9;
   padding: 1rem;
   border-radius: 6px;
+}
+.flight-booking-btn{
+
+  width: auto;
+  padding:10px 15px;
+  /* height: 45px; */
+  border-radius: 20px;
+  background-color: #315aed;
+  color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.41);
 }

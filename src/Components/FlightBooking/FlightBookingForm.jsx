@@ -5,7 +5,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FaPlaneDeparture, FaPlaneArrival, FaCalendarAlt, FaUser } from 'react-icons/fa';
 import './FlightBookingForm.css';
-
+import FlightResults from './FlightResults';
 
 const cities = [
   { value: 'Mumbai', label: 'Mumbai, India' },
@@ -16,103 +16,116 @@ const cities = [
 ];
 
 function FlightBookingForm() {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate(); // ✅ Add this
+  const [formData, setFormData] = useState({
+    tripType: 'oneway',
+    fromCity: null,
+    toCity: null,
+    departureDate: new Date(),
+    returnDate: null,
+    passengers: { adults: 1, children: 0, infants: 0 },
+    travelClass: 'Economy',
+  });
 
-
-
-  const [tripType, setTripType] = useState('oneway');
-  const [fromCity, setFromCity] = useState(null);
-  const [toCity, setToCity] = useState(null);
-  const [departureDate, setDepartureDate] = useState(new Date());
-  const [returnDate, setReturnDate] = useState(null);
-  const [passengers, setPassengers] = useState({ adults: 1, children: 0, infants: 0 });
-
+  const [hasSearched, setHasSearched] = useState(false);
   const [showPassengerDropdown, setShowPassengerDropdown] = useState(false);
-  const [travelClass, setTravelClass] = useState("Economy");
   const dropdownRef = useRef(null);
 
+  const totalPassengers =
+    formData.passengers.adults + formData.passengers.children + formData.passengers.infants;
 
-  const increment = (type) => {
-    setPassengers((prev) => ({ ...prev, [type]: prev[type] + 1 }));
-  };
-
-  const decrement = (type) => {
-    setPassengers((prev) => ({
+  const handlePassengerChange = (type, increment = true) => {
+    setFormData((prev) => ({
       ...prev,
-      [type]: Math.max(prev[type] - 1, type === 'adults' ? 1 : 0),
+      passengers: {
+        ...prev.passengers,
+        [type]: Math.max(
+          increment ? prev.passengers[type] + 1 : prev.passengers[type] - 1,
+          type === 'adults' ? 1 : 0
+        ),
+      },
     }));
   };
 
-  const totalPassengers = passengers.adults + passengers.children + passengers.infants;
-
-  const toggleDropdown = () => setShowPassengerDropdown(!showPassengerDropdown);
-
   const handleSearch = () => {
-    if (!fromCity || !toCity) {
+    if (!formData.fromCity || !formData.toCity) {
       alert('Please select both cities');
       return;
     }
-
-    // ✅ Navigate to flight results page with state
-    navigate('/flights', {
-      state: {
-        tripType,
-        fromCity,
-        toCity,
-        departureDate,
-        returnDate,
-        passengers,
-        travelClass,
-      },
-    });
+    setHasSearched(true)
+    // navigate('/flights', { state: formData });
   };
 
   return (
-    <div className='flight-booking-wrapper'>
+    <div className="flight-booking-wrapper">
       <div className="container flight-form p-4 shadow">
         <div className="d-flex mb-3">
-          <button className={`btn ${tripType === 'oneway' ? 'btn-primary' : 'btn-outline-primary'} me-2`} onClick={() => setTripType('oneway')}>One-way</button>
-          <button className={`btn ${tripType === 'round' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => setTripType('round')}>Round-trip</button>
+          {['oneway', 'round'].map((type) => (
+            <button
+              key={type}
+              className={`btn ${
+                formData.tripType === type ? 'btn-primary' : 'btn-outline-primary'
+              } me-2`}
+              onClick={() => setFormData((prev) => ({ ...prev, tripType: type }))}
+            >
+              {type === 'oneway' ? 'One-way' : 'Round-trip'}
+            </button>
+          ))}
         </div>
+
         <div className="row g-3 align-items-center">
           <div className="col-md-6">
             <label className="form-label"><FaPlaneDeparture /> Flying from</label>
-            <Select options={cities} value={fromCity} onChange={setFromCity} placeholder="Select city" />
+            <Select
+              options={cities}
+              value={formData.fromCity}
+              onChange={(value) => setFormData((prev) => ({ ...prev, fromCity: value }))}
+              placeholder="Select city"
+            />
           </div>
           <div className="col-md-6">
             <label className="form-label"><FaPlaneArrival /> Flying to</label>
-            <Select options={cities} value={toCity} onChange={setToCity} placeholder="Select city" />
+            <Select
+              options={cities}
+              value={formData.toCity}
+              onChange={(value) => setFormData((prev) => ({ ...prev, toCity: value }))}
+              placeholder="Select city"
+            />
           </div>
+
           <div className="col-md-6">
             <label className="form-label"><FaCalendarAlt /> Departure</label>
             <DatePicker
               className="form-control"
-              selected={departureDate}
-              onChange={(date) => setDepartureDate(date)}
+              selected={formData.departureDate}
+              onChange={(date) => setFormData((prev) => ({ ...prev, departureDate: date }))}
               dateFormat="dd/MM/yyyy"
             />
           </div>
-          {tripType === 'round' && (
+
+          {formData.tripType === 'round' && (
             <div className="col-md-6">
               <label className="form-label"><FaCalendarAlt /> Return</label>
               <DatePicker
                 className="form-control"
-                selected={returnDate}
-                onChange={(date) => setReturnDate(date)}
-                minDate={departureDate}
+                selected={formData.returnDate}
+                onChange={(date) => setFormData((prev) => ({ ...prev, returnDate: date }))}
+                minDate={formData.departureDate}
                 dateFormat="dd/MM/yyyy"
               />
             </div>
           )}
+
           <div className="col-md-6 position-relative">
             <label className="form-label"><FaUser /> Passengers</label>
-            <div className="form-control passenger-box" onClick={toggleDropdown}>
-              {totalPassengers} Passenger{totalPassengers > 1 ? 's' : ''}, {travelClass}
+            <div className="form-control passenger-box" onClick={() => setShowPassengerDropdown(!showPassengerDropdown)}>
+              {totalPassengers} Passenger{totalPassengers > 1 ? 's' : ''}, {formData.travelClass}
             </div>
+
             {showPassengerDropdown && (
               <div className="passenger-dropdown shadow p-3 rounded bg-white" ref={dropdownRef}>
-                {['adults', 'children', 'infants'].map((type, i) => (
+                {['adults', 'children', 'infants'].map((type) => (
                   <div key={type} className="d-flex justify-content-between align-items-center mb-2">
                     <div>
                       {type === 'adults' && 'Adults (12yrs and above)'}
@@ -120,15 +133,20 @@ function FlightBookingForm() {
                       {type === 'infants' && 'Infants (below 2yrs)'}
                     </div>
                     <div className="d-flex align-items-center">
-                      <button className="btn btn-sm btn-outline-secondary me-2" onClick={() => decrement(type)}>-</button>
-                      <span>{passengers[type]}</span>
-                      <button className="btn btn-sm btn-outline-secondary ms-2" onClick={() => increment(type)}>+</button>
+                      <button className="btn btn-sm btn-outline-secondary me-2" onClick={() => handlePassengerChange(type, false)}>-</button>
+                      <span>{formData.passengers[type]}</span>
+                      <button className="btn btn-sm btn-outline-secondary ms-2" onClick={() => handlePassengerChange(type, true)}>+</button>
                     </div>
                   </div>
                 ))}
+
                 <div className="d-flex justify-content-between flex-wrap mt-3">
-                  {['Economy', 'Premium economy', 'Business', 'First Class'].map(cls => (
-                    <button key={cls} className={`btn m-1 ${travelClass === cls ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => setTravelClass(cls)}>
+                  {['Economy', 'Premium economy', 'Business', 'First Class'].map((cls) => (
+                    <button
+                      key={cls}
+                      className={`btn m-1 ${formData.travelClass === cls ? 'btn-primary' : 'btn-outline-primary'}`}
+                      onClick={() => setFormData((prev) => ({ ...prev, travelClass: cls }))}
+                    >
                       {cls}
                     </button>
                   ))}
@@ -138,12 +156,16 @@ function FlightBookingForm() {
           </div>
 
           <div className="col-12 text-center mt-3">
-            <button className="btn btn-lg btn-primary w-100" onClick={handleSearch}>SEARCH FLIGHTS</button>
+            <button className="btn btn-lg btn-primary w-100" onClick={handleSearch}>
+              SEARCH FLIGHTS
+            </button>
           </div>
         </div>
       </div>
 
-      
+    {hasSearched && (
+      <FlightResults/>
+    )}
     </div>
   );
 }

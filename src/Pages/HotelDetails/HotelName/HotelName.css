@@ -1,15 +1,9 @@
 .hotel-name {
-    display: flex;
-    font-family: 'Arial', sans-serif;
-    padding: 30px;
-    gap: 40px;
     max-width: 1200px;
     margin: auto;
+    padding: 0 30px;
 }
 
-.hotel-name__left {
-    flex: 2;
-}
 
 .hotel-name__heading {
     font-size: 28px;
@@ -20,6 +14,6 @@
 
 .hotel-name__image {
     width: 100%;
-    height: auto;
-    border-radius: 6px;
+    height: 540px;
+    border-radius:30px;
 }

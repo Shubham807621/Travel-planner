@@ -199,10 +199,9 @@
   margin-bottom: 10px;
   border-radius: 4px;
 }
-.aboutus-section .features-container .f-bottom .feature-item h4 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
+.aboutus-section .features-container .feature-item .aboutstitle {
+  font-size: 25px;
+  color: #000 !important;
   /* margin: 0 0 10px; */
 }
 

@@ -3,29 +3,21 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './LocationCard.css';
 
-const LocationCard = () => {
-    const position = [27.0238, 74.2179]; // Rajasthan
+const LocationCard = ({hoteldetails}) => {
+    
+        if (!hoteldetails) {
+        return <div className="hotel-name">Loading hotel details...</div>;
+    }
 
     return (
         <div className="location-card">
             <div className="map-container">
-                <MapContainer
-                    center={position}
-                    zoom={6}
-                    scrollWheelZoom={false}
-                    className="map"
-                >
-                    <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-                    <Marker position={position}>
-                        <Popup>Rajasthan</Popup>
-                    </Marker>
-                </MapContainer>
+        
+                <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23210.96069222513!2d73.27149792595448!3d17.134240328654755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bea0f002b11fd5d%3A0x870bb0f727fa3064!2sParin%20Hotel%20and%20Resort.!5e1!3m2!1sen!2sin!4v1749481622942!5m2!1sen!2sin"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div className="details">
-                <h2 className="score">8.5 Excellent</h2>
+                <h2 className="score">{hoteldetails.rating} Rating</h2>
                 <p className="subtext">Location rating score</p>
 
                 <ul className="features">
@@ -34,19 +26,12 @@ const LocationCard = () => {
                     <li><strong>🚶 Excellent for walking</strong></li>
                 </ul>
 
-                <div className="parking">
-                    <span>🅿️ Parking</span>
-                    <span className="parking--free">FREE</span>
+                <div className="address">
+                    <p>Address : {hoteldetails.address}</p>
                 </div>
 
-                <div className="walkable">
-                    <p><strong>Walkable places:</strong></p>
-                    <ul>
-                        <li>Ajmera Marol Naka Station – 270 m</li>
-                    </ul>
-                </div>
-
-                <button className="button">SEE NEARBY PLACES</button>
+    {/* 
+                    <button className="button">SEE NEARBY PLACES</button> */}
             </div>
         </div>
     );

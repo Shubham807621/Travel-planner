@@ -7,20 +7,25 @@ import PoolNightView from '../../../Images/HotelDetails/HotelGallery/poolviewnig
 import Restaurant from '../../../Images/HotelDetails/HotelGallery/Resturant.jpeg';
 import DayPoolView from '../../../Images/HotelDetails/HotelGallery/poolviewday.jpeg';
 
-const photos = [
-    { src: HotelFront, alt: "Hotel Front" },
+
+
+export default function HotelGallery({ hoteldetails }) {
+
+      if (!hoteldetails) {
+        return <div className="hotel-name">Loading hotel details...</div>;
+    }
+    const photos = [
+    { src: hoteldetails.imgUrl, alt: "Hotel Front" },
     { src: HotelRoom, alt: "Hotel Room" },
     { src: DiningArea, alt: "Dining Area" },
     { src: Lobby, alt: "Lobby" },
     { src: PoolNightView, alt: "Pool Night View" },
     { src: Restaurant, alt: "Restaurant" },
-    { src: DayPoolView, alt: "Day Pool View" },
+    // { src: DayPoolView, alt: "Day Pool View" },
 ];
-
-export default function HotelGallery() {
     return (
         <section className="hotel-gallery">
-            <h2 className="hotel-gallery-heading">Explore Our Hotel</h2>
+            <h2 className="hotel-gallery-heading">{hoteldetails.name}</h2>
             <div className="hotel-gallery-grid">
                 <div className="hotel-gallery-main">
                     <img src={photos[0].src} alt={photos[0].alt} className="hotel-gallery-main-img" />

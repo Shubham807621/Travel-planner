@@ -63,7 +63,6 @@ function App() {
           <Route path='/book-ride' element={<Ride/>}/>
           <Route path='/admin/user' element={<User/>}/>
           <Route path="/flightbook" element={<FlightBookingForm />} />
-          <Route path="/flights" element={<FlightResults />} />
           <Route path="/book-now" element={<BookingPage />} />
 
         </Routes>

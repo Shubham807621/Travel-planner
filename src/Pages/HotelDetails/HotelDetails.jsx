@@ -18,6 +18,7 @@ export default function HotelDetails() {
  console.log(id);
 
  const [hotel, setHotel] = useState();
+ const [rooms, setRooms] = useState([])
   
    useEffect(()=>{
        const fetchHotelDetails = async ()=>{
@@ -25,7 +26,7 @@ export default function HotelDetails() {
          try {
            const response = await getHotelDetails(id);
            setHotel(response);
-         
+            setRooms(response.rooms)
            
          } catch (error) {
              console.error("Error fetching documents:", error);
@@ -41,21 +42,21 @@ export default function HotelDetails() {
         <div className="hotel-details">
             <div className="hotel-details-top">
                 <div className="hotel-details-main">
-                    <HotelName hoteldetails={hotel} />
-                    <HotelGallery />
-                    <DetailsSection />
+                    {/* <HotelName hoteldetails={hotel} /> */}
+                    <HotelGallery hoteldetails={hotel}/>
+                    <DetailsSection hoteldetails={hotel} />
                     <HotelFeatures />
                     <GallerySection />
                     <PlanJourney />
                 </div>
                 <div className="hotel-details-side">
-                    <LocationCard />
+                    <LocationCard hoteldetails={hotel}/>
             
                 </div>
             </div>
             {/* Room Section */}
             <div className="hotel-details-rooms">
-                <RoomOptions />
+                <RoomOptions roomDetails={rooms}/>
             </div>
 
         </div>
