@@ -1,0 +1,149 @@
+.cab-list {
+    max-width: 750px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.cab-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.cab-card:hover {
+    transform: scale(1.01);
+}
+
+.cab-content {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cab-image {
+    flex: 0 0 120px;
+}
+
+.cab-image img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cab-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car-name-rating {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.rating {
+    font-size: 0.95rem;
+    color: #2ecc71;
+}
+
+.fuel {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    margin-top: 0.4rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.fuel.cng {
+    background-color: #00b894;
+    width: 30px;
+
+}
+
+.fuel.diesel {
+    background-color: #e67e22;
+    width: 40px;
+}
+
+.seats {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.note {
+    font-size: 0.88rem;
+    margin-top: 0.6rem;
+    color: #ff6f00;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.tax {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.final-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+    text-align: right;
+}
+
+.select-btn {
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.select-btn:hover {
+    background-color: #004ccf;
+}
