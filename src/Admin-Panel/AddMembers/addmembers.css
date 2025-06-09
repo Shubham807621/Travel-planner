@@ -140,3 +140,10 @@
   text-align: left;
   
 }
+
+.continue-btn{
+  background-color: #1DC5CE;
+  border-radius: 15px ;
+  color: white;
+  
+}

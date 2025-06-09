@@ -12,8 +12,10 @@ function BookingPage() {
   };
 
   return (
-    <div className="container mt-4">
-      <h2>Booking for {flight.airline}</h2>
+    <div className="container" style={{padding:"5% 0"}}>
+      <h2>Booking for 
+        {/* {flight.airline} */}
+        </h2>
 
       {/* Contact Details Form */}
       <div className="card p-3 mb-4">

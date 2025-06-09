@@ -8,6 +8,7 @@ import HomeIcon from '@mui/icons-material/Home';
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({ fname: '',lname:'', email: '',phone:'',id:'',file:null });
   const [submittedMembers, setSubmittedMembers] = useState([]);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -189,6 +190,10 @@ import HomeIcon from '@mui/icons-material/Home';
 
         )}
       </div>
+        <button className="continue-btn mb-4" onClick={() => navigate("/booking")}>
+          Continue  
+        </button>
+
 </div>
       
   );

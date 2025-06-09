@@ -7,6 +7,7 @@ export const API_URLs = {
     GET_PLACES:"/api/get-places",
     SEARCH_HOTEL:"/api/hotel/search",
     GET_CITY:"/api/city",
+    GET_USERS:"/auth/user-list",
 }
 
 export const API_BASE_URL = "http://localhost:8080"

@@ -1,20 +1,20 @@
 import React from 'react';
 import './Booking.css';
+import { useNavigate } from 'react-router-dom';
 
 const Booking = () => {
+  const navigate = useNavigate();
   return (
     <div className="booking-container-wrapper">
-      {/* Background Image Section */}
+
       <div className="booking-img-wrapper">
         <div className="image-banner"></div>
         <h1 className="booking-heading">BOOKING</h1>
-        <div className="booking-content">
-          <h2>BOOKING</h2>
-        </div>
+       
       </div>
 
-      {/* Progress Steps */}
-      <div className="progress-steps">
+
+      {/* <div className="progress-steps">
         <div className="step active">
           <span className="step-circle"></span>
           <span className="step-text">Your Cart</span>
@@ -27,13 +27,13 @@ const Booking = () => {
           <span className="step-circle"></span>
           <span className="step-text">Finish</span>
         </div>
-      </div>
+      </div> */}
 
-      {/* Main Content */}
+
       <div className="main-content">
-        {/* Left Section: Form */}
+
         <div className="form-section">
-          {/* Your Details */}
+
           <div className="section">
             <h2 className="section-title">
               <span className="step-number">1</span> Your Details
@@ -43,17 +43,16 @@ const Booking = () => {
               <input type="text" placeholder="Last Name*" className="input-field" />
               <input type="email" placeholder="Email*" className="input-field" />
               <input type="email" placeholder="Confirm Email*" className="input-field" />
-              <input type="tel" placeholder="Phone Number*" className="input-field full-width" />
+              <input type="tel" placeholder="Phone Number*" className="input-field" />
             </div>
           </div>
 
-          {/* Payment Information */}
           <div className="section">
             <h2 className="section-title">
               <span className="step-number">2</span> Payment Information
             </h2>
             <div className="form-grid">
-              <input type="text" placeholder="Card Number*" className="input-field full-width" />
+              <input type="text" placeholder="Card Number*" className="input-field" />
               <input type="text" placeholder="MM/YY*" className="input-field" />
               <input type="text" placeholder="Security Code*" className="input-field" />
             </div>
@@ -68,23 +67,23 @@ const Booking = () => {
             </p>
           </div>
 
-          {/* Billing Address */}
+
           <div className="section">
             <h2 className="section-title">
               <span className="step-number">3</span> Billing Address
             </h2>
             <div className="form-grid">
-              <select className="input-field full-width">
+              <select className="input-field">
                 <option>Select Your Country</option>
                 <option>Country 1</option>
                 <option>Country 2</option>
               </select>
-              <input type="text" placeholder="Street Line 1*" className="input-field full-width" />
-              <input type="text" placeholder="Street Line 2" className="input-field full-width" />
+              <input type="text" placeholder="Street Line 1*" className="input-field" />
+              <input type="text" placeholder="Street Line 2" className="input-field" />
               <input type="text" placeholder="City*" className="input-field" />
               <input type="text" placeholder="State*" className="input-field" />
               <input type="text" placeholder="Postal Code*" className="input-field" />
-              <textarea placeholder="Additional Information (e.g., Special notes for delivery)" className="input-field full-width textarea"></textarea>
+              <textarea placeholder="Additional Information (e.g., Special notes for delivery)" className="input-field textarea"></textarea>
             </div>
           </div>
 
@@ -95,7 +94,7 @@ const Booking = () => {
               <input type="checkbox" id="policy-agree" />
               <label htmlFor="policy-agree">I agree to the full terms & conditions and general policy.</label>
             </div>
-            <button className="book-now-btn">BOOK NOW</button>
+            <button className="book-now-btn" onClick={()=>navigate("/booking-confirmation")}>BOOK NOW</button>
           </div>
         </div>
 

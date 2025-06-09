@@ -142,3 +142,17 @@ export const getWeather = async (city) =>{
     }
 
 }
+export const getUserList = async () =>{
+
+  const url = `${API_BASE_URL}${API_URLs.GET_USERS}`
+ 
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+
+}

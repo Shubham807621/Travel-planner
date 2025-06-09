@@ -2,8 +2,14 @@ import React from 'react';
 import './PlanJourney.css';
 import airportTransfer from '../../../Images/HotelDetails/cabs/cab2.jpeg';
 import rentCar from '../../../Images/HotelDetails/cabs/Cab1.jpeg';
+import { useNavigate } from 'react-router-dom';
 
 const PlanJourney = () => {
+
+    const navigate = useNavigate();
+    const handleClick = ()=>{
+        navigate("/book-ride")
+    }
     return (
         <div className="plan-journey-container">
             <h2 className="title">Plan your journey to your hotel</h2>
@@ -17,7 +23,7 @@ const PlanJourney = () => {
                         <p className="description">Get to your hotel easily and securely</p>
                         <div className="card-footer">
                             <span className="date">25 May · 2 Adults</span>
-                            <button className="search-btn">Search</button>
+                            <button className="search-btn" onClick={handleClick}>Search</button>
                         </div>
                     </div>
                 </div>

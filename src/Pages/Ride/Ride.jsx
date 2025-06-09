@@ -7,10 +7,12 @@ import Testimonials from './Testimonials/Testimonials'
 export default function Ride() {
   return (
    <>
-        <RideBookingForm/>
-        <BookingSteps/>
-        <MapCoverage/>
-        <Testimonials/>
+        <div className='ride-wrapper pt-5'>
+          <RideBookingForm/>
+          <BookingSteps/>
+          <MapCoverage/>
+          <Testimonials/>
+        </div>
 
    </>
   )

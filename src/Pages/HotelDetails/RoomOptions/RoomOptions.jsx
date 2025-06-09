@@ -1,7 +1,10 @@
 import './RoomOptions.css';
 import room1 from '../../../Images/HotelDetails/RoomOptions/room1.jpeg';
 import room2 from '../../../Images/HotelDetails/RoomOptions/room2.jpeg';
+import { useNavigate } from 'react-router-dom';
 
+const RoomOptions = () => {
+    
 const rooms = [
     {
         title: 'Studio Suite',
@@ -19,7 +22,11 @@ const rooms = [
     }
 ];
 
-const RoomOptions = () => {
+    const navigate = useNavigate();
+   
+    const handleClick = ()=>{
+        navigate("/addMembers")
+    }
     return (
         <div className="room-options-container">
             <h2 className="title">
@@ -34,7 +41,7 @@ const RoomOptions = () => {
                             <p>🛏️ Room size: {room.size}</p>
                             <p>🌇 {room.view}</p>
                             <p>🛌 {room.bed}</p>
-                            <button className="price-button">Enter dates to see prices</button>
+                            <button className="price-button" onClick={handleClick}>Book Now</button>
                         </div>
                     </div>
                 ))}

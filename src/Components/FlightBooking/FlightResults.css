@@ -1,5 +1,6 @@
 .results-container {
   background: #f9f9f9;
+  padding: 8% 0;
 }
 
 .results-container .flight-card {
@@ -13,7 +14,7 @@
 .results-container .flight-card:hover {
   transform: scale(1.02);
 }
-h3{
+.results-container  h3{
     text-align: center;
 }
 h4 {

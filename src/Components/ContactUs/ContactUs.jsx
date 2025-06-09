@@ -57,7 +57,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="signup-section">
+    <div className="signup-section pb-5">
       <div className="signup-image-wrapper">
         <div className="image-banner"></div>
         <div className="signup-content">
@@ -162,17 +162,9 @@ const ContactUs = () => {
         !3m2!1d16.7049873!2d74.2432527!5e0!3m2!1sen!2sin!4v1747851696928!5m2!1sen!2sin" width="600" height="450" 
         s
         tyle="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-      <div className="f-bottom">
-        <div className="auto-container">
-          <div className="inner clearfix">
-            <div className="copyright">
-              Copyright &copy; 2022 Travel Planner. All Rights Reserved.
-            </div>
-          </div>
-        </div>
       </div>
+
+    
     </div>
   );
 };

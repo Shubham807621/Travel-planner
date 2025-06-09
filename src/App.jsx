@@ -28,6 +28,7 @@ import User from './Admin-Panel/Users/User'
 import FlightBookingForm from './Components/FlightBooking/FlightBookingForm'
 import FlightResults from './Components/FlightBooking/FlightResults'
 import BookingPage from './Components/FlightBooking/BookingPage'
+import BookingConfirmation from './Pages/BookingConfirmation/BookingConfirmation'
 
 
 
@@ -57,6 +58,7 @@ function App() {
           <Route path='/destination/:city/hotel-details/:id' element={<HotelDetails/>}/>
           <Route path="/admin/dashboard" element={<Dashboard/>} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/booking-confirmation" element={<BookingConfirmation />} />
           <Route path="/admin/add-package" element={<Form />} />
           <Route path='/book-ride' element={<Ride/>}/>
           <Route path='/admin/user' element={<User/>}/>

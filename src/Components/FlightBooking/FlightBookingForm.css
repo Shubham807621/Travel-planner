@@ -1,21 +1,29 @@
-.flight-form {
-  max-width: 800px;
-  margin: auto;
-  margin-top: 80px;
-  background: white;
+.flight-booking-wrapper{
+
+  padding-top: 8%;
 
 }
 
-.flight-form .form-label svg {
+.flight-booking-wrapper .flight-form {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 40px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.273);
+  border-radius: 15px;
+
+}
+
+.flight-booking-wrapper .flight-form .form-label svg {
   margin-right: 5px;
   color: #007bff;
 }
-.flight-form .passenger-box {
+.flight-booking-wrapper .flight-form .passenger-box {
   cursor: pointer;
   position: relative;
 }
 
-.flight-form .passenger-dropdown {
+.flight-booking-wrapper .flight-form .passenger-dropdown {
   position: absolute;
   top: 100%;
   z-index: 10;
@@ -24,6 +32,6 @@
   border: 1px solid #dee2e6;
 }
 
-.flight-form .passenger-dropdown button {
+.flight-booking-wrapper .flight-form .passenger-dropdown button {
   min-width: 30px;
 }

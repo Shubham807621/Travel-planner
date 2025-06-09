@@ -96,7 +96,7 @@
     };
 
     return (
-        <div className="results-container p-4">
+        <div className="results-container">
         <h3>Flights from {state?.fromCity?.label} to {state?.toCity?.label}</h3>
         {dummyFlights.map((flight, index) => (
             <div className="flight-card shadow-sm rounded p-3 mb-3" key={index}>

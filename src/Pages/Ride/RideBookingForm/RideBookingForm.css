@@ -1,5 +1,5 @@
 .booking-container {
-    max-width: 800px;
+    width: 1100px;
     margin: 2rem auto;
     background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
@@ -49,6 +49,7 @@
 .booking-container .booking-card .input-group {
     flex: 1 1 48%;
     text-align: left;
+    display: block;
 }
 
 .booking-container .booking-card .input-group label {
