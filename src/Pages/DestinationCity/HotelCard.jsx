@@ -42,7 +42,7 @@ const handleClick = (id) => {
     <>
         <div className="hotel-card-wrapper ">
             <h3>Best Hotels</h3>
-            <div className='d-flex justify-content-between'>
+            <div className='d-flex justify-content-between mt-5'>
                 {hotels.map((hotel)=>(
                 <div className="hotel-card" key={hotel.id} onClick={()=> handleClick(hotel.id)}>
                     <div className="hotel-img-wrapper">

@@ -112,18 +112,24 @@
     font-size: 20px;
 }
 
+.destination-city-wrapper .destination-city-info h3{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+
 .destination-city-wrapper .destination-city-info .destination-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 440px;
-    padding-top: 5%;
+    margin-top: 5%;
     gap: 10px;
 }
 
 .destination-city-wrapper .destination-city-info .destination-box .destination-card {
     max-width: 320px;
-    height: 470px;
+    height: 510px;
     border-radius: 10px;
     margin: 0 10px;
     overflow: hidden;
@@ -166,6 +172,6 @@
 
 .destination-city-wrapper .destination-box .destination-card .city-info .destination-description {
     margin: 10px 0;
-    color: rgb(46, 46, 46);
+    color: rgba(46, 45, 45, 0.775);
 
 }

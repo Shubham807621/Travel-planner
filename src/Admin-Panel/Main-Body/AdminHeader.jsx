@@ -21,6 +21,7 @@
   import LockResetIcon from '@mui/icons-material/LockReset';
 
 import { useNavigate } from "react-router-dom"
+import { getUserDetails } from '../../Components/APIServices/apiservice';
 
 export default function AdminHeader() {
 
@@ -53,11 +54,28 @@ export default function AdminHeader() {
       setOpenMenu(openMenu === menu ? null : menu);
     };
 
-    const employee={
+ const [employee , setEmployee] = useState({
+        name:"",
+        email:"",
+    });
 
-        name:"Shubham Musale",
-        email:"shubhammusale111@gmail.com"
-    }
+    const userId = localStorage.getItem("userId")
+
+     useEffect(()=>{
+          const fetchUserDetails = async ()=>{
+        
+            try {
+              const response = await getUserDetails(userId);
+             setEmployee(response);
+              
+            } catch (error) {
+                console.error("Error fetching documents:", error);
+              }
+        
+          };
+          fetchUserDetails();
+        
+        },[userId])
 
  
 
@@ -88,7 +106,7 @@ export default function AdminHeader() {
                             className="profile-img"
                         />
                         <div className="profile-info">
-                            <p className="fw-bold mb-0 d-none d-md-inline">Shubham Musale</p>
+                            <p className="fw-bold mb-0 d-none d-md-inline">{employee.name}</p>
                         
                         </div>
                         </button>

@@ -19,7 +19,7 @@ export default function BookingConfirmation() {
     <div className="booking-confirmation-wrapper">
         <div className="booking-img-wrapper">
             <div className="image-banner"></div>
-        <h1 className="booking-content">Booikng</h1>
+        <h1 className="booking-content">Booking</h1>
        
         </div>
 

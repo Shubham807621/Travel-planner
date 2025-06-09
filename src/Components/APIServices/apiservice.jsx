@@ -156,3 +156,33 @@ export const getUserList = async () =>{
     }
 
 }
+
+export const getUserDetails = async (userId) =>{
+
+  const url = `${API_BASE_URL}${API_URLs.GET_USER_DETAILS}/${userId}`
+ 
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+
+}
+
+export const getHotelDetails = async (id) =>{
+
+  const url = `${API_BASE_URL}${API_URLs.GET_HOTEL_BYID}/${id}`
+ 
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+
+}

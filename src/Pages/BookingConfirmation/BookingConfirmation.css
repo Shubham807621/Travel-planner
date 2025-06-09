@@ -75,7 +75,7 @@
 .booking-confirmation-wrapper  .confirmation-box{
     width: 80%;
     height: 150px;
-    background-color: aqua;
+    background-color: #d3dcfd;
     border-radius: 15px;
     margin: auto;
         display: flex;

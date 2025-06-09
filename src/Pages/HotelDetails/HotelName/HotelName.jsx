@@ -1,7 +1,9 @@
 import React from 'react';
 import './HotelName.css';
 
-const HotelName = () => {
+const HotelName = ({hoteldetails}) => {
+
+    console.log(hoteldetails)
     return (
         <div className="hotel-name">
             <div className="hotel-name__left">
