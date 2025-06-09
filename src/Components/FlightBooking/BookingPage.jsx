@@ -96,7 +96,7 @@ function BookingPage() {
                 <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
               </div>
               <div className="modal-body text-center">
-                <p>🎉 <strong>Thank you for booking with us!</strong></p>
+                <p>🎉 <strong style={{fontSize:"20px"}}>Thank you for booking with us!</strong></p>
               </div>
               <div className="modal-footer">
                 <button className="btn btn-secondary" onClick={() => setShowModal(false)}>Close</button>

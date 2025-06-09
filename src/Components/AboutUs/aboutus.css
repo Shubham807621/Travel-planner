@@ -97,31 +97,31 @@
     font-size: 20px;
 }
 
-.about-us {
+.aboutus-section .about-us {
   padding: 40px 0;
   background-color: #f8fcff;
 }
 
-.heading {
+.aboutus-section .about-us .heading {
   font-size: 2.9rem;
   font-weight: 900;
   color: #111827;
   margin-bottom: 20px;
 }
 
-.aboutus-description {
+.aboutus-section .about-us .aboutus-description {
   font-size: 1.1rem;
   color: #1d1c1c;
 }
 
-.icon {
+.aboutus-section .about-us .feature-section .icon {
   color: #2ea6bb;
   font-size: 1.8rem;
   margin-top: 3px;
  width: 40px;
 }
 
-.blockquote {
+.aboutus-section .about-us .blockquote {
   font-style: italic;
   color: #555;
   border-left: 4px solid #94d2ff;
@@ -129,7 +129,7 @@
   margin-top: 20px;
 }
 
-.video-section {
+.aboutus-section .video-section {
   position: relative;
   height: 100vh;
   background-size: cover;
@@ -139,7 +139,7 @@
   align-items: center;
 }
 
-.play-button {
+.aboutus-section .video-section .play-button {
   font-size: 3rem;
   color: white;
   background: rgba(0, 0, 0, 0.6);
@@ -150,18 +150,18 @@
   transition: 0.3s ease;
 }
 
-.play-button:hover {
+.aboutus-section .video-section .play-button:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.iframe-container {
+.aboutus-section .video-section .iframe-container {
   width: 100%;
   max-width: 100%;
   height: 450px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
 }
-.close-button {
+.aboutus-section .video-section .iframe-container .close-button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -174,29 +174,23 @@
   padding: 5px 10px;
   border-radius: 5px;
 }
-.copyright{
-    width: 100%;
-    height: 70px;
-    background-color: rgb(36, 33, 33);
-    color: white;
-    padding: 20px;
-}
-.features-container {
+
+.aboutus-section .features-container {
   display: flex;
   justify-content: space-around;
   padding: 40px;
   background-color: #fff;
 }
 
-.feature-item {
+.aboutus-section .features-container .feature-item {
   text-align: left;
   width: 250px;
   
 }
-.aboutstitle{
+.aboutus-section .features-container .feature-item .icon-box .aboutstitle{
   margin-left: 2px;
 }
-.icon-box {
+.aboutus-section .features-container .feature-item .icon-box {
   background-color: #0077b6;
   color: #fff;
   padding: 20px;
@@ -207,14 +201,14 @@
   width: 100px;
 }
 
-.f-bottom .feature-item h4 {
+.aboutus-section .features-container .f-bottom .feature-item h4 {
   font-size: 16px;
   font-weight: bold;
   color: #000;
   /* margin: 0 0 10px; */
 }
 
-p {
+.aboutus-section .features-container .feature-item .icon-box p {
   font-size: 14px;
   color: #333;
 }
