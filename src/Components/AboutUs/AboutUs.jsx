@@ -140,15 +140,7 @@ const AboutUs = () => {
           </div>
         ))}
       </div>
-      <div className="f-bottom">
-          <div className="auto-container">
-            <div className="inner clearfix">
-              <div className="copyright">
-                Copyright &copy; 2022 Travel Planner. All Rights Reserved.
-              </div>
-            </div>
-          </div>
-      </div>
+      
     </div>
   );
 };
