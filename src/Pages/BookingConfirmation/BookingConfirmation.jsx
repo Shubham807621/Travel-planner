@@ -49,19 +49,19 @@ export default function BookingConfirmation() {
                 <h2 className="summary-title">Summary</h2>
                 <div className="summary-item">
                     <span>Deluxe Goodie Bag</span>
-                    <span>£500</span>
+                    <span></span>
                 </div>
                 <div className="summary-item">
                     <span>Insurance</span>
-                    <span>£34</span>
+                    <span></span>
                 </div>
                 <div className="summary-total">
                     <span>Total Cost</span>
-                    <span>£534</span>
+                    <span></span>
                 </div>
                 <div className="support-info">
                     <p>Need Help Booking?</p>
-                    <p>Call us at <strong>+44 123 456 7890</strong></p>
+                    <p>Call us at <strong>+91 9900118899</strong></p>
                 </div>
             </div>
         </div>

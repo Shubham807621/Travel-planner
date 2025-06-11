@@ -75,8 +75,10 @@ const Booking = () => {
             <div className="form-grid">
               <select className="input-field">
                 <option>Select Your Country</option>
-                <option>Country 1</option>
-                <option>Country 2</option>
+                <option>India</option>
+                <option>Australia</option>
+                <option>US</option>
+                <option>UK</option>
               </select>
               <input type="text" placeholder="Street Line 1*" className="input-field" />
               <input type="text" placeholder="Street Line 2" className="input-field" />
@@ -103,19 +105,19 @@ const Booking = () => {
           <h2 className="summary-title">Summary</h2>
           <div className="summary-item">
             <span>Deluxe Goodie Bag</span>
-            <span>£500</span>
+            <span>₹500</span>
           </div>
           <div className="summary-item">
             <span>Insurance</span>
-            <span>£34</span>
+            <span>₹34</span>
           </div>
           <div className="summary-total">
             <span>Total Cost</span>
-            <span>£534</span>
+            <span>₹534</span>
           </div>
           <div className="support-info">
             <p>Need Help Booking?</p>
-            <p>Call us at <strong>+44 123 456 7890</strong></p>
+            <p>Call us at <strong>+91 8899664488</strong></p>
           </div>
         </div>
       </div>
