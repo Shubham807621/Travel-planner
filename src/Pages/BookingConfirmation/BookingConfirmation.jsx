@@ -81,6 +81,9 @@ export default function BookingConfirmation() {
                 </div>
 
             </div>
+
         </>
     )
+
+
 }

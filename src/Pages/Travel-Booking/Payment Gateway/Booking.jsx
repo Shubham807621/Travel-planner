@@ -154,6 +154,7 @@ const Booking = () => {
               <span className="step-number">3</span> Billing Address
             </h2>
             <div className="form-grid">
+
               <input 
                 type="text" 
                 placeholder="Country*" 
@@ -167,6 +168,8 @@ const Booking = () => {
               <input type="text" placeholder="Street Line 2" name='streetLine2' className="input-field" value={address.streetLine2} onChange={handleAddressChange} />
               <input type="text" placeholder="City*" name='city' className="input-field" value={address.city} onChange={handleAddressChange} />
               <input type="text" placeholder="Postal Code*" name='postalCode' className="input-field" value={address.postalCode} onChange={handleAddressChange} />
+
+
               <textarea placeholder="Additional Information (e.g., Special notes for delivery)" className="input-field textarea"></textarea>
             </div>
           </div>
@@ -206,6 +209,7 @@ const Booking = () => {
           <div className="support-info">
             <p>Need Help Booking?</p>
             <p>Call us at <strong>+91 1234567890</strong></p>
+
           </div>
         </div>
       </div>
