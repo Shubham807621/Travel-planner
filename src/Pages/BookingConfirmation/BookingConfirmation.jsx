@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './BookingConfirmation.css'
 import CheckIcon from '@mui/icons-material/Check';
+import { useState } from 'react';
 
 export default function BookingConfirmation() {
-      const bookingInfo = {
+    const bookingInfo = {
         bookingId: "999-QSDE-55",
         firstName: "John",
         lastName: "Doe",
@@ -14,59 +15,72 @@ export default function BookingConfirmation() {
         zipCode: "44500",
         address: "445 Mount Eden Road, london, borfish"
     };
-  return (
-    <>
-    <div className="booking-confirmation-wrapper">
-        <div className="booking-img-wrapper">
-            <div className="image-banner"></div>
-        <h1 className="booking-content">Booking</h1>
-       
-        </div>
+    const [room, setRoom] = useState(null);
+    const [hotelName, setHotelName] = useState("");
+    const userDetails = JSON.parse(localStorage.getItem("userDetails"));
+    const cardDetails = JSON.parse(localStorage.getItem('cardDetails'));
+    const addressData = JSON.parse(localStorage.getItem('addressData'));
 
-        <div className="confirmation-box">
-            <div className="success-icon-wrapper">
-                <CheckIcon className='check-icon'/>
-            </div>
-            <div className="confirmation-message">
-                <h2>PAYMENT CONFIRMED</h2>
-                <p>hank you, your payment has been successful and your booking is now confirmed</p>
-            </div>
-        </div>
+    useEffect(() => {
+        const storedRoom = localStorage.getItem("selectedRoom");
+        const storedHotel = localStorage.getItem("hotelName");
 
-        <div className="booking-confirmation-container">
-            <div className="booking-confirmation-details">
-                <div className="booking-row"><span>Booking id:</span> {bookingInfo.bookingId}</div>
-                <div className="booking-row"><span>First Name:</span> {bookingInfo.firstName}</div>
-                <div className="booking-row"><span>Last Name:</span> {bookingInfo.lastName}</div>
-                <div className="booking-row"><span>Email:</span> {bookingInfo.email}</div>
-                <div className="booking-row"><span>Phone</span> {bookingInfo.phone}</div>
-                <div className="booking-row"><span>Card number</span> {bookingInfo.cardNumber}</div>
-                <div className="booking-row"><span>Country:</span> {bookingInfo.country}</div>
-                <div className="booking-row"><span>Zip Code</span> {bookingInfo.zipCode}</div>
-                <div className="booking-row"><span>Address</span> {bookingInfo.address}</div>
+        if (storedRoom) {
+            setRoom(JSON.parse(storedRoom));
+        }
+
+        if (storedHotel) {
+            setHotelName(storedHotel);
+        }
+    }, []);
+
+    console.log( cardDetails);
+
+      if (!room) {
+    return <div>No room selected</div>;
+  }
+    return (
+        <>
+            <div className="booking-confirmation-wrapper">
+                <div className="booking-img-wrapper">
+                    <div className="image-banner"></div>
+                    <h1 className="booking-content">Booking Confirmation</h1>
+
+                </div>
+
+                <div className="confirmation-box">
+                    <div className="success-icon-wrapper">
+                        <CheckIcon className='check-icon' />
+                    </div>
+                    <div className="confirmation-message">
+                        <h2>PAYMENT CONFIRMED</h2>
+                        <p>Thank you, your payment has been successful and your booking is now confirmed</p>
+                    </div>
+                </div>
+
+                <div className="booking-confirmation-container">
+                    <div className="booking-confirmation-details">
+                        <div className="booking-row"><span>Booking id:</span> {bookingInfo.bookingId}</div>
+                        <div className="booking-row"><span>Name:</span> {userDetails.name}</div>
+                        <div className="booking-row"><span>Email:</span>{userDetails.email}</div>
+                        <div className="booking-row"><span>Phone</span> {userDetails.phoneNumber}</div>
+                        <div className="booking-row"><span>Hotel Name</span> {hotelName}</div>
+                        <div className="booking-row"><span>Card number</span>******{cardDetails.cardNumber.slice(-3)}</div>
+                        <div className="booking-row"><span>Country:</span> {addressData.country}</div>
+                        <div className="booking-row"><span>Address</span> {addressData.city}</div>
+                        <div className="booking-row"><span>Zip Code</span> {addressData.postalCode}</div>
+                    </div>
+                    <div className="confirmation-price-summary">
+                        <h2 className="summary-title">Summary</h2>
+                  
+                        <div className="support-info">
+           
+                            <p>Call us at <strong>+44 123 456 7890</strong></p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div className="confirmation-price-summary">
-                <h2 className="summary-title">Summary</h2>
-                <div className="summary-item">
-                    <span>Deluxe Goodie Bag</span>
-                    <span>£500</span>
-                </div>
-                <div className="summary-item">
-                    <span>Insurance</span>
-                    <span>£34</span>
-                </div>
-                <div className="summary-total">
-                    <span>Total Cost</span>
-                    <span>£534</span>
-                </div>
-                <div className="support-info">
-                    <p>Need Help Booking?</p>
-                    <p>Call us at <strong>+44 123 456 7890</strong></p>
-                </div>
-            </div>
-        </div>
-       
-    </div>
-    </>
-  )
+        </>
+    )
 }

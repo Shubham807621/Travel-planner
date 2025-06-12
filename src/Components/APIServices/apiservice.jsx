@@ -160,7 +160,6 @@ export const getUserList = async () =>{
 export const getUserDetails = async (userId) =>{
 
   const url = `${API_BASE_URL}${API_URLs.GET_USER_DETAILS}/${userId}`
- 
     try {
         const response = await axios.get(url)
         return response.data;

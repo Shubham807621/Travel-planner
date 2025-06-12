@@ -23,6 +23,9 @@ export default function HotelGallery({ hoteldetails }) {
     { src: Restaurant, alt: "Restaurant" },
     // { src: DayPoolView, alt: "Day Pool View" },
 ];
+
+    localStorage.setItem("hotelName", hoteldetails.name);
+
     return (
         <section className="hotel-gallery">
             <h2 className="hotel-gallery-heading">{hoteldetails.name}</h2>

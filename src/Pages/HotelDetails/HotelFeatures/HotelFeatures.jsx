@@ -8,7 +8,7 @@ import { AiFillAlert } from 'react-icons/ai';
 function HotelFeatures() {
     return (
         <div className="hotel-features">
-            {/* Highlights */}
+
             <div className="feature-box">
                 <h2>Highlights</h2>
                 <div className="highlight-list">

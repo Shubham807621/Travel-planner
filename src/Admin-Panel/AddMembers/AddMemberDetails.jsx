@@ -191,8 +191,8 @@ import HomeIcon from '@mui/icons-material/Home';
 
         )}
       </div>
-        <button className="continue-btn mb-4" onClick={() => navigate("/booking")}>
-          Continue  
+        <button className="continue-btn my-4" onClick={() => navigate("/booking")}>
+          Continue Your Booking
         </button>
 
 </div>
