@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '@mui/icons-material'; // Load Material Icons
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -75,22 +75,12 @@ const dummyFlights = [
     },
 ];
 
-function FlightResults() {
-    const { state } = useLocation();
+function FlightResults({state }) {
+      const { fromCity, toCity, passengers } = state || {};
     const [expandedIndex, setExpandedIndex] = useState(null);
     const navigate = useNavigate();
 
-    const handleSelect = (flight) => {
-        navigate('/book-now', {
-            state: {
-                flight,
-                fromCity: state.fromCity,
-                toCity: state.toCity,
-                passengers: state.passengers, // e.g., { adults: 2, children: 1 }
-            },
-        });
-    };
-
+ 
     const toggleExpand = (index) => {
         setExpandedIndex(expandedIndex === index ? null : index);
     };
@@ -153,7 +143,19 @@ function FlightResults() {
                                     </div>
                                 )}
                             </div>
-                            <button className="flight-booking-btn mt-2" onClick={() => handleSelect(flight)}>Select</button>
+                            {/* <button className="flight-booking-btn mt-2" onClick={() => handleSelect(flight)}>Select</button> */}
+                            <Link
+                                to="/book-now"
+                                state={{
+                                    flight,
+                                    fromCity: state?.fromCity,
+                                    toCity: state?.toCity,
+                                    passengers: state?.passengers,
+                                }}
+                                className="flight-booking-btn mt-2 d-inline-block text-decoration-none"
+                            >
+                                Select
+                            </Link>
                         </div>
                     )}
                 </div>

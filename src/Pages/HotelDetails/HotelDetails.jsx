@@ -36,6 +36,7 @@ export default function HotelDetails() {
         fetchHotelDetails();
 
     }, [id])
+
     const [formData, setFormData] = useState(() => {
         // Load from localStorage if available
         const stored = localStorage.getItem('bookingDates');
@@ -69,6 +70,7 @@ export default function HotelDetails() {
                 </div>
                 <div className="hotel-details-side">
                     <LocationCard hoteldetails={hotel} />
+                    
                     <div className="dates">
                         <div className="input-group">
                             <label>Checking Date : </label>

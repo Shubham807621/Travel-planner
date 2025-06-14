@@ -164,7 +164,7 @@ function FlightBookingForm() {
       </div>
 
     {hasSearched && (
-      <FlightResults/>
+      <FlightResults state={formData}/>
     )}
     </div>
   );

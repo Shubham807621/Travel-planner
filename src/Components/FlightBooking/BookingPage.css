@@ -1,0 +1,206 @@
+/* ============================
+   Booking Page Wrapper
+============================ */
+.flight-booking-page {
+  padding: 40px 10%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fafafa;
+}
+
+.flight-booking-page .flight-booking-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* ============================
+   Booking Summary Section
+============================ */
+.flight-booking-page .flight-booking-summary {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.flight-booking-page .flight-booking-summary .flight-booking-summary-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.flight-booking-page .flight-booking-summary .flight-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.flight-booking-page .flight-booking-summary .flight-info p {
+  margin: 2px 0;
+}
+
+.flight-booking-page .flight-booking-summary .flight-price {
+  margin-left: auto;
+  text-align: right;
+}
+
+.flight-booking-page .flight-booking-summary .flight-price h4 {
+  margin-bottom: 5px;
+  color: #28a745;
+}
+
+.flight-booking-page .flight-booking-summary .flight-price .total-price {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* ============================
+   Contact Form Section
+============================ */
+.flight-booking-page .contact-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.flight-booking-page .contact-form .input-field {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.flight-booking-page .contact-form .input-field:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* ============================
+   Passenger Section
+============================ */
+.flight-booking-page .passenger-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.flight-booking-page .passenger-section .passenger-box {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background-color: #fdfdfd;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+}
+
+.flight-booking-page .passenger-section .input-field {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.flight-booking-page .passenger-section .dob-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.flight-booking-page .passenger-section .dob-select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* ============================
+   Book Button
+============================ */
+.flight-booking-page .book-btn {
+  background-color: #28a745;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.flight-booking-page .book-btn:hover {
+  background-color: #218838;
+}
+
+/* ============================
+   Booking Modal
+============================ */
+.flight-booking-page .flight-booking-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.flight-booking-page .flight-booking-modal .modal-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.flight-booking-page .flight-booking-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.flight-booking-page .flight-booking-modal .close-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.flight-booking-page .flight-booking-modal .modal-body p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.flight-booking-page .flight-booking-modal .modal-footer {
+  margin-top: 20px;
+}
+
+.flight-booking-page .flight-booking-modal .btn-close-modal {
+  padding: 8px 16px;
+  border: none;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.flight-booking-page .flight-booking-modal .btn-close-modal:hover {
+  background-color: #5a6268;
+}

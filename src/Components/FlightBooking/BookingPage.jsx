@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import './BookingPage.css';
 
 function BookingPage() {
   const { state } = useLocation();
@@ -12,97 +13,103 @@ function BookingPage() {
   };
 
   return (
-    <div className="container" style={{padding:"5% 0"}}>
-      <h2>Booking for 
-        {/* {flight.airline} */}
-        </h2>
+    <div className="flight-booking-page">
+      <h2 className="flight-booking-title">Booking for {flight?.airline}</h2>
+
+      {/* Flight Summary */}
+      {flight && (
+        <div className="flight-booking-summary">
+          <div className="flight-booking-summary-header">
+            <img src={flight.logo} alt={flight.airline} className="flight-logo" />
+            <div className="flight-info">
+              <h5>{flight.airline}</h5>
+              <p>{flight.from} → {flight.to}</p>
+              <p>{flight.departure} → {flight.arrival}</p>
+              <p>Duration: {flight.duration}</p>
+              <p>Refund Policy: {flight.refundPolicy}</p>
+            </div>
+            <div className="flight-price">
+              <h4>₹{flight.price}</h4>
+              <small>{totalPassengers} Passenger(s)</small>
+              <p className="total-price">Total: ₹{flight.price * totalPassengers}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Contact Details Form */}
-      <div className="card p-3 mb-4">
+      <div className="contact-form">
         <h4>Contact Details</h4>
-        <input type="text" className="form-control mb-2" placeholder="Full Name" />
-        <input type="email" className="form-control mb-2" placeholder="Email" />
-        <input type="tel" className="form-control mb-2" placeholder="Phone Number" />
+        <input type="text" className="input-field" placeholder="Full Name" />
+        <input type="email" className="input-field" placeholder="Email" />
+        <input type="tel" className="input-field" placeholder="Phone Number" />
       </div>
 
       {/* Passenger Details */}
-      <div className="card p-3 mb-4">
-  <h4>Passenger Details</h4>
-  {[...Array(totalPassengers)].map((_, index) => (
-    <div key={index} className="border rounded p-3 mb-3">
-      <h6>Passenger {index + 1}</h6>
-
-      <input type="text" className="form-control mb-2" placeholder="Passenger Name" />
-
-      <select className="form-control mb-2">
-        <option value="">Gender</option>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-      </select>
-
-      <div className="row mb-2">
-        <div className="col">
-          <select className="form-control">
-            <option value="">Day</option>
-            {Array.from({ length: 31 }, (_, i) => (
-              <option key={i + 1}>{i + 1}</option>
-            ))}
-          </select>
-        </div>
-        <div className="col">
-          <select className="form-control">
-            <option value="">Month</option>
-            {[
-              'January', 'February', 'March', 'April', 'May', 'June',
-              'July', 'August', 'September', 'October', 'November', 'December'
-            ].map((month, i) => (
-              <option key={i + 1} value={i + 1}>{month}</option>
-            ))}
-          </select>
-        </div>
-        <div className="col">
-          <select className="form-control">
-            <option value="">Year</option>
-            {Array.from({ length: 100 }, (_, i) => {
-              const year = new Date().getFullYear() - i;
-              return <option key={year}>{year}</option>;
-            })}
-          </select>
-        </div>
+      <div className="passenger-section">
+        <h4>Passenger Details</h4>
+        {[...Array(totalPassengers)].map((_, index) => (
+          <div key={index} className="passenger-box">
+            <h6>Passenger {index + 1}</h6>
+            <input type="text" className="input-field" placeholder="Passenger Name" />
+            <select className="input-field">
+              <option value="">Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+            <div className="dob-row">
+              <select className="dob-select">
+                <option value="">Day</option>
+                {Array.from({ length: 31 }, (_, i) => (
+                  <option key={i + 1}>{i + 1}</option>
+                ))}
+              </select>
+              <select className="dob-select">
+                <option value="">Month</option>
+                {[
+                  'January', 'February', 'March', 'April', 'May', 'June',
+                  'July', 'August', 'September', 'October', 'November', 'December'
+                ].map((month, i) => (
+                  <option key={i + 1} value={i + 1}>{month}</option>
+                ))}
+              </select>
+              <select className="dob-select">
+                <option value="">Year</option>
+                {Array.from({ length: 100 }, (_, i) => {
+                  const year = new Date().getFullYear() - i;
+                  return <option key={year}>{year}</option>;
+                })}
+              </select>
+            </div>
+            <select className="input-field">
+              <option value="">Nationality</option>
+              <option>Indian</option>
+              <option>American</option>
+              <option>British</option>
+              <option>Canadian</option>
+              <option>Australian</option>
+              <option>Other</option>
+            </select>
+          </div>
+        ))}
       </div>
 
-      <select className="form-control mb-2">
-        <option value="">Nationality</option>
-        <option>Indian</option>
-        <option>American</option>
-        <option>British</option>
-        <option>Canadian</option>
-        <option>Australian</option>
-        <option>Other</option>
-      </select>
-    </div>
-  ))}
-</div>
-
-
-      <button className="btn btn-success" onClick={handleBooking}>Book Now</button>
+      <button className="book-btn" onClick={handleBooking}>Book Now</button>
 
       {/* Modal */}
       {showModal && (
-        <div className="modal fade show d-block" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-              <div className="modal-header bg-success text-white">
-                <h5 className="modal-title">Booking Confirmed</h5>
-                <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
-              </div>
-              <div className="modal-body text-center">
-                <p>🎉 <strong style={{fontSize:"20px"}}>Thank you for booking with us!</strong></p>
-              </div>
-              <div className="modal-footer">
-                <button className="btn btn-secondary" onClick={() => setShowModal(false)}>Close</button>
-              </div>
+        <div className="flight-booking-modal">
+          <div className="modal-container">
+            <div className="modal-header">
+              <h5>Booking Confirmed</h5>
+              <button className="close-btn" onClick={() => setShowModal(false)}>×</button>
+            </div>
+            <div className="modal-body">
+              <p>🎉 <strong>Thank you for flight-booking with us!</strong></p>
+            </div>
+            <div className="modal-footer">
+              <button className="btn-close-modal" onClick={() => setShowModal(false)}>Close</button>
             </div>
           </div>
         </div>
