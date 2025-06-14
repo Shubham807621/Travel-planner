@@ -24,8 +24,7 @@
   padding: 20px;
   border-radius: 12px;
   height: fit-content;
-  background: white; /* Ensure it doesn't appear transparent */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+
   z-index: 10; /* Keeps it above background content if needed */
 
 }

@@ -59,7 +59,7 @@ const Weather = () => {
         fetchWeather();
       },)
 
-console.log(weatherData)
+
 
 
   return (

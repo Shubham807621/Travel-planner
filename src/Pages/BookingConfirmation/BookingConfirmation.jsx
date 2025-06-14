@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './BookingConfirmation.css'
 import CheckIcon from '@mui/icons-material/Check';
 import { useState } from 'react';
+import thanksyou from '../../Images/thank you.mp4';
 
 export default function BookingConfirmation() {
     const bookingInfo = {
@@ -34,11 +35,11 @@ export default function BookingConfirmation() {
         }
     }, []);
 
-    console.log( cardDetails);
+    console.log(cardDetails);
 
-      if (!room) {
-    return <div>No room selected</div>;
-  }
+    if (!room) {
+        return <div>No room selected</div>;
+    }
     return (
         <>
             <div className="booking-confirmation-wrapper">
@@ -71,12 +72,20 @@ export default function BookingConfirmation() {
                         <div className="booking-row"><span>Zip Code</span> {addressData.postalCode}</div>
                     </div>
                     <div className="confirmation-price-summary">
-                        <h2 className="summary-title">Summary</h2>
-                  
+                        <h2 className="summary-title">Help & Support</h2>
+
                         <div className="support-info">
-           
-                            <p>Call us at <strong>+44 123 456 7890</strong></p>
+
+                            <p className='mt-3'>Call us at <strong>+91 1234567890</strong></p>
+                            <p className='mt-3'>Address: <strong> 3146 Koontz, India</strong></p>
+
                         </div>
+                        <video className='thanks-video'
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            src={thanksyou}></video>
                     </div>
                 </div>
 
