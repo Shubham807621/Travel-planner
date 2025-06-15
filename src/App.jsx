@@ -30,6 +30,7 @@ import FlightResults from './Components/FlightBooking/FlightResults'
 import BookingPage from './Components/FlightBooking/BookingPage'
 import BookingConfirmation from './Pages/BookingConfirmation/BookingConfirmation'
 import TravelPackageDetails from './Pages/TravelPackageList/Details/TravelPackageDetails'
+import CabList from './Pages/Ride/CabList/CabList'
 
 
 
@@ -66,7 +67,6 @@ function App() {
           <Route path="/flightbook" element={<FlightBookingForm />} />
           <Route path="/book-now" element={<BookingPage />} />
           <Route path='/package-details/:id' element={<TravelPackageDetails />} />
-
         </Routes>
       <Footer/>
       </BrowserRouter>

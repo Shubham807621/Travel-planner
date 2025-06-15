@@ -21,7 +21,7 @@ const PlanJourney = () => {
                     <h3>From Hotel to Destination</h3>
                     <p>Book a cab to the airport, city, or your next adventure</p>
                     <p className="date">Select Date</p>
-                    <button className="btn-search">Book Now</button>
+                    <button className="btn-search" onClick={()=>handleClick()}>Book Now</button>
                 </div>
 
                 {/* Arrival Journey Timeline */}

@@ -10,7 +10,7 @@ const RoomOptions = ({ roomDetails }) => {
     }
 
     const navigate = useNavigate();
-    console.log(roomDetails);
+  
     const handleClick = (room) => {
         localStorage.setItem("selectedRoom", JSON.stringify(room));
         navigate("/booking");

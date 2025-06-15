@@ -1,5 +1,6 @@
 import "./CabList.css";
-
+import cab4 from '../../../Images/CabList/cab4.jpeg';
+import cab from '../../../Images/CabList/cab.jpeg';
 const CabList = () => {
     const cabs = [
         {
@@ -11,7 +12,7 @@ const CabList = () => {
             tax: "+₹603 (Taxes & Charges)",
             ac: true,
             seats: 4,
-            image: "./src/assets/cab4.jpeg",
+            image: cab4,
         },
         {
             name: "SUV or similar",
@@ -22,7 +23,7 @@ const CabList = () => {
             tax: "+₹617 (Taxes & Charges)",
             ac: false,
             seats: 6,
-            image: "./src/assets/cab.jpeg",
+            image: cab
         },
         {
             name: "Dzire, Etios or similar",
@@ -34,7 +35,7 @@ const CabList = () => {
             note: "Roof carrier available with this car starting @ INR 209",
             ac: true,
             seats: 4,
-            image: "./src/assets/cab4.jpeg",
+            image: cab4,
         },
         {
             name: "SUV or similar",
@@ -45,7 +46,7 @@ const CabList = () => {
             tax: "+₹617 (Taxes & Charges)",
             ac: false,
             seats: 6,
-            image: "./src/assets/cab.jpeg",
+            image: cab,
         },
     ];
 

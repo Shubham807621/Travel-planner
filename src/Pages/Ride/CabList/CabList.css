@@ -1,11 +1,15 @@
 .cab-list {
-    max-width: 750px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    font-family: "Segoe UI", sans-serif;
+    width: 75%;
+    margin: 0 auto;
+    padding: 1% 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .cab-card {
+    width: 48%;
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
@@ -70,13 +74,13 @@
 
 .fuel.cng {
     background-color: #00b894;
-    width: 30px;
+    width: 45px;
 
 }
 
 .fuel.diesel {
     background-color: #e67e22;
-    width: 40px;
+    width: 55px;
 }
 
 .seats {

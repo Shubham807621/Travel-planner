@@ -2,13 +2,19 @@
 import React, { useState } from 'react';
 import './RideBookingForm.css';
 import { CalendarIcon, ClockIcon, MapPinIcon, UsersIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import CabList from '../CabList/CabList';
 
 const RideBookingForm = () => {
     const [isRoundTrip, setIsRoundTrip] = useState(true);
     const [rideType, setRideType] = useState('point');
     const [rideDuration, setRideDuration] = useState('1 hour');
+    const navigate = useNavigate();
+    const [hasSearched, setHasSearched] = useState(false);
 
     return (
+        <>
+        
         <div className="booking-container">
             <div className="ride-type-toggle">
                 <button
@@ -126,9 +132,14 @@ const RideBookingForm = () => {
                     </>
                 )}
 
-                <button className="search-button">SEARCH</button>
+                <button className="search-button" onClick={()=> setHasSearched(true)}>SEARCH</button>
             </div>
+
         </div>
+            {hasSearched && (
+                <CabList />
+            )}
+        </>
     );
 };
 
