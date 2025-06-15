@@ -1,7 +1,21 @@
 import "./CabList.css";
 import cab4 from '../../../Images/CabList/cab4.jpeg';
 import cab from '../../../Images/CabList/cab.jpeg';
-const CabList = () => {
+import { useNavigate } from 'react-router-dom';
+
+const CabList = ({ formData }) => {
+    const navigate = useNavigate();
+
+    const handleCabSelect = (cab) => {
+        navigate("/cab-confirmation", {
+            state: {
+                ...formData,
+                cabName: cab.name,
+                price: cab.price,
+            },
+        });
+    };
+
     const cabs = [
         {
             name: "Indica, Swift or similar",
@@ -23,7 +37,7 @@ const CabList = () => {
             tax: "+₹617 (Taxes & Charges)",
             ac: false,
             seats: 6,
-            image: cab
+            image: cab,
         },
         {
             name: "Dzire, Etios or similar",
@@ -73,7 +87,7 @@ const CabList = () => {
                                 </div>
                                 <div className="action">
                                     <span className="final-price">₹{cab.price}</span>
-                                    <button className="select-btn">SELECT CAB</button>
+                                    <button className="select-btn" onClick={() => handleCabSelect(cab)}>SELECT CAB</button>
                                 </div>
                             </div>
                         </div>

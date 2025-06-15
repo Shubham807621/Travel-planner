@@ -1,0 +1,155 @@
+.cab-confirmation-wrapper{
+    padding-top: 120px; /* Ensure content is below the navbar */
+    position: relative;
+    width: 100%;
+}
+
+.cab-confirmation-wrapper .cab-img-wrapper {
+  position: relative;
+    padding: 250px 0px 140px;
+    margin-bottom: 10%;
+  }
+  
+  .cab-confirmation-wrapper  .cab-img-wrapper .booking-heading {
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  
+   .cab-confirmation-wrapper .cab-img-wrapper .image-banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 120%;
+    background: url("../../Images/banner-image-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+  
+  .cab-confirmation-wrapper  .cab-img-wrapper .image-banner:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(252, 252, 252);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.57), rgba(16, 34, 27, 0.35), rgba(16, 34, 27, 1.0));
+  }
+  
+  .cab-confirmation-wrapper  .cab-img-wrapper .image-banner:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    background: url("../../Images/banner-pattern.png") bottom center repeat-x;
+    height: 39px;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: 80s linear 0s infinite normal none running slide;
+  }
+
+  
+  .cab-img-wrapper .cab-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;    
+    font-family: Poppins, sans-serif;
+    font-size: 65px;
+    font-weight: 700 !important;
+    color: rgb(0, 0, 0);
+  }
+
+.cab-confirmation-wrapper  .confirmation-box{
+    width: 80%;
+    height: 150px;
+    background-color: #d3dcfd;
+    border-radius: 15px;
+    margin: auto;
+        display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cab-confirmation-wrapper  .confirmation-box .success-icon-wrapper{
+    width: 100px;
+    height: 100px;
+    /* background-color: blue; */
+    border-radius: 50%;
+    border: 4px solid white;
+
+}
+
+.cab-confirmation-wrapper  .confirmation-box .success-icon-wrapper .check-icon{
+    width: 60px;
+    height: 60px;
+    color: white;
+    margin: 15px;
+}
+
+.cab-confirmation-wrapper  .confirmation-box .confirmation-message{
+    width: 80%;
+    margin-top: 15px;
+
+}
+
+.cab-confirmation-container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+.cab-confirmation-details{
+    width: 58%;
+    margin: 40px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    border-collapse: collapse;
+}
+
+.cab-confirmation-details .booking-row {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.cab-confirmation-details .booking-row span {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+.confirmation-price-summary{
+    width: 40%;
+    height: auto;
+    /* background-color: #f8f8f8; */
+    margin: 40px 0;
+    padding: 25px;
+}
+
+
+.confirmation-price-summary .thanks-video{
+    width: 100%;
+    height: 400px;
+  
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

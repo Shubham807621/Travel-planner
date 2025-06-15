@@ -31,6 +31,7 @@ import BookingPage from './Components/FlightBooking/BookingPage'
 import BookingConfirmation from './Pages/BookingConfirmation/BookingConfirmation'
 import TravelPackageDetails from './Pages/TravelPackageList/Details/TravelPackageDetails'
 import CabList from './Pages/Ride/CabList/CabList'
+import CabConfirmation from './Pages/Ride/CabConfirmation/CabConfirmation'
 
 
 
@@ -63,6 +64,7 @@ function App() {
           <Route path="/booking-confirmation" element={<BookingConfirmation />} />
           <Route path="/admin/add-package" element={<Form />} />
           <Route path='/book-ride' element={<Ride/>}/>
+          <Route path='/cab-confirmation' element={<CabConfirmation/>}/>
           <Route path='/admin/user' element={<User/>}/>
           <Route path="/flightbook" element={<FlightBookingForm />} />
           <Route path="/book-now" element={<BookingPage />} />

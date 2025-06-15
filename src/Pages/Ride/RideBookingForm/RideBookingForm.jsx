@@ -11,6 +11,15 @@ const RideBookingForm = () => {
     const [rideDuration, setRideDuration] = useState('1 hour');
     const navigate = useNavigate();
     const [hasSearched, setHasSearched] = useState(false);
+    const [formData, setFormData] = useState({
+    pickup: '',
+    dropoff: '',
+    pickupDate: '2025-05-30',
+    pickupTime: '00:00',
+    returnDate: '',
+    returnTime: '',
+    travelers: 1,
+});
 
     return (
         <>
@@ -38,7 +47,10 @@ const RideBookingForm = () => {
                     <label>Pick Up</label>
                     <div className="input-with-icon">
                         <MapPinIcon size={18} />
-                        <input type="text" placeholder="Airport, address, place or hotel name..." />
+                        <input type="text" placeholder="Airport, address, place or hotel name..."
+                        value={formData.pickup}
+                        onChange={(e) => setFormData({...formData, pickup: e.target.value})}
+                        />
                     </div>
                 </div>
 
@@ -47,7 +59,10 @@ const RideBookingForm = () => {
                         <label>Drop Off</label>
                         <div className="input-with-icon">
                             <MapPinIcon size={18} />
-                            <input type="text" placeholder="Airport, address, place or hotel name..." />
+                            <input type="text" placeholder="Airport, address, place or hotel name..."
+                             value={formData.dropoff}
+                            onChange={(e) => setFormData({...formData, dropoff: e.target.value})}
+                            />
                         </div>
                     </div>
                 )}
@@ -56,7 +71,10 @@ const RideBookingForm = () => {
                     <label>Pickup Date</label>
                     <div className="input-with-icon">
                         <CalendarIcon size={18} />
-                        <input type="date" defaultValue="2025-05-30" />
+                        <input type="date" defaultValue="2025-05-30"
+                        value={formData.pickupDate}
+                        onChange={(e) => setFormData({...formData, pickupDate: e.target.value})}
+                        />
                     </div>
                 </div>
 
@@ -64,7 +82,10 @@ const RideBookingForm = () => {
                     <label>Pickup Time</label>
                     <div className="input-with-icon">
                         <ClockIcon size={18} />
-                        <input type="time" defaultValue="00:00" />
+                        <input type="time" defaultValue="00:00" 
+                        value={formData.pickupTime}
+                        onChange={(e) => setFormData({...formData, pickupTime: e.target.value})}
+                        />
                     </div>
                 </div>
 
@@ -88,7 +109,10 @@ const RideBookingForm = () => {
                     <label>Number of Travelers</label>
                     <div className="input-with-icon">
                         <UsersIcon size={18} />
-                        <input type="number" defaultValue={1} min={1} />
+                        <input type="number" defaultValue={1} min={1} 
+                        value={formData.travelers}
+                         onChange={(e) => setFormData({...formData, travelers: e.target.value})}
+                        />
                     </div>
                 </div>
 
@@ -137,7 +161,7 @@ const RideBookingForm = () => {
 
         </div>
             {hasSearched && (
-                <CabList />
+                <CabList formData={formData} />
             )}
         </>
     );
