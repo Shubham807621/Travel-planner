@@ -1,58 +1,51 @@
 import React from 'react';
 import './PlanJourney.css';
-import airportTransfer from '../../../Images/HotelDetails/cabs/cab2.jpeg';
-import rentCar from '../../../Images/HotelDetails/cabs/Cab1.jpeg';
+import carImage from '../../../Images/HotelDetails/cabs/Cab1.jpeg';
 import { useNavigate } from 'react-router-dom';
 
 const PlanJourney = () => {
 
     const navigate = useNavigate();
-    const handleClick = ()=>{
+    const handleClick = () => {
         navigate("/book-ride")
     }
     return (
-        <div className="plan-journey-container">
-            <h2 className="title">Plan your journey to your hotel</h2>
-            <p className="subtitle">Book your ride in advance for a hassle-free trip</p>
+        <section className="plan-journey-section">
+            <h2>Plan your journey with ease</h2>
+            <p className="subtitle">Book your rides to and from your hotel</p>
 
-            <div className="card-grid">
-                <div className="card">
-                    <img src={airportTransfer} alt="Airport Transfer" className="card-image" />
-                    <div className="card-content">
-                        <h3>Book your airport transfer</h3>
-                        <p className="description">Get to your hotel easily and securely</p>
-                        <div className="card-footer">
-                            <span className="date">25 May · 2 Adults</span>
-                            <button className="search-btn" onClick={handleClick}>Search</button>
-                        </div>
-                    </div>
+            <div className="journey-content">
+                {/* Hotel to Destination */}
+                <div className="ride-box">
+                    <img src={carImage} alt="Car" className="car-img" />
+                    <h3>From Hotel to Destination</h3>
+                    <p>Book a cab to the airport, city, or your next adventure</p>
+                    <p className="date">Select Date</p>
+                    <button className="btn-search">Book Now</button>
                 </div>
 
-                <div className="card">
-                    <img src={rentCar} alt="Rent a Car" className="card-image" />
-                    <div className="card-content">
-                        <h3>Rent a car</h3>
-                        <p className="description">Find an ideal ride for your trip</p>
-                        <div className="card-footer">
-                            <span className="date">25 May - 25 May</span>
-                            <button className="search-btn">Search</button>
-                        </div>
+                {/* Arrival Journey Timeline */}
+                <div className="journey-timeline">
+                    <h4 className="timeline-heading">Arrival Journey</h4>
+                    <div className="timeline-step">
+                        <span className="icon">📲</span>
+                        <p>Reserve pickup online</p>
                     </div>
-                </div>
-
-                <div className="card">
-                    <img src={airportTransfer} alt="Airport Transfer" className="card-image" />
-                    <div className="card-content">
-                        <h3>Book your airport transfer</h3>
-                        <p className="description">Get to your hotel easily and securely</p>
-                        <div className="card-footer">
-                            <span className="date">25 May · 2 Adults</span>
-                            <button className="search-btn">Search</button>
-                        </div>
+                    <div className="timeline-step">
+                        <span className="icon">✈️</span>
+                        <p>Land at airport / arrive at station</p>
+                    </div>
+                    <div className="timeline-step">
+                        <span className="icon">🚕</span>
+                        <p>Meet your driver with your nameboard</p>
+                    </div>
+                    <div className="timeline-step">
+                        <span className="icon">🏨</span>
+                        <p>Reach your hotel smoothly</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

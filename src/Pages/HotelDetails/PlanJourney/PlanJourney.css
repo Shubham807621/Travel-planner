@@ -1,120 +1,87 @@
-.plan-journey-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    font-family: 'Segoe UI', sans-serif;
+.plan-journey-section {
     text-align: center;
+    padding: 3rem 1rem;
+    background: #f9f9ff;
 }
 
-.plan-journey-container .title {
-    font-size: 24px;
-    font-weight: 600;
+.plan-journey-section .subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.plan-journey-section .journey-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+/* Ride Box */
+.plan-journey-section .journey-content .ride-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 300px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.plan-journey-section .journey-content .ride-box:hover {
+    transform: translateY(-5px);
+}
+
+.plan-journey-section .journey-content .ride-box .car-img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.plan-journey-section .journey-content .ride-box .date {
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.plan-journey-section .journey-content .ride-box .btn-search {
+    background-color: #007bff;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Timeline */
+.plan-journey-section .journey-content .journey-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    text-align: left;
+    padding-left: 2rem;
+    border-left: 4px solid #007bff;
+    position: relative;
+    max-width: 320px;
+}
+
+.plan-journey-section .journey-content .journey-timeline .timeline-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
     color: #333;
 }
 
-.plan-journey-container .subtitle {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 30px;
+.plan-journey-section .journey-content .journey-timeline .timeline-step {
+    position: relative;
+    padding-left: 2rem;
 }
 
-
-.plan-journey-container  .card-grid {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-}
-
-.plan-journey-container  .card-grid .card {
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 16px;
-    width: 300px;
-    margin: 0 10px;
-    padding: 10px 5px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.plan-journey-container  .card-grid .card:hover {
-
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-}
-
-
- .plan-journey-container  .card-grid .card .card-image {
-
-      width: 140px;
-    height: auto;
-    margin: 20px auto 10px;
-    display: block;
-}
-
-.plan-journey-container .card-grid .card .card-content {
-    padding: 0 20px 20px;
-}
-
-.plan-journey-container .card-grid .card .card-content h3 {
-
-    padding: 0 20px 20px;
-}
-
-.card-grid .card .card-content h3 {
-
-    font-size: 18px;
-    color: #222;
-    margin-bottom: 5px;
-}
-
-.plan-journey-container .card-grid .card .card-content .description {
-
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 16px;
-}
-
-
-.plan-journey-container .card-grid .card .card-content .card-footer {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-}
-
-
-.plan-journey-container .card-grid .card .card-content .card-footer .date {
-    color: #666;
-}
-
-.plan-journey-container .card-grid .card .card-content .card-footer .search-btn {
-
-    background-color: #0066ff;
-    color: white;
-    border: none;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-
-.plan-journey-container .card-grid .card .card-content .card-footer .search-btn:hover {
-
-    background-color: #0052cc;
-}
-
-.card-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.card-grid .card {
-    width: 300px;
-    flex-shrink: 0;
+.plan-journey-section .journey-content .journey-timeline .timeline-step .icon {
+    position: absolute;
+    left: -1.4rem;
+    top: 0;
+    font-size: 1.5rem;
 }
