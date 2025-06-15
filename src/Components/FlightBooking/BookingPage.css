@@ -2,9 +2,18 @@
    Booking Page Wrapper
 ============================ */
 .flight-booking-page {
-  padding: 40px 10%;
+  padding:6% 10%;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
+  background: url("../../Images//Flights/flight-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.flight-booking-page .flight-booking-wrapper {
+  background: url("../../Images//Flights/flight-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .flight-booking-page .flight-booking-title {

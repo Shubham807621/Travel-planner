@@ -19,6 +19,7 @@ function BookingPage() {
       {/* Flight Summary */}
       {flight && (
         <div className="flight-booking-summary">
+          <div className="backgroun-img-wrapper"></div>
           <div className="flight-booking-summary-header">
             <img src={flight.logo} alt={flight.airline} className="flight-logo" />
             <div className="flight-info">

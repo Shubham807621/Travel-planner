@@ -1,0 +1,86 @@
+.travel-package-wrapper {
+    padding-top: 7%;
+    /* background: linear-gradient(to right, #fdfbfb, #ebedee); */
+    min-height: 100vh;
+}
+
+/* Main Container */
+.travel-package-container {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    max-width: 85%;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+.travel-package-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+/* Meta Info */
+.travel-package-meta p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Sections */
+.hotel-section, .activity-section {
+    margin-top: 40px;
+}
+
+.hotel-section h2, .activity-section h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+/* Cards */
+.hotel-card, .activity-card {
+    background-color: #fafafa;
+    border-left: 6px solid #3498db;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hotel-card:hover, .activity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Content */
+.hotel-name, .activity-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.hotel-address, .hotel-rating,
+.activity-description, .activity-price, .activity-type {
+    font-size: 15px;
+    margin: 6px 0;
+    color: #333;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

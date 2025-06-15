@@ -10,6 +10,9 @@ export const API_URLs = {
     GET_USERS:"/auth/user-list",
     GET_USER_DETAILS:"/auth/user-details",
     GET_HOTEL_BYID:"/api/hotel",
+    GET_ALL_PACKAGES:"/api/packages",
+    GET_ALL_BOOKINGS:"/api/all-booking",
+    GET_PACKAGE_BYID:"/api/packages",
 }
 
 export const API_BASE_URL = "http://localhost:8080"

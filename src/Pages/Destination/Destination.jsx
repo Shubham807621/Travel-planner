@@ -3,6 +3,7 @@ import './Destination.css'
 import TrendingDestinations from '../TrendingDestinations/TrendingDestinations'
 import HomeIcon from '@mui/icons-material/Home';
 import { Link } from 'react-router-dom';
+import TravelPackageList from '../TravelPackageList/TravelPackageList';
 
 export default function Destination() {
   return (
@@ -27,6 +28,8 @@ export default function Destination() {
             
             </div>
                 <TrendingDestinations/>
+
+                <TravelPackageList/>
         </div>
     
     </>

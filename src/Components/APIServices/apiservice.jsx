@@ -185,3 +185,49 @@ export const getHotelDetails = async (id) =>{
     }
 
 }
+
+export const getPackageList = async () =>{
+
+  const url = `${API_BASE_URL}${API_URLs.GET_ALL_PACKAGES}`
+ 
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+
+}
+
+export const getBookingList = async () =>{
+
+  const url = `${API_BASE_URL}${API_URLs.GET_ALL_BOOKINGS}`
+ 
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+
+}
+export const getPackageById = async (id) =>{
+
+  const url = `${API_BASE_URL}${API_URLs.GET_PACKAGE_BYID}/${id}`
+ 
+    try {
+        const response = await axios.get(url)
+        return response.data;
+        
+    } catch (error) {
+        console.error('Error:', error.response || error.message);
+        throw error;
+    }
+
+}
+
+

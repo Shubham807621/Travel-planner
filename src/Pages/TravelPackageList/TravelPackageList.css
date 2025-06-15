@@ -1,0 +1,45 @@
+.travel-package-list {
+    padding: 20px;
+    /* font-family: Arial, sans-serif; */
+    margin: auto;
+    width: 75%;
+}
+
+.travel-package-list__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.travel-package-list__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.travel-package-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.travel-package-card__name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.travel-package-card__details p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.travel-package-card__price {
+    color: #007b00;
+    font-weight: bold;
+}
