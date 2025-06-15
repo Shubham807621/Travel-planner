@@ -24,9 +24,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px 300px 300px;
   grid-template-areas:
-    "img4 img4 img5"
-    "img1 img3 img3"
-    "img6 img6 img2";
+    "img5 img5 img4"
+    "img6 img3 img3"
+    "img1 img1 img2";
 }
 
 .img1 { grid-area: img1; }
