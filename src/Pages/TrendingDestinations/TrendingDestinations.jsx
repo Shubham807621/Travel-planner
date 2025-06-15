@@ -19,7 +19,7 @@ const [states, setStates] =useState([]);
 const navigate = useNavigate();
 
 const handleClick =(state)=>{
-console.log("hello")
+
 navigate(`/destination/${state}`);
 
 }

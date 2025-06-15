@@ -11,17 +11,15 @@
 .destination-card .destination-detail .img-wrapper{
 
     width: 100%;
-   
-   
+    border-radius: 16px;   
 }
 .destination-card .destination-detail .detail-image{
-   width: 100%;
+  width: 100%;
   max-height: 430px;
   height: auto;
   object-fit: cover;
-    object-position: center; /* <-- Show top part of image */
+  object-position: center; /* <-- Show top part of image */
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 
 }

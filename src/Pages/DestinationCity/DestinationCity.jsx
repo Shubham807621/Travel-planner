@@ -57,8 +57,7 @@ export default function DestinationCity() {
     
     },[selectedCity])
 
-    console.log(cityImg)
-
+ 
   return (
     <>
         <div className="destination-city-wrapper">
